@@ -2030,6 +2030,7 @@ ul.booking-steps li .text {
   color: #fff;
   padding: 0 32px;
   position: relative;
+  cursor: pointer;
 }
 .sdl-booking .tab_booking li.active {
   position: relative;
@@ -2233,12 +2234,13 @@ ul.booking-steps li .text {
 }
 .add-box .tab_booking li {
   line-height: 50px;
+  cursor: pointer;
 }
 .add-box .tab_booking li a {
   font-weight: 500;
   text-transform: uppercase;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   padding: 0 40px;
 }
 .add-box .tab_booking li.active {

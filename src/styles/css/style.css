@@ -14,7 +14,8 @@
 @import url("./pe-icon-7-stroke.css");
 @import url("./waves.min.css");
 @import url("./animate.css");
-@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800"); */
 
 /*==========
   1.  Reset
@@ -532,12 +533,12 @@ button:focus {
 }
 /*========== Page Title ==========*/
 .top-title {
-  background: url("../images/template/page-title.jpg") no-repeat top center;
+  background: url("/images/template/page-title.jpg") no-repeat top center;
   height: 394px;
   position: relative;
 }
 .top-title.ver-1 {
-  background: url("../images/template/services-single.jpg") no-repeat top center;
+  background: url("/images/template/services-single.jpg") no-repeat top center;
   height: 394px;
   position: relative;
 }
@@ -613,7 +614,8 @@ button:focus {
   padding: 0;
   margin-bottom: 15px;
 }
-.main-menu .menu > li > span {
+.main-menu .menu > li > span,
+.main-menu .menu > li > a > span {
   color: #969696;
   font-size: 40px;
   display: block;
@@ -627,7 +629,8 @@ button:focus {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.main-menu .menu > li > span:before {
+.main-menu .menu > li > span:before,
+.main-menu .menu > li > a > span:before {
   content: "";
   position: absolute;
   height: 30px;
@@ -638,12 +641,16 @@ button:focus {
   background-color: #fff;
 }
 .main-menu .menu > li > span:hover:before,
-.main-menu .menu > li > span.active:before {
+.main-menu .menu > li > span.active:before,
+.main-menu .menu > li > a > span:hover:before,
+.main-menu .menu > li > a > span.active:before {
   left: 0;
   opacity: 1;
 }
 .main-menu .menu li > span:hover,
-.main-menu .menu li > span.active {
+.main-menu .menu li > span.active,
+.main-menu .menu li > a:hover,
+.main-menu .menu li > a.active {
   color: #fff;
 }
 .header-01 .box-right .search {
@@ -1721,6 +1728,7 @@ ul.tab-post li:hover {
 /* Post Grid */
 .post-grid article.post {
   width: 33.33%;
+  height: 359px;
   padding: 0 15px;
   border: none;
   float: left;
@@ -1732,6 +1740,11 @@ ul.tab-post li:hover {
   -o-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  height: 100%;
+}
+.post-grid article.post .featured-image img {
+  height: 100%;
+  object-fit: cover;
 }
 .post-grid article.post:hover .featured-image {
   opacity: 0;
@@ -2174,7 +2187,7 @@ article.post-single .post-content > p {
   background: #bf9c60;
 }
 .scroll-top {
-  background-image: url("../images/icon/go_top.png");
+  background-image: url("/images/icon/go_top.png");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;

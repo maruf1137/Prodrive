@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const navigationData = [
   {
@@ -10,27 +11,50 @@ const navigationData = [
   {
     id: 2,
     title: "Our Fleet",
-    url: "/",
+    items: [
+      {
+        title: "Our Fleet 03",
+        url: "/fleet",
+      },
+      {
+        title: "Our Fleet Single 2",
+        url: "single-fleet",
+      },
+    ],
   },
   {
     id: 3,
-    title: "Home",
-    url: "/",
+    title: "Services",
+    url: "/services",
   },
   {
     id: 4,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 5,
-    title: "Home",
-    url: "/",
+    title: "Blog",
+    url: "/blog",
   },
 ];
 
 const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
+  const [navigationStateData, setNavigationStateData] =
+    useState(navigationData);
+
+  const handleNavigationDropdown = (id) => {
+    console.log("first");
+    const newData = navigationData.map((item) => {
+      if (item.id === id) {
+        item.isActive = !item.isActive;
+        return item;
+      } else {
+        return item;
+      }
+    });
+    setNavigationStateData(newData);
+  };
+
+  // useEffect(() => {
+  //   console.log(navigationStateData);
+  // }, [navigationStateData]);
 
   return (
     <header id="header" class="header-03">
@@ -57,9 +81,9 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="x_logo">
-                <a href="index.html" title="logo prodrive">
+                <Link href="/" title="logo prodrive">
                   <img src="images/logowhite.png" alt="" />
-                </a>
+                </Link>
               </li>
               <li class="x_language">
                 <img src="images/icon/web.png" alt="" />
@@ -73,155 +97,44 @@ const Navbar = () => {
               </li>
             </ul>
             <ul class="menu">
-              <li class="has-dropdown">
-                <span>Home</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="index.html">Home 01</a>
-                  </li>
-                  <li>
-                    <a href="index2.html">Home 02</a>
-                  </li>
-                  <li>
-                    <a href="index3.html">Home 03</a>
-                  </li>
-                  <li>
-                    <a href="index4.html">Home 04</a>
-                  </li>
-                  <li>
-                    <a href="index5.html">Home 05</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <span>Our Fleet</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="our-fleet-01.html">Our Fleet 01</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-02.html">Our Fleet 02</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-03.html">Our Fleet 03</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-04.html">Our Fleet 04</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-05.html">Our Fleet 05</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-single1.html">Our Fleet Single 01</a>
-                  </li>
-                  <li>
-                    <a href="our-fleet-single2.html">Our Fleet Single 02</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <span>Service Rates</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="services.html">Services</a>
-                  </li>
-                  <li>
-                    <a href="services-rates.html">Services Rates</a>
-                  </li>
-                  <li>
-                    <a href="services-single.html">Services Single</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <span>Pages</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="booking-car-class.html">Booking Car Class</a>
-                  </li>
-                  <li>
-                    <a href="booking-card.html">Booking Card</a>
-                  </li>
-                  <li>
-                    <a href="booking-check-out.html">Booking Checkout</a>
-                  </li>
-                  <li>
-                    <a href="booking-login.html">Booking Login</a>
-                  </li>
-                  <li>
-                    <a href="booking-options.html">Booking Options</a>
-                  </li>
-                  <li>
-                    <a href="404.html">404 Page</a>
-                  </li>
-                  <li>
-                    <a href="about1.html">About 01</a>
-                  </li>
-                  <li>
-                    <a href="about2.html">About 02</a>
-                  </li>
-                  <li>
-                    <a href="accordion.html">Accordion</a>
-                  </li>
-                  <li>
-                    <a href="alert.html">Alert</a>
-                  </li>
-                  <li>
-                    <a href="button.html">Button</a>
-                  </li>
-                  <li>
-                    <a href="price-table.html">Price Table</a>
-                  </li>
-                  <li>
-                    <a href="progress.html">Progress</a>
-                  </li>
-                  <li>
-                    <a href="tables.html">Tables</a>
-                  </li>
-                  <li>
-                    <a href="tabs.html">Tabs</a>
-                  </li>
-                  <li>
-                    <a href="typography.html">Typography</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <span>Blog</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="blog.html">Blog</a>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Blog Grid</a>
-                  </li>
-                  <li>
-                    <a href="blog-sidebar.html">Blog Sidebar</a>
-                  </li>
-                  <li>
-                    <a href="blog-fullwidth.html">Blog Fullwidth</a>
-                  </li>
-                  <li>
-                    <a href="blog-fullwidth-sidebar.html">
-                      Blog Fullwidth Sidebar
-                    </a>
-                  </li>
-                  <li>
-                    <a href="blog-single.html">Blog Single</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <span>Contact</span>
-                <ul class="menu-dropdown">
-                  <li>
-                    <a href="contact1.html">Contact 01</a>
-                  </li>
-                  <li>
-                    <a href="contact2.html">Contact 02</a>
-                  </li>
-                </ul>
-              </li>
+              {navigationStateData.map(
+                ({ id, title, url, items, isActive }) => {
+                  if (!items) {
+                    return (
+                      <li class="has-dropdown" key={id}>
+                        {/* <span>Home</span> */}
+                        <Link href={url}>
+                          <span>{title}</span>
+                        </Link>
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li
+                        class="has-dropdown"
+                        key={id}
+                        onClick={() => handleNavigationDropdown(id)}>
+                        <span>{title}</span>
+                        <ul
+                          class="menu-dropdown"
+                          style={
+                            isActive
+                              ? { display: "block" }
+                              : { display: "none" }
+                          }>
+                          {items.map(({ title, url }, index) => {
+                            return (
+                              <li key={index}>
+                                <Link href={url}>{title}</Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </li>
+                    );
+                  }
+                }
+              )}
             </ul>
             <div class="button">
               <a href="#" class="quote" title="">
@@ -266,9 +179,9 @@ const Navbar = () => {
           </div>
         </div>
         <div id="logo" class="logo-pro">
-          <a href="index.html" title="logo prodrive">
+          <Link href="/" title="logo prodrive">
             <img src="images/logo_dark.png" alt="" />
-          </a>
+          </Link>
         </div>
         <div class="box-right">
           <div class="login">
