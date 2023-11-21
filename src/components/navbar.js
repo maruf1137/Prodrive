@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const navigationData = [
   {
@@ -18,7 +18,7 @@ const navigationData = [
       },
       {
         title: "Our Fleet Single 2",
-        url: "single-fleet",
+        url: "/fleet/single-fleet",
       },
     ],
   },
@@ -30,7 +30,42 @@ const navigationData = [
   {
     id: 4,
     title: "Blog",
-    url: "/blog",
+    items: [
+      {
+        title: "Blog Grid",
+        url: "/blog",
+      },
+      {
+        title: "Single Blog",
+        url: "/blog/12",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Pages",
+    items: [
+      {
+        title: "Booking Car Class",
+        url: "/booking/car-class",
+      },
+      {
+        title: "Booking Car Options",
+        url: "/booking/car-options",
+      },
+      {
+        title: "Login",
+        url: "/booking/login",
+      },
+      {
+        title: "Booking Card",
+        url: "/booking/card",
+      },
+      {
+        title: "Booking Checkout",
+        url: "/booking/checkout",
+      },
+    ],
   },
 ];
 
@@ -51,10 +86,6 @@ const Navbar = () => {
     });
     setNavigationStateData(newData);
   };
-
-  // useEffect(() => {
-  //   console.log(navigationStateData);
-  // }, [navigationStateData]);
 
   return (
     <header id="header" class="header-03">
@@ -77,16 +108,16 @@ const Navbar = () => {
                   href="#"
                   class="close_x"
                   onClick={() => setNavigation(false)}>
-                  <img src="images/icon/close_x.png" alt="" />
+                  <img src="/images/icon/close_x.png" alt="" />
                 </a>
               </li>
               <li class="x_logo">
                 <Link href="/" title="logo prodrive">
-                  <img src="images/logowhite.png" alt="" />
+                  <img src="/images/logowhite.png" alt="" />
                 </Link>
               </li>
               <li class="x_language">
-                <img src="images/icon/web.png" alt="" />
+                <img src="/images/icon/web.png" alt="" />
                 <select id="languages">
                   <option value="saab">KR</option>
                   <option value="vw">FR</option>
@@ -103,7 +134,7 @@ const Navbar = () => {
                     return (
                       <li class="has-dropdown" key={id}>
                         {/* <span>Home</span> */}
-                        <Link href={url}>
+                        <Link href={url} onClick={() => setNavigation(false)}>
                           <span>{title}</span>
                         </Link>
                       </li>
@@ -125,7 +156,11 @@ const Navbar = () => {
                           {items.map(({ title, url }, index) => {
                             return (
                               <li key={index}>
-                                <Link href={url}>{title}</Link>
+                                <Link
+                                  href={url}
+                                  onClick={() => setNavigation(false)}>
+                                  {title}
+                                </Link>
                               </li>
                             );
                           })}
@@ -180,7 +215,7 @@ const Navbar = () => {
         </div>
         <div id="logo" class="logo-pro">
           <Link href="/" title="logo prodrive">
-            <img src="images/logo_dark.png" alt="" />
+            <img src="/images/logo_dark.png" alt="" />
           </Link>
         </div>
         <div class="box-right">

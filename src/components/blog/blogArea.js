@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import BlogArticle from "./blogArticle";
 
 const blogData = {
   btns: [
@@ -128,11 +127,54 @@ const BlogArea = () => {
             </ul>
             <motion.div layout class="post-grid grid">
               <AnimatePresence>
-                {/* {filtered.map((movie) => {
-                  return <Movie movie={movie} key={movie.id} />;
-                })} */}
                 {filtered.map((item) => {
-                  return <BlogArticle item={item} key={item.id} />;
+                  const { id, title, img, desc, author, date, url } = item;
+                  return (
+                    <motion.article
+                      style={{ overflow: "hidden" }}
+                      key={id}
+                      layout
+                      transition={{
+                        ease: "linear",
+                        duration: 0.3,
+                      }}
+                      initial={{ transform: "scale(0.2)" }}
+                      animate={{ transform: "scale(1)" }}
+                      exit={{ transform: "scale(0.2)" }}
+                      class="post ipsotope transport limousine">
+                      <div class="featured-image">
+                        <img src={img} alt={title} />
+                      </div>
+                      <div class="entry-content">
+                        <div class="entry-post-title">
+                          <h4 class="post-title">
+                            <Link href={url}>{title}</Link>
+                          </h4>
+                        </div>
+                        <ul>
+                          <li class="author">
+                            <a href="#">
+                              <img src="/images/icon/author.png" alt="" />
+                              {author}
+                            </a>
+                          </li>
+                          <li class="date">
+                            <a href="#">
+                              <img src="/images/icon/date.png" alt="" />
+                              {date}
+                            </a>
+                          </li>
+                        </ul>
+                        <p>{desc}</p>
+                        <div class="btn-readmore">
+                          <Link href={url}>
+                            Read More
+                            <img src="images/icon/right-2.png" alt="" />
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.article>
+                  );
                 })}
               </AnimatePresence>
             </motion.div>

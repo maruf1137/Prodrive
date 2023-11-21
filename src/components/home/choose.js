@@ -15,7 +15,7 @@ const Choose = () => {
             <div class="col-md-3 col-sm-6">
               <div class="iconbox center">
                 <div class="iconbox-icon">
-                  <img src="images/iconbox/01.png" alt="" />
+                  <img src="/images/iconbox/01.png" alt="" />
                 </div>
                 <div class="iconbox-content">
                   <h3>
@@ -33,7 +33,7 @@ const Choose = () => {
             <div class="col-md-3 col-sm-6">
               <div class="iconbox center">
                 <div class="iconbox-icon">
-                  <img src="images/iconbox/02.png" alt="" />
+                  <img src="/images/iconbox/02.png" alt="" />
                 </div>
                 <div class="iconbox-content">
                   <h3>
@@ -51,7 +51,7 @@ const Choose = () => {
             <div class="col-md-3 col-sm-6">
               <div class="iconbox center">
                 <div class="iconbox-icon">
-                  <img src="images/iconbox/03.png" alt="" />
+                  <img src="/images/iconbox/03.png" alt="" />
                 </div>
                 <div class="iconbox-content">
                   <h3>
@@ -69,7 +69,7 @@ const Choose = () => {
             <div class="col-md-3 col-sm-6">
               <div class="iconbox center">
                 <div class="iconbox-icon">
-                  <img src="images/iconbox/04.png" alt="" />
+                  <img src="/images/iconbox/04.png" alt="" />
                 </div>
                 <div class="iconbox-content">
                   <h3>

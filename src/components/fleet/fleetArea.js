@@ -1,5 +1,7 @@
 import React from "react";
 import TempleteTitle from "../templeteTitle";
+import { vehicleData } from "../data";
+import Link from "next/link";
 
 const FleetArea = () => {
   return (
@@ -16,6 +18,47 @@ const FleetArea = () => {
           </div>
         </div>
         <div class="row">
+          {vehicleData.map((item) => {
+            const { id, title, img, subtitle, author, mail, price } = item;
+            return (
+              <div class="col-md-6" key={id}>
+                <div class="select-car al-center">
+                  <div class="select-box">
+                    <div class="image-car">
+                      <img src={img} alt={title} />
+                    </div>
+                    <div class="box-text">
+                      <div class="top">
+                        <h3>{title}</h3>
+                        <div class="name-car">{subtitle}</div>
+                      </div>
+                      <div class="content">
+                        <ul>
+                          <li>
+                            <img src="images/booking/people.png" alt="" />{" "}
+                            {author}
+                          </li>
+                          <li>
+                            <img src="images/booking/vali.png" alt="" /> {mail}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="bottom">
+                        <div class="price">
+                          <span>${price}</span> / hour
+                        </div>
+                        <div class="btn-select">
+                          <Link href="/fleet/fleet-details" title="">
+                            View Details
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
           <div class="col-md-6">
             <div class="select-car al-center">
               <div class="select-box">
