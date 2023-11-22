@@ -9,15 +9,15 @@ const Choose = () => {
         secTitle="Why Choose Us"
         subtitle="Explore our first class limousine & car rental services"
       />
-      <section class="section-iconbox">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="iconbox center">
-                <div class="iconbox-icon">
+      <section className="section-iconbox">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
+              <div className="iconbox center">
+                <div className="iconbox-icon">
                   <img src="/images/iconbox/01.png" alt="" />
                 </div>
-                <div class="iconbox-content">
+                <div className="iconbox-content">
                   <h3>
                     <a href="#" title="">
                       Easy Online Booking
@@ -30,12 +30,12 @@ const Choose = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="iconbox center">
-                <div class="iconbox-icon">
+            <div className="col-md-3 col-sm-6">
+              <div className="iconbox center">
+                <div className="iconbox-icon">
                   <img src="/images/iconbox/02.png" alt="" />
                 </div>
-                <div class="iconbox-content">
+                <div className="iconbox-content">
                   <h3>
                     <a href="#" title="">
                       Professional Drivers
@@ -48,12 +48,12 @@ const Choose = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="iconbox center">
-                <div class="iconbox-icon">
+            <div className="col-md-3 col-sm-6">
+              <div className="iconbox center">
+                <div className="iconbox-icon">
                   <img src="/images/iconbox/03.png" alt="" />
                 </div>
-                <div class="iconbox-content">
+                <div className="iconbox-content">
                   <h3>
                     <a href="#" title="">
                       Variety of Car Brands
@@ -66,12 +66,12 @@ const Choose = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="iconbox center">
-                <div class="iconbox-icon">
+            <div className="col-md-3 col-sm-6">
+              <div className="iconbox center">
+                <div className="iconbox-icon">
                   <img src="/images/iconbox/04.png" alt="" />
                 </div>
-                <div class="iconbox-content">
+                <div className="iconbox-content">
                   <h3>
                     <a href="#" title="">
                       Online Payment

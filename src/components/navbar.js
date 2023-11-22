@@ -88,35 +88,35 @@ const Navbar = () => {
   };
 
   return (
-    <header id="header" class="header-03">
-      <div class="container-fluid">
-        <div class="onclick" onClick={() => setNavigation(true)}>
+    <header id="header" className="header-03">
+      <div className="container-fluid">
+        <div className="onclick" onClick={() => setNavigation(true)}>
           <span></span>
           Menu
         </div>
-        <ul class="info-contact">
-          <li class="vehicle">Wehicles</li>
+        <ul className="info-contact">
+          <li className="vehicle">Wehicles</li>
           <li>(880) 172 380 956</li>
         </ul>
-        <div class={navigation ? "navigation active" : "navigation"}>
+        <div className={navigation ? "navigation active" : "navigation"}>
           <div
             id="main-menu"
-            class={navigation ? "main-menu active" : "main-menu"}>
-            <ul class="top-menuleft">
-              <li class="x_close">
+            className={navigation ? "main-menu active" : "main-menu"}>
+            <ul className="top-menuleft">
+              <li className="x_close">
                 <a
                   href="#"
-                  class="close_x"
+                  className="close_x"
                   onClick={() => setNavigation(false)}>
                   <img src="/images/icon/close_x.png" alt="" />
                 </a>
               </li>
-              <li class="x_logo">
+              <li className="x_logo">
                 <Link href="/" title="logo prodrive">
                   <img src="/images/logowhite.png" alt="" />
                 </Link>
               </li>
-              <li class="x_language">
+              <li className="x_language">
                 <img src="/images/icon/web.png" alt="" />
                 <select id="languages">
                   <option value="saab">KR</option>
@@ -127,12 +127,12 @@ const Navbar = () => {
                 </select>
               </li>
             </ul>
-            <ul class="menu">
+            <ul className="menu">
               {navigationStateData.map(
                 ({ id, title, url, items, isActive }) => {
                   if (!items) {
                     return (
-                      <li class="has-dropdown" key={id}>
+                      <li className="has-dropdown" key={id}>
                         {/* <span>Home</span> */}
                         <Link href={url} onClick={() => setNavigation(false)}>
                           <span>{title}</span>
@@ -142,12 +142,12 @@ const Navbar = () => {
                   } else {
                     return (
                       <li
-                        class="has-dropdown"
+                        className="has-dropdown"
                         key={id}
                         onClick={() => handleNavigationDropdown(id)}>
                         <span>{title}</span>
                         <ul
-                          class="menu-dropdown"
+                          className="menu-dropdown"
                           style={
                             isActive
                               ? { display: "block" }
@@ -171,59 +171,59 @@ const Navbar = () => {
                 }
               )}
             </ul>
-            <div class="button">
-              <a href="#" class="quote" title="">
+            <div className="button">
+              <a href="#" className="quote" title="">
                 Get A Quote
               </a>
-              <a href="booking-car-class.html" class="booking" title="">
+              <a href="booking-car-class.html" className="booking" title="">
                 Online Booking
               </a>
             </div>
-            <ul class="social-ft">
+            <ul className="social-ft">
               <li>
                 <a href="#" title="Facebook">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i className="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="#" title="Twitter">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i className="fa fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="#" title="Instagram">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i className="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="#" title="Pinterest">
-                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                  <i className="fa fa-pinterest" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="#" title="Dribble">
-                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+                  <i className="fa fa-dribbble" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="#" title="Google">
-                  <i class="fa fa-google" aria-hidden="true"></i>
+                  <i className="fa fa-google" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div id="logo" class="logo-pro">
+        <div id="logo" className="logo-pro">
           <Link href="/" title="logo prodrive">
             <img src="/images/logo_dark.png" alt="" />
           </Link>
         </div>
-        <div class="box-right">
-          <div class="login">
+        <div className="box-right">
+          <div className="login">
             <a href="#">Login/</a>
             <a href="#">Register</a>
           </div>
-          <ul class="quocte-booking">
+          <ul className="quocte-booking">
             <li>
               <a href="#">Get A Quote</a>
             </li>

@@ -48,6 +48,7 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
         item.isActive = true;
         return item;
       } else {
+        item.isActive = false;
         return item;
       }
     });
@@ -59,36 +60,36 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
   }, [stepNo]);
 
   return (
-    <section class="booking-steps-area mht">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="booking-steps">
+    <section className="booking-steps-area mht">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <ul className="booking-steps">
               {stepsStateData.map((item) => {
                 const { id, img, title, isActive } = item;
                 return (
-                  <li class={isActive ? "active" : ""} key={id}>
+                  <li className={isActive ? "active" : ""} key={id}>
                     <span>{id}</span>
-                    <div class="icon">
+                    <div className="icon">
                       <img src={img} alt={title} />
                     </div>
-                    <div class="text">{title}</div>
+                    <div className="text">{title}</div>
                   </li>
                 );
               })}
             </ul>
             <div
-              class={
+              className={
                 summaryBarOpen
                   ? "button-summary-bar open"
                   : "button-summary-bar"
               }
               onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
-              <div class="icon">
-                <span class="ion-ios-arrow-thin-down"></span>
+              <div className="icon">
+                <span className="ion-ios-arrow-thin-down"></span>
               </div>
-              <p class="show">Select Location & Date</p>
-              <p class="hide">Hide</p>
+              <p className="show">Select Location & Date</p>
+              <p className="hide">Hide</p>
             </div>
           </div>
         </div>

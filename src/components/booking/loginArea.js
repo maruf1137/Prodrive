@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const tabBtns = [
@@ -14,19 +15,25 @@ const tabBtns = [
 
 const LoginArea = () => {
   const [tabBtnActive, setTabBtnActive] = useState(1);
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/booking/card");
+  };
 
   return (
-    <section class="login-booking-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-8">
-            <div class="login-booking">
-              <ul class="login-tab-list">
+    <section className="login-booking-area">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-2"></div>
+          <div className="col-lg-8">
+            <div className="login-booking">
+              <ul className="login-tab-list">
                 {tabBtns.map(({ id, title }) => {
                   return (
                     <li
-                      class={tabBtnActive == id ? "active" : ""}
+                      className={tabBtnActive == id ? "active" : ""}
                       key={id}
                       onClick={() => setTabBtnActive(id)}>
                       {title}
@@ -34,13 +41,17 @@ const LoginArea = () => {
                   );
                 })}
               </ul>
-              <div class="login-content">
+              <div className="login-content">
                 {tabBtnActive == 1 ? (
-                  <div id="tab-1" class="content-tab">
-                    <div class="login-form">
-                      <form action="#" method="post" accept-charset="utf-8">
-                        <div class="one-half">
-                          <div class="form-email">
+                  <div id="tab-1" className="content-tab">
+                    <div className="login-form">
+                      <form
+                        action="#"
+                        method="post"
+                        accept-charset="utf-8"
+                        onSubmit={(e) => handleSubmit(e)}>
+                        <div className="one-half">
+                          <div className="form-email">
                             <label for="">Email</label>
                             <input
                               type="text"
@@ -50,8 +61,8 @@ const LoginArea = () => {
                             />
                           </div>
                         </div>
-                        <div class="one-half">
-                          <div class="form-password">
+                        <div className="one-half">
+                          <div className="form-password">
                             <label for="">Password</label>
                             <input
                               type="password"
@@ -61,9 +72,9 @@ const LoginArea = () => {
                             />
                           </div>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="one-half">
-                          <div class="remember">
+                        <div className="clearfix"></div>
+                        <div className="one-half">
+                          <div className="remember">
                             <input
                               type="checkbox"
                               name="remember"
@@ -72,30 +83,30 @@ const LoginArea = () => {
                             <label for="remember">Remember me</label>
                           </div>
                         </div>
-                        <div class="one-half">
-                          <div class="btn-submit">
+                        <div className="one-half">
+                          <div className="btn-submit">
                             <a href="#" title="">
                               Lost Your Password ?
                             </a>
                             <button type="submit">LOGIN</button>
                           </div>
                         </div>
-                        <div class="clearfix"></div>
+                        <div className="clearfix"></div>
                       </form>
                     </div>
-                    <div class="login-social">
+                    <div className="login-social">
                       <span>OR</span>
                       <p>You can log in quickly with your account.</p>
-                      <ul class="social">
-                        <li class="facebook">
+                      <ul className="social">
+                        <li className="facebook">
                           <a href="#" title="">
-                            <span class="fa fa-facebook"></span>Connect with
+                            <span className="fa fa-facebook"></span>Connect with
                             Facebook
                           </a>
                         </li>
-                        <li class="twitter">
+                        <li className="twitter">
                           <a href="#" title="">
-                            <span class="fa fa-twitter"></span>Connect with
+                            <span className="fa fa-twitter"></span>Connect with
                             Twitter
                           </a>
                         </li>
@@ -103,10 +114,14 @@ const LoginArea = () => {
                     </div>
                   </div>
                 ) : (
-                  <div id="tab-2" class="content-tab">
-                    <div class="register-form">
-                      <form action="#" method="get" accept-charset="utf-8">
-                        <div class="one-half first-name">
+                  <div id="tab-2" className="content-tab">
+                    <div className="register-form">
+                      <form
+                        action="#"
+                        method="get"
+                        accept-charset="utf-8"
+                        onSubmit={(e) => handleSubmit(e)}>
+                        <div className="one-half first-name">
                           <label for="firstname">First Name </label>
                           <input
                             type="text"
@@ -115,7 +130,7 @@ const LoginArea = () => {
                             placeholder="Ali"
                           />
                         </div>
-                        <div class="one-half last-name">
+                        <div className="one-half last-name">
                           <label for="lastname">Last Name</label>
                           <input
                             type="text"
@@ -124,7 +139,7 @@ const LoginArea = () => {
                             placeholder="TUF..."
                           />
                         </div>
-                        <div class="one-half email">
+                        <div className="one-half email">
                           <label for="email">Email</label>
                           <input
                             type="text"
@@ -133,7 +148,7 @@ const LoginArea = () => {
                             placeholder="creativelayer088@gmail.com"
                           />
                         </div>
-                        <div class="one-half phone">
+                        <div className="one-half phone">
                           <label for="phone">Phone</label>
                           <input
                             type="text"
@@ -142,15 +157,15 @@ const LoginArea = () => {
                             placeholder="(+90) 538 658 96 315"
                           />
                         </div>
-                        <div class="one-half pass">
+                        <div className="one-half pass">
                           <label for="pass">Password</label>
                           <input type="text" name="pass" id="pass" />
                         </div>
-                        <div class="one-half re-pass">
+                        <div className="one-half re-pass">
                           <label for="re-pass">Repeat Password</label>
                           <input type="password" name="phone" id="re-pass" />
                         </div>
-                        <div class="one-half checkbox">
+                        <div className="one-half checkbox">
                           <input type="checkbox" name="accept" id="accept" />
                           <label for="accept">
                             Accept
@@ -164,10 +179,10 @@ const LoginArea = () => {
                             input
                           </label>
                         </div>
-                        <div class="one-half btn-submit">
+                        <div className="one-half btn-submit">
                           <button type="submit">REGISTER</button>
                         </div>
-                        <div class="clearfix"></div>
+                        <div className="clearfix"></div>
                       </form>
                     </div>
                   </div>
@@ -175,7 +190,7 @@ const LoginArea = () => {
               </div>
             </div>
           </div>
-          <div class="col-lg-2"></div>
+          <div className="col-lg-2"></div>
         </div>
       </div>
     </section>

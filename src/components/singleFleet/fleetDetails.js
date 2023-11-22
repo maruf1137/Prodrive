@@ -25,18 +25,18 @@ const FleetDetails = () => {
   const [fleetTab, setFleetTab] = useState(1);
 
   return (
-    <section class="our-fleet-single primary-slider">
-      <div class="container">
+    <section className="our-fleet-single primary-slider">
+      <div className="container">
         <TempleteTitle
           title="Ecomnomy Premium Limousine"
           secTitle="Ecomnomy Premium Limousine"
           subtitle="We also take custom orders and will help you acquire a specific
           yacht."
         />
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-8 fix-bst">
-            <article class="block-customs-single">
-              <div class="featured-customs">
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-8 fix-bst">
+            <article className="block-customs-single">
+              <div className="featured-customs">
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={0}
@@ -46,36 +46,36 @@ const FleetDetails = () => {
                   modules={[Pagination]}
                   className="mySwiper">
                   <SwiperSlide>
-                    <div class="images">
+                    <div className="images">
                       <img src="/images/fleet/detail_fleet.jpg" alt="" />
-                      <a href="#" class="bkings">
+                      <a href="#" className="bkings">
                         Online Booking
                         <img src="/images/icon/arrow-white.png" alt="" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div class="images">
+                    <div className="images">
                       <img src="/images/fleet/detail_fleet.jpg" alt="" />
-                      <a href="#" class="bkings">
+                      <a href="#" className="bkings">
                         Online Booking
                         <img src="/images/icon/arrow-white.png" alt="" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div class="images">
+                    <div className="images">
                       <img src="/images/fleet/detail_fleet.jpg" alt="" />
-                      <a href="#" class="bkings">
+                      <a href="#" className="bkings">
                         Online Booking
                         <img src="/images/icon/arrow-white.png" alt="" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div class="images">
+                    <div className="images">
                       <img src="/images/fleet/detail_fleet.jpg" alt="" />
-                      <a href="#" class="bkings">
+                      <a href="#" className="bkings">
                         Online Booking
                         <img src="/images/icon/arrow-white.png" alt="" />
                       </a>
@@ -83,9 +83,11 @@ const FleetDetails = () => {
                   </SwiperSlide>
                 </Swiper>
               </div>
-              <div class="info-fleet">
-                <h3 class="title">Hiring a Mercedes E-Class with Prodrive</h3>
-                <h5 class="sub-title">Mercedes E Class</h5>
+              <div className="info-fleet">
+                <h3 className="title">
+                  Hiring a Mercedes E-Class with Prodrive
+                </h3>
+                <h5 className="sub-title">Mercedes E Class</h5>
                 <p>
                   The Mercedes Benz E Class chauffeur car is the perfect
                   executive level chauffeur car for all types of business trips
@@ -97,9 +99,9 @@ const FleetDetails = () => {
                 </p>
               </div>
             </article>
-            <div class="bottom-content row">
-              <div class="col-xs-12 col-sm-12 col-md-4 fix-bst">
-                <ul class="detail-info">
+            <div className="bottom-content row">
+              <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
+                <ul className="detail-info">
                   <li>
                     <span>Passengers</span>
                     <p>4</p>
@@ -118,8 +120,8 @@ const FleetDetails = () => {
                   </li>
                 </ul>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 fix-bst">
-                <ul class="detail-info">
+              <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
+                <ul className="detail-info">
                   <li>
                     <span>Passengers</span>
                     <p>4</p>
@@ -138,8 +140,8 @@ const FleetDetails = () => {
                   </li>
                 </ul>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 fix-bst">
-                <ul class="detail-info">
+              <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
+                <ul className="detail-info">
                   <li>
                     <span>Passengers</span>
                     <p>4</p>
@@ -160,14 +162,14 @@ const FleetDetails = () => {
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 fix-bst">
-            <div class="sidebar">
-              <div class="sdl-booking add-box not-fixed">
-                <ul class="tab_booking">
+          <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
+            <div className="sidebar">
+              <div className="sdl-booking add-box not-fixed">
+                <ul className="tab_booking">
                   {fleetTabs.btns.map(({ id, title }) => {
                     return (
                       <li
-                        class={fleetTab == id ? "active" : ""}
+                        className={fleetTab == id ? "active" : ""}
                         key={id}
                         onClick={() => setFleetTab(id)}>
                         <a>{title}</a>
@@ -179,13 +181,13 @@ const FleetDetails = () => {
                   return (
                     <div
                       key={id}
-                      class={
+                      className={
                         fleetTab == id
                           ? "schedule-booking d-block"
                           : "schedule-booking d-none"
                       }>
-                      <form class="form-booking" method="get" action="#">
-                        <div class="pick-address">
+                      <form className="form-booking" method="get" action="#">
+                        <div className="pick-address">
                           <label>Pick Up Address</label>
                           <input
                             type="text"
@@ -193,7 +195,7 @@ const FleetDetails = () => {
                             placeholder="From: address, airport, hotel, ..."
                           />
                         </div>
-                        <div class="pick-dropday">
+                        <div className="pick-dropday">
                           <label>Drop Off Address</label>
                           <input
                             type="text"
@@ -201,10 +203,10 @@ const FleetDetails = () => {
                             placeholder="From: address, airport, hotel, ..."
                           />
                         </div>
-                        <div class="pick-date">
+                        <div className="pick-date">
                           <label>Pick Up Date</label>
                           <div
-                            class="date form_date"
+                            className="date form_date"
                             data-date=""
                             data-date-format="dd MM yyyy"
                             data-link-field="dtp_input2"
@@ -216,20 +218,20 @@ const FleetDetails = () => {
                               placeholder="Wed 19 July, 2017"
                               readonly
                             />
-                            <span class="add-on">
-                              <i class="icon-remove"></i>
+                            <span className="add-on">
+                              <i className="icon-remove"></i>
                             </span>
-                            <span class="add-on">
-                              <i class="icon-th"></i>
+                            <span className="add-on">
+                              <i className="icon-th"></i>
                             </span>
                           </div>
                           <input type="hidden" id="dtp_input2" value="" />
                           <br />
                         </div>
-                        <div class="pick-time">
+                        <div className="pick-time">
                           <label>Pick Up Time</label>
                           <div
-                            class="controls input-append date form_time"
+                            className="controls input-append date form_time"
                             data-date=""
                             data-date-format="hh:ii p"
                             data-link-field="dtp_input3"
@@ -241,18 +243,18 @@ const FleetDetails = () => {
                               placeholder="12:25 am"
                               readonly
                             />
-                            <span class="add-on">
-                              <i class="icon-remove"></i>
+                            <span className="add-on">
+                              <i className="icon-remove"></i>
                             </span>
-                            <span class="add-on">
-                              <i class="icon-th"></i>
+                            <span className="add-on">
+                              <i className="icon-th"></i>
                             </span>
                           </div>
                           <input type="hidden" id="dtp_input3" value="" />
                           <br />
                         </div>
-                        <div class="btn-submit">
-                          <a href="#" class="register_now">
+                        <div className="btn-submit">
+                          <a href="#" className="register_now">
                             Reserve Now
                             <img src="images/icon/arrow-white.png" alt="" />
                           </a>
@@ -262,40 +264,40 @@ const FleetDetails = () => {
                   );
                 })}
               </div>
-              <div class="popular-fleet">
-                <div class="items">
-                  <div class="content">
-                    <h3 class="title">PER HOUR RATE</h3>
-                    <div class="price">
+              <div className="popular-fleet">
+                <div className="items">
+                  <div className="content">
+                    <h3 className="title">PER HOUR RATE</h3>
+                    <div className="price">
                       <span>$29</span> / hour
                     </div>
                     <p>*$3/hour Fuel Sercharges</p>
                   </div>
-                  <div class="images">
+                  <div className="images">
                     <img src="images/icon/fr1.png" alt="" />
                   </div>
                 </div>
-                <div class="items">
-                  <div class="content">
-                    <h3 class="title">PER HOUR RATE</h3>
-                    <div class="price">
+                <div className="items">
+                  <div className="content">
+                    <h3 className="title">PER HOUR RATE</h3>
+                    <div className="price">
                       <span>$529</span> / hour
                     </div>
                     <p>*$3/hour Fuel Sercharges</p>
                   </div>
-                  <div class="images">
+                  <div className="images">
                     <img src="images/icon/fr2.png" alt="" />
                   </div>
                 </div>
-                <div class="items">
-                  <div class="content">
-                    <h3 class="title">PER HOUR RATE</h3>
-                    <div class="price">
+                <div className="items">
+                  <div className="content">
+                    <h3 className="title">PER HOUR RATE</h3>
+                    <div className="price">
                       <span>$129</span> / hour
                     </div>
                     <p>*depend on picking up area</p>
                   </div>
-                  <div class="images">
+                  <div className="images">
                     <img src="images/icon/fr3.png" alt="" />
                   </div>
                 </div>

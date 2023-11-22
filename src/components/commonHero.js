@@ -7,23 +7,23 @@ const CommonHero = ({
   pageName = "Fleet",
 }) => {
   return (
-    <section class="top-title">
-      <div class="top-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="top-page-heading">
+    <section className="top-title">
+      <div className="top-page">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="top-page-heading">
                 <h1>{title}</h1>
-                <p class="sub-title">{subtitle}</p>
+                <p className="sub-title">{subtitle}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="breadcrumbs">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
+      <div className="breadcrumbs">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
               <ul>
                 <li>
                   <Link href="/">Home </Link>

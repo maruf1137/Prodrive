@@ -41,8 +41,8 @@ const blogData = [
 ];
 const Blog = () => {
   return (
-    <section class="blog-slider change_bg hide_mb primary-slider">
-      <div class="container">
+    <section className="blog-slider change_bg hide_mb primary-slider">
+      <div className="container">
         <TempleteTitle
           title="Articles & Tips"
           secTitle="Articles & Tips"
@@ -59,24 +59,24 @@ const Blog = () => {
           {blogData.map(({ id, title, img, author, date }) => {
             return (
               <SwiperSlide key={id}>
-                <article class="post">
-                  <div class="featured-image">
+                <article className="post">
+                  <div className="featured-image">
                     <img src={img} alt={title} />
                   </div>
-                  <div class="entry-content">
-                    <div class="entry-post-title">
-                      <h4 class="post-title">
+                  <div className="entry-content">
+                    <div className="entry-post-title">
+                      <h4 className="post-title">
                         <a href="#">{title}</a>
                       </h4>
                     </div>
                     <ul>
-                      <li class="author">
+                      <li className="author">
                         <a href="#">
                           <img src="/images/icon/author.png" alt="" />
                           {author}
                         </a>
                       </li>
-                      <li class="date">
+                      <li className="date">
                         <a href="#">
                           <img src="/images/icon/date.png" alt="" />
                           {date}

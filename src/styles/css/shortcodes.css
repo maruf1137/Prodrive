@@ -37,6 +37,7 @@
 	36. Blog Slider
 	37. Testimonial
  */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap");
 
 /*========== Section Title ==========*/
 .template-title {
@@ -2023,7 +2024,7 @@ ul.booking-steps li .text {
   line-height: 80px;
 }
 .sdl-booking .tab_booking li a {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
@@ -2116,7 +2117,7 @@ ul.booking-steps li .text {
   overflow: hidden;
 }
 .schedule-booking .text-over {
-  font-family: Dosis;
+  font-family: inherit;
   font-size: 123.1px;
   line-height: 120px;
   color: #3d3d3d;
@@ -2195,7 +2196,7 @@ ul.booking-steps li .text {
   outline: none;
   height: auto;
   background-color: transparent;
-  font-family: "Dosis";
+  font-family: inherit;
 }
 .schedule-booking .form-booking select {
   position: relative;
@@ -2207,7 +2208,7 @@ ul.booking-steps li .text {
 }
 .schedule-booking .form-booking a {
   display: block;
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   background: #bf9c60;
@@ -2400,7 +2401,7 @@ ul.booking-steps li .text {
   display: none;
 }
 .template-title .title {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 600;
   font-size: 40.02px;
   line-height: 55px;
@@ -2413,7 +2414,7 @@ ul.booking-steps li .text {
   margin-bottom: 37px;
 }
 .has-over .title_over {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 600;
   font-size: 80.5px;
   line-height: 80.5px;
@@ -2499,7 +2500,7 @@ ul.booking-steps li .text {
 }
 .icon-box .tab_services li a {
   display: block;
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 300;
   font-size: 23px;
   color: #000;
@@ -2543,7 +2544,7 @@ hr {
 .icon-box .content-box p {
   display: inline-block;
   vertical-align: top;
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -2558,7 +2559,7 @@ hr {
   text-align: center;
 }
 .icon-box .content-box .view_service a {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 15px;
   color: #1e1e1e;
@@ -2580,7 +2581,7 @@ hr {
   margin-bottom: 30px;
 }
 .our_services .box-service .services_name {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 25px;
   color: #fff;
@@ -2633,7 +2634,7 @@ hr {
   transition: opacity 0.3 ease-in-out;
 }
 .tab_menu li a {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -2813,7 +2814,7 @@ hr {
 }
 .fleet-content .fleet-title a,
 .automatic {
-  font-family: Dosis;
+  font-family: inherit;
   font-size: 20px;
   line-height: 30px;
   color: #1e1e1e;
@@ -2829,7 +2830,7 @@ hr {
 }
 .fleet-content ul li a {
   color: #969696;
-  font-family: Dosis;
+  font-family: inherit;
   font-size: 17px;
 }
 .ffh {
@@ -2947,7 +2948,7 @@ hr {
   margin-bottom: 26px;
 }
 .info-box .booking {
-  font-family: Dosis;
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   color: #fff;

@@ -1,20 +1,17 @@
 import Services from "@/components/home/services";
-import dynamic from "next/dynamic";
-import Fleet from "@/components/home/fleet";
 import InfoBox from "@/components/home/infoBox";
 import Choose from "@/components/home/choose";
 import Blog from "@/components/home/blog";
 import AboutBox from "@/components/home/aboutBox";
-// const Fleet = dynamic(() => import("@/components/home/fleet"));
-// const Fleet = dynamic(() => import("@/components/home/fleet"), {
-//   ssr: false,
-// });
+import Hero from "@/components/home/hero";
+import Fleet2 from "@/components/home/fleet2";
 
 export default function Home() {
   return (
     <div>
+      <Hero />
       <Services />
-      <Fleet />
+      <Fleet2 />
       <InfoBox />
       <AboutBox />
       <Choose />

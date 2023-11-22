@@ -3,18 +3,18 @@ import TempleteTitle from "../templeteTitle";
 
 const AboutBox = () => {
   return (
-    <section class="about-box">
-      <div class="container">
+    <section className="about-box">
+      <div className="container">
         <TempleteTitle
           title="How It Works"
           secTitle="How It Works"
           subtitle="Our booking process is simple and efficient"
         />
-        <div class="row">
-          <div class="col-md-7 full-sm">
+        <div className="row">
+          <div className="col-md-7 full-sm">
             <img src="/images/about/macbook.png" alt="" />
           </div>
-          <div class="col-md-5 full-sm">
+          <div className="col-md-5 full-sm">
             <ul>
               <li>
                 <h3>1 - Book Via App Or Web</h3>

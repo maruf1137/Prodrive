@@ -108,15 +108,15 @@ const BlogArea = () => {
   }, [blogTab]);
 
   return (
-    <section id="main-post" class="ver-1">
-      <div class="container">
-        <div class="row">
-          <div class="block-post">
-            <ul class="tab-post">
+    <section id="main-post" className="ver-1">
+      <div className="container">
+        <div className="row">
+          <div className="block-post">
+            <ul className="tab-post">
               {blogData.btns.map((title, i) => {
                 return (
                   <li
-                    class={blogTab == title ? "active" : ""}
+                    className={blogTab == title ? "active" : ""}
                     data-filter="*"
                     key={i}
                     onClick={() => setBlogTab(title)}>
@@ -125,7 +125,7 @@ const BlogArea = () => {
                 );
               })}
             </ul>
-            <motion.div layout class="post-grid grid">
+            <motion.div layout className="post-grid grid">
               <AnimatePresence>
                 {filtered.map((item) => {
                   const { id, title, img, desc, author, date, url } = item;
@@ -141,24 +141,24 @@ const BlogArea = () => {
                       initial={{ transform: "scale(0.2)" }}
                       animate={{ transform: "scale(1)" }}
                       exit={{ transform: "scale(0.2)" }}
-                      class="post ipsotope transport limousine">
-                      <div class="featured-image">
+                      className="post ipsotope transport limousine">
+                      <div className="featured-image">
                         <img src={img} alt={title} />
                       </div>
-                      <div class="entry-content">
-                        <div class="entry-post-title">
-                          <h4 class="post-title">
+                      <div className="entry-content">
+                        <div className="entry-post-title">
+                          <h4 className="post-title">
                             <Link href={url}>{title}</Link>
                           </h4>
                         </div>
                         <ul>
-                          <li class="author">
+                          <li className="author">
                             <a href="#">
                               <img src="/images/icon/author.png" alt="" />
                               {author}
                             </a>
                           </li>
-                          <li class="date">
+                          <li className="date">
                             <a href="#">
                               <img src="/images/icon/date.png" alt="" />
                               {date}
@@ -166,7 +166,7 @@ const BlogArea = () => {
                           </li>
                         </ul>
                         <p>{desc}</p>
-                        <div class="btn-readmore">
+                        <div className="btn-readmore">
                           <Link href={url}>
                             Read More
                             <img src="images/icon/right-2.png" alt="" />
@@ -180,42 +180,42 @@ const BlogArea = () => {
             </motion.div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pagination-area ver-1">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="pagination-area ver-1">
               <ul>
-                <li class="prev">
-                  <a href="#" class="waves-effect" title="">
+                <li className="prev">
+                  <a href="#" className="waves-effect" title="">
                     <img src="images/icon/prev.png" alt="" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="waves-effect" title="">
+                  <a href="#" className="waves-effect" title="">
                     1
                   </a>
                 </li>
-                <li class="active">
-                  <a href="#" class="waves-effect" title="">
+                <li className="active">
+                  <a href="#" className="waves-effect" title="">
                     2
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="waves-effect" title="">
+                  <a href="#" className="waves-effect" title="">
                     3
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="waves-effect" title="">
+                  <a href="#" className="waves-effect" title="">
                     ...
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="waves-effect" title="">
+                  <a href="#" className="waves-effect" title="">
                     22
                   </a>
                 </li>
-                <li class="next">
-                  <a href="#" class="waves-effect" title="">
+                <li className="next">
+                  <a href="#" className="waves-effect" title="">
                     <img src="images/icon/next.png" alt="" />
                   </a>
                 </li>

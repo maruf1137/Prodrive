@@ -3,28 +3,28 @@ import React from "react";
 const SingleBlogArea = () => {
   return (
     <section id="main-single">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="block-single">
-              <article class="post-single">
-                <div class="featured-post">
-                  <div class="image-post">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8">
+            <div className="block-single">
+              <article className="post-single">
+                <div className="featured-post">
+                  <div className="image-post">
                     <img src="/images/blog/15.jpg" alt="" />
                   </div>
                 </div>
-                <div class="post-title">
+                <div className="post-title">
                   <h4>
                     What To Do if Your Rental Car Has Met With An Accident
                   </h4>
                   <ul>
-                    <li class="author">
+                    <li className="author">
                       <a href="#">
                         <img src="/images/icon/author.png" alt="" />
                         Ali Tufan
                       </a>
                     </li>
-                    <li class="date">
+                    <li className="date">
                       <a href="#">
                         <img src="/images/icon/date.png" alt="" />
                         January 18, 2017
@@ -32,7 +32,7 @@ const SingleBlogArea = () => {
                     </li>
                   </ul>
                 </div>
-                <div class="post-content">
+                <div className="post-content">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisici elit, sed
                     eiusmod tempor incidunt ut labore et dolore magna aliqua.
@@ -56,9 +56,9 @@ const SingleBlogArea = () => {
                       Cum sociis natoque penatus etaed pnis dis parturient
                       montes, scettr aieo ridus mus. Etiam portaem mley
                     </p>
-                    <div class="author">
-                      <span class="name">Ali TUFAN </span>
-                      <span class="option"> - Envato Author</span>
+                    <div className="author">
+                      <span className="name">Ali TUFAN </span>
+                      <span className="option"> - Envato Author</span>
                     </div>
                   </blockquote>
                   <p>
@@ -75,42 +75,42 @@ const SingleBlogArea = () => {
                   </p>
                 </div>
               </article>
-              <div class="direction">
-                <div class="tags">
+              <div className="direction">
+                <div className="tags">
                   <span>Tags:</span>
                   <a href="#">Business Trips</a>, <a href="#">Los Angeles</a>,
                   <a href="#">Luxury</a>,<a href="#">Service</a>
                 </div>
-                <div class="share">
+                <div className="share">
                   <span>Share:</span>
                   <a href="#" title="Facebook">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i className="fa fa-facebook" aria-hidden="true"></i>
                   </a>
                   <a href="#" title="Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i className="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                   <a href="#" title="Instagram">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i className="fa fa-instagram" aria-hidden="true"></i>
                   </a>
                   <a href="#" title="Pinterest">
-                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    <i className="fa fa-pinterest" aria-hidden="true"></i>
                   </a>
                   <a href="#" title="Dribble">
-                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    <i className="fa fa-dribbble" aria-hidden="true"></i>
                   </a>
                   <a href="#" title="Google">
-                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i className="fa fa-google" aria-hidden="true"></i>
                   </a>
                 </div>
               </div>
-              <div class="nav-single">
+              <div className="nav-single">
                 <ul>
-                  <li class="prev">
+                  <li className="prev">
                     <a href="#">
-                      <div class="icon">
+                      <div className="icon">
                         <img src="/images/icon/prev.png" alt="" />
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h4>Previous Post</h4>
                         <p>
                           Getting Started Designing Apps for the Apple Watch
@@ -118,12 +118,12 @@ const SingleBlogArea = () => {
                       </div>
                     </a>
                   </li>
-                  <li class="next">
+                  <li className="next">
                     <a href="#">
-                      <div class="icon">
+                      <div className="icon">
                         <img src="/images/icon/next.png" alt="" />
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h4>Next Post</h4>
                         <p>
                           Getting Started Designing Apps for the Apple Watch
@@ -133,18 +133,20 @@ const SingleBlogArea = () => {
                   </li>
                 </ul>
               </div>
-              <div class="comment-single">
+              <div className="comment-single">
                 <div id="comment-area">
                   <h4>02 Comments</h4>
-                  <ul class="comment-list">
-                    <li class="comment">
-                      <div class="avatar">
+                  <ul className="comment-list">
+                    <li className="comment">
+                      <div className="avatar">
                         <img src="/images/blog/comment-01.jpg" alt="" />
                       </div>
-                      <div class="comment-content">
-                        <div class="name">
+                      <div className="comment-content">
+                        <div className="name">
                           Daniel Vandaft -
-                          <span class="date">December 3, 2017 at 7:24 pm</span>
+                          <span className="date">
+                            December 3, 2017 at 7:24 pm
+                          </span>
                         </div>
                         <p>
                           Comment example here. Nulla risus lacus, vehicula id
@@ -152,21 +154,24 @@ const SingleBlogArea = () => {
                           doloremque laudantium mi quam. Lorem In euismod urna
                           ac massa adipiscing interdum.
                         </p>
-                        <div class="reply">
+                        <div className="reply">
                           <a href="#">
-                            <i class="fa fa-reply" aria-hidden="true"></i>Reply
+                            <i className="fa fa-reply" aria-hidden="true"></i>
+                            Reply
                           </a>
                         </div>
                       </div>
                     </li>
-                    <li class="comment">
-                      <div class="avatar">
+                    <li className="comment">
+                      <div className="avatar">
                         <img src="/images/blog/comment-02.jpg" alt="" />
                       </div>
-                      <div class="comment-content">
-                        <div class="name">
+                      <div className="comment-content">
+                        <div className="name">
                           Vanessa Elina -
-                          <span class="date">December 3, 2017 at 7:24 pm</span>
+                          <span className="date">
+                            December 3, 2017 at 7:24 pm
+                          </span>
                         </div>
                         <p>
                           Comment example here. Nulla risus lacus, vehicula id
@@ -174,20 +179,21 @@ const SingleBlogArea = () => {
                           doloremque laudantium mi quam. Lorem In euismod urna
                           ac massa adipiscing interdum.
                         </p>
-                        <div class="reply">
+                        <div className="reply">
                           <a href="#">
-                            <i class="fa fa-reply" aria-hidden="true"></i>Reply
+                            <i className="fa fa-reply" aria-hidden="true"></i>
+                            Reply
                           </a>
                         </div>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div class="form-comment-area">
+                <div className="form-comment-area">
                   <h4>Leave a Reply</h4>
                   <form action="#" method="get" accept-charset="utf-8">
-                    <div class="comment-form">
-                      <div class="comment-form-name one-half">
+                    <div className="comment-form">
+                      <div className="comment-form-name one-half">
                         <label id="first-name">First Name</label>
                         <input
                           type="text"
@@ -196,7 +202,7 @@ const SingleBlogArea = () => {
                           placeholder="Ali"
                         />
                       </div>
-                      <div class="comment-form-email one-half">
+                      <div className="comment-form-email one-half">
                         <label id="first-name">Email</label>
                         <input
                           type="text"
@@ -206,12 +212,12 @@ const SingleBlogArea = () => {
                         />
                       </div>
                     </div>
-                    <div class="comment-form">
+                    <div className="comment-form">
                       <label>Comment</label>
                       <textarea name="comment" placeholder="Ali"></textarea>
                     </div>
-                    <div class="btn-submit">
-                      <button type="submit" class="waves-effect">
+                    <div className="btn-submit">
+                      <button type="submit" className="waves-effect">
                         Post Comment
                         <img src="/images/icon/right-3.png" alt="" />
                       </button>
@@ -221,11 +227,11 @@ const SingleBlogArea = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="sidebar">
-              <div class="widget widget-search">
+          <div className="col-md-4">
+            <div className="sidebar">
+              <div className="widget widget-search">
                 <form action="#" method="get" accept-charset="utf-8">
-                  <div class="input-search">
+                  <div className="input-search">
                     <input
                       type="text"
                       name="search"
@@ -237,7 +243,7 @@ const SingleBlogArea = () => {
                   </div>
                 </form>
               </div>
-              <div class="widget widget-category">
+              <div className="widget widget-category">
                 <h3>Categories</h3>
                 <ul>
                   <li>
@@ -278,51 +284,51 @@ const SingleBlogArea = () => {
                   </li>
                 </ul>
               </div>
-              <div class="widget widget-news">
+              <div className="widget widget-news">
                 <h3>Latest News</h3>
                 <ul>
                   <li>
-                    <div class="news-image">
+                    <div className="news-image">
                       <img src="/images/blog/news-01.jpg" alt="" />
                     </div>
-                    <div class="news-content">
+                    <div className="news-content">
                       <h6>
                         <a href="#" title="">
                           New Shuttle Train Service
                         </a>
                       </h6>
-                      <p class="date">22.05.2017</p>
+                      <p className="date">22.05.2017</p>
                     </div>
                   </li>
                   <li>
-                    <div class="news-image">
+                    <div className="news-image">
                       <img src="/images/blog/news-02.jpg" alt="" />
                     </div>
-                    <div class="news-content">
+                    <div className="news-content">
                       <h6>
                         <a href="#" title="">
                           Brooklyn Airport Service
                         </a>
                       </h6>
-                      <p class="date">22.05.2017</p>
+                      <p className="date">22.05.2017</p>
                     </div>
                   </li>
                   <li>
-                    <div class="news-image">
+                    <div className="news-image">
                       <img src="/images/blog/news-03.jpg" alt="" />
                     </div>
-                    <div class="news-content">
+                    <div className="news-content">
                       <h6>
                         <a href="#" title="">
                           New Shuttle Train Service
                         </a>
                       </h6>
-                      <p class="date">22.05.2017</p>
+                      <p className="date">22.05.2017</p>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="widget widget-tags">
+              <div className="widget widget-tags">
                 <h3>Tags</h3>
                 <ul>
                   <li>

@@ -113,29 +113,24 @@ const Fleet = () => {
   const [fleetTab, setFleetTab] = useState("All");
 
   return (
-    <section class="block-fleet fleet-section primary-slider change_bg">
-      <div class="container">
+    <section className="block-fleet fleet-section primary-slider change_bg">
+      <div className="container">
         <TempleteTitle
           title="The Prodrive Fleet"
           secTitle="The Prodrive Fleet"
           subtitle="We also take custom orders and will help you acquire a specific yacht"
         />
-        <ul class="tab_menu">
+        <ul className="tab_menu">
           {fleetData.btns.map(({ id, title }) => {
             return (
-              <li class={fleetTab == title ? "current" : ""} key={id}>
-                <a href="#tab-1" onClick={() => setFleetTab(title)}>
-                  {title}
-                </a>
+              <li className={fleetTab == title ? "current" : ""} key={id}>
+                <a onClick={() => setFleetTab(title)}>{title}</a>
               </li>
             );
           })}
         </ul>
         {/* item all */}
-        <div
-          className={
-            fleetTab == "All" ? "fleet-carousel active" : "fleet-carousel"
-          }>
+        <div className="fleet-carousel active">
           <Swiper
             pagination={{
               clickable: true,
@@ -150,23 +145,23 @@ const Fleet = () => {
                 const { id, title, img, author, automatic, mail } = item;
                 return (
                   <SwiperSlide key={id}>
-                    <div class="fleet-item">
-                      <div class="images px-5">
+                    <div className="fleet-item">
+                      <div className="images px-5">
                         <img src={img} alt={title} />
                       </div>
-                      <div class="fleet-content">
-                        <h4 class="fleet-title">
+                      <div className="fleet-content">
+                        <h4 className="fleet-title">
                           <a href="#">{title}</a>
                         </h4>
-                        <h4 class="automatic">{automatic}</h4>
+                        <h4 className="automatic">{automatic}</h4>
                         <ul>
-                          <li class="author">
+                          <li className="author">
                             <a href="#">
                               <img src="/images/icon/author.png" alt="" />
                               {author}
                             </a>
                           </li>
-                          <li class="mail">
+                          <li className="mail">
                             <a href="#">
                               <img src="/images/icon/mail.png" alt="" />
                               {mail}
@@ -182,10 +177,7 @@ const Fleet = () => {
         </div>
 
         {/* item Party Bus */}
-        <div
-          className={
-            fleetTab == "Party Bus" ? "fleet-carousel active" : "fleet-carousel"
-          }>
+        <div className="fleet-carousel">
           <Swiper
             pagination={{
               clickable: true,
@@ -200,23 +192,23 @@ const Fleet = () => {
                 const { id, title, img, author, automatic, mail } = item;
                 return (
                   <SwiperSlide key={id}>
-                    <div class="fleet-item">
-                      <div class="images px-5">
+                    <div className="fleet-item">
+                      <div className="images px-5">
                         <img src={img} alt={title} />
                       </div>
-                      <div class="fleet-content">
-                        <h4 class="fleet-title">
+                      <div className="fleet-content">
+                        <h4 className="fleet-title">
                           <a href="#">{title}</a>
                         </h4>
-                        <h4 class="automatic">{automatic}</h4>
+                        <h4 className="automatic">{automatic}</h4>
                         <ul>
-                          <li class="author">
+                          <li className="author">
                             <a href="#">
                               <img src="/images/icon/author.png" alt="" />
                               {author}
                             </a>
                           </li>
-                          <li class="mail">
+                          <li className="mail">
                             <a href="#">
                               <img src="/images/icon/mail.png" alt="" />
                               {mail}
@@ -232,10 +224,7 @@ const Fleet = () => {
         </div>
 
         {/* item Sedan */}
-        <div
-          className={
-            fleetTab == "Sedan" ? "fleet-carousel active" : "fleet-carousel"
-          }>
+        <div className="fleet-carousel">
           <Swiper
             pagination={{
               clickable: true,
@@ -250,23 +239,23 @@ const Fleet = () => {
                 const { id, title, img, author, automatic, mail } = item;
                 return (
                   <SwiperSlide key={id}>
-                    <div class="fleet-item">
-                      <div class="images px-5">
+                    <div className="fleet-item">
+                      <div className="images px-5">
                         <img src={img} alt={title} />
                       </div>
-                      <div class="fleet-content">
-                        <h4 class="fleet-title">
+                      <div className="fleet-content">
+                        <h4 className="fleet-title">
                           <a href="#">{title}</a>
                         </h4>
-                        <h4 class="automatic">{automatic}</h4>
+                        <h4 className="automatic">{automatic}</h4>
                         <ul>
-                          <li class="author">
+                          <li className="author">
                             <a href="#">
                               <img src="/images/icon/author.png" alt="" />
                               {author}
                             </a>
                           </li>
-                          <li class="mail">
+                          <li className="mail">
                             <a href="#">
                               <img src="/images/icon/mail.png" alt="" />
                               {mail}
@@ -282,12 +271,7 @@ const Fleet = () => {
         </div>
 
         {/* item Stretch Limo */}
-        <div
-          className={
-            fleetTab == "Stretch Limo"
-              ? "fleet-carousel active"
-              : "fleet-carousel"
-          }>
+        <div className="fleet-carousel">
           <Swiper
             pagination={{
               clickable: true,
@@ -302,23 +286,23 @@ const Fleet = () => {
                 const { id, title, img, author, automatic, mail } = item;
                 return (
                   <SwiperSlide key={id}>
-                    <div class="fleet-item">
-                      <div class="images px-5">
+                    <div className="fleet-item">
+                      <div className="images px-5">
                         <img src={img} alt={title} />
                       </div>
-                      <div class="fleet-content">
-                        <h4 class="fleet-title">
+                      <div className="fleet-content">
+                        <h4 className="fleet-title">
                           <a href="#">{title}</a>
                         </h4>
-                        <h4 class="automatic">{automatic}</h4>
+                        <h4 className="automatic">{automatic}</h4>
                         <ul>
-                          <li class="author">
+                          <li className="author">
                             <a href="#">
                               <img src="/images/icon/author.png" alt="" />
                               {author}
                             </a>
                           </li>
-                          <li class="mail">
+                          <li className="mail">
                             <a href="#">
                               <img src="/images/icon/mail.png" alt="" />
                               {mail}

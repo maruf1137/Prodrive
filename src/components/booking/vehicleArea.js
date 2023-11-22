@@ -4,25 +4,25 @@ import Link from "next/link";
 
 const vehicleArea = () => {
   return (
-    <section class="select-vehicle-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+    <section className="select-vehicle-area">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
             {vehicleData.map((item) => {
               const { id, title, img, subtitle, desc, author, mail, price } =
                 item;
               const s1 = id % 2 == 0 ? true : false;
               return (
-                <div class={s1 ? "select-car s1" : "select-car"} key={id}>
-                  <div class="image-car one-half">
+                <div className={s1 ? "select-car s1" : "select-car"} key={id}>
+                  <div className="image-car one-half">
                     <img src={img} alt={title} />
                   </div>
-                  <div class="box-text one-half">
-                    <div class="top">
+                  <div className="box-text one-half">
+                    <div className="top">
                       <h3>{title}</h3>
-                      <div class="name-car">{subtitle}</div>
+                      <div className="name-car">{subtitle}</div>
                     </div>
-                    <div class="content">
+                    <div className="content">
                       <p>{desc}</p>
                       <ul>
                         <li>
@@ -34,18 +34,18 @@ const vehicleArea = () => {
                         </li>
                       </ul>
                     </div>
-                    <div class="bottom">
-                      <div class="price">
+                    <div className="bottom">
+                      <div className="price">
                         <span>${price}</span> / hour
                       </div>
-                      <div class="btn-select">
+                      <div className="btn-select">
                         <Link href="/booking/car-options" title="">
                           SELECT
                         </Link>
                       </div>
                     </div>
                   </div>
-                  <div class="clearfix"></div>
+                  <div className="clearfix"></div>
                 </div>
               );
             })}

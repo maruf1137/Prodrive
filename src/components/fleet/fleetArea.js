@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const FleetArea = () => {
   return (
-    <section class="our-fleet-area fix-loadmore">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+    <section className="our-fleet-area fix-loadmore">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
             <TempleteTitle
               title="The Prodrive Fleet"
               secTitle="The Prodrive Fleet"
@@ -17,22 +17,22 @@ const FleetArea = () => {
             />
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           {vehicleData.map((item) => {
             const { id, title, img, subtitle, author, mail, price } = item;
             return (
-              <div class="col-md-6" key={id}>
-                <div class="select-car al-center">
-                  <div class="select-box">
-                    <div class="image-car">
+              <div className="col-md-6" key={id}>
+                <div className="select-car al-center">
+                  <div className="select-box">
+                    <div className="image-car">
                       <img src={img} alt={title} />
                     </div>
-                    <div class="box-text">
-                      <div class="top">
+                    <div className="box-text">
+                      <div className="top">
                         <h3>{title}</h3>
-                        <div class="name-car">{subtitle}</div>
+                        <div className="name-car">{subtitle}</div>
                       </div>
-                      <div class="content">
+                      <div className="content">
                         <ul>
                           <li>
                             <img src="images/booking/people.png" alt="" />{" "}
@@ -43,11 +43,11 @@ const FleetArea = () => {
                           </li>
                         </ul>
                       </div>
-                      <div class="bottom">
-                        <div class="price">
+                      <div className="bottom">
+                        <div className="price">
                           <span>${price}</span> / hour
                         </div>
-                        <div class="btn-select">
+                        <div className="btn-select">
                           <Link href="/fleet/fleet-details" title="">
                             View Details
                           </Link>
@@ -59,21 +59,21 @@ const FleetArea = () => {
               </div>
             );
           })}
-          <div class="col-md-6">
-            <div class="select-car al-center">
-              <div class="select-box">
-                <div class="image-car">
+          <div className="col-md-6">
+            <div className="select-car al-center">
+              <div className="select-box">
+                <div className="image-car">
                   <img src="images/booking/car-01.jpg" alt="" />
                 </div>
-                <div class="box-text">
-                  <div class="top">
+                <div className="box-text">
+                  <div className="top">
                     <h3>Economy Premium</h3>
-                    <div class="name-car">
+                    <div className="name-car">
                       Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
                       similar
                     </div>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <ul>
                       <li>
                         <img src="images/booking/people.png" alt="" /> Max . 3
@@ -83,11 +83,11 @@ const FleetArea = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="bottom">
-                    <div class="price">
+                  <div className="bottom">
+                    <div className="price">
                       <span>$49</span> / hour
                     </div>
-                    <div class="btn-select">
+                    <div className="btn-select">
                       <a href="#" title="">
                         View Details
                       </a>
@@ -97,21 +97,21 @@ const FleetArea = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="select-car al-center">
-              <div class="select-box">
-                <div class="image-car">
+          <div className="col-md-6">
+            <div className="select-car al-center">
+              <div className="select-box">
+                <div className="image-car">
                   <img src="images/booking/car-02.jpg" alt="" />
                 </div>
-                <div class="box-text">
-                  <div class="top">
+                <div className="box-text">
+                  <div className="top">
                     <h3>Business Class</h3>
-                    <div class="name-car">
+                    <div className="name-car">
                       Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
                       similar
                     </div>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <ul>
                       <li>
                         <img src="images/booking/people.png" alt="" /> Max . 3
@@ -121,11 +121,11 @@ const FleetArea = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="bottom">
-                    <div class="price">
+                  <div className="bottom">
+                    <div className="price">
                       <span>$99</span> / hour
                     </div>
-                    <div class="btn-select">
+                    <div className="btn-select">
                       <a href="#" title="">
                         View Details
                       </a>
@@ -135,21 +135,21 @@ const FleetArea = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="select-car al-center">
-              <div class="select-box">
-                <div class="image-car">
+          <div className="col-md-6">
+            <div className="select-car al-center">
+              <div className="select-box">
+                <div className="image-car">
                   <img src="images/booking/car-03.png" alt="" />
                 </div>
-                <div class="box-text">
-                  <div class="top">
+                <div className="box-text">
+                  <div className="top">
                     <h3>Business Van</h3>
-                    <div class="name-car">
+                    <div className="name-car">
                       Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
                       similar
                     </div>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <ul>
                       <li>
                         <img src="images/booking/people.png" alt="" /> Max . 3
@@ -159,11 +159,11 @@ const FleetArea = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="bottom">
-                    <div class="price">
+                  <div className="bottom">
+                    <div className="price">
                       <span>$189</span> / hour
                     </div>
-                    <div class="btn-select">
+                    <div className="btn-select">
                       <a href="#" title="">
                         View Details
                       </a>
@@ -173,21 +173,21 @@ const FleetArea = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="select-car al-center">
-              <div class="select-box">
-                <div class="image-car">
+          <div className="col-md-6">
+            <div className="select-car al-center">
+              <div className="select-box">
+                <div className="image-car">
                   <img src="images/booking/car-04.jpg" alt="" />
                 </div>
-                <div class="box-text">
-                  <div class="top">
+                <div className="box-text">
+                  <div className="top">
                     <h3>First Class</h3>
-                    <div class="name-car">
+                    <div className="name-car">
                       Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
                       similar
                     </div>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <ul>
                       <li>
                         <img src="images/booking/people.png" alt="" /> Max . 3
@@ -197,11 +197,11 @@ const FleetArea = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="bottom">
-                    <div class="price">
+                  <div className="bottom">
+                    <div className="price">
                       <span>$259</span> / hour
                     </div>
-                    <div class="btn-select">
+                    <div className="btn-select">
                       <a href="#" title="">
                         View Details
                       </a>
@@ -211,7 +211,7 @@ const FleetArea = () => {
               </div>
             </div>
           </div>
-          <div class="loadmore">
+          <div className="loadmore">
             <a href="#" title="">
               Load More
             </a>

@@ -4,60 +4,60 @@ const Footer = () => {
   return (
     <>
       {/* Start Footer */}
-      <footer id="footer" class="footer-03 parallax">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 ft1 mb">
-              <div class="widget-footer widget-about">
-                <div class="logo-ft">
+      <footer id="footer" className="footer-03 parallax">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3 ft1 mb">
+              <div className="widget-footer widget-about">
+                <div className="logo-ft">
                   <a href="#" title="">
                     <img src="images/logo-ft.png" alt="" />
                   </a>
                 </div>
-                <ul class="infomation-ft">
+                <ul className="infomation-ft">
                   <li>
                     329 Queensberry Street, North Melbourne VIC 3051, Australia.
                   </li>
                   <li>123 456 7890</li>
                   <li>support@prodrive.com</li>
                 </ul>
-                <ul class="social-ft">
+                <ul className="social-ft">
                   <li>
                     <a href="#" title="Facebook">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <i className="fa fa-facebook" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="Twitter">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i className="fa fa-twitter" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="Instagram">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                      <i className="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="Pinterest">
-                      <i class="fa fa-pinterest" aria-hidden="true"></i>
+                      <i className="fa fa-pinterest" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="Dribble">
-                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                      <i className="fa fa-dribbble" aria-hidden="true"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="Google">
-                      <i class="fa fa-google" aria-hidden="true"></i>
+                      <i className="fa fa-google" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-2 ft2 mb">
-              <div class="widget-footer widget-services">
-                <h3 class="title-ft">Our services</h3>
+            <div className="col-md-2 ft2 mb">
+              <div className="widget-footer widget-services">
+                <h3 className="title-ft">Our services</h3>
                 <ul>
                   <li>
                     <a href="#" title="">
@@ -77,9 +77,9 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-2 ft2 mb">
-              <div class="widget-footer widget-services">
-                <h3 class="title-ft">About us</h3>
+            <div className="col-md-2 ft2 mb">
+              <div className="widget-footer widget-services">
+                <h3 className="title-ft">About us</h3>
                 <ul>
                   <li>
                     <a href="#" title="">
@@ -119,9 +119,9 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-2 ft2 mb">
-              <div class="widget-footer widget-services">
-                <h3 class="title-ft">Our cars</h3>
+            <div className="col-md-2 ft2 mb">
+              <div className="widget-footer widget-services">
+                <h3 className="title-ft">Our cars</h3>
                 <ul>
                   <li>
                     <a href="#" title="">
@@ -161,26 +161,26 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-3 ft3 mb">
-              <div class="widget-footer widget-apps">
+            <div className="col-md-3 ft3 mb">
+              <div className="widget-footer widget-apps">
                 <ul>
-                  <li class="app-store">
+                  <li className="app-store">
                     <a href="#" title="App Store">
-                      <div class="image-app">
+                      <div className="image-app">
                         <img src="images/icon/app-store.png" alt="" />
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h5>App Store</h5>
                         <p>Available now on the</p>
                       </div>
                     </a>
                   </li>
-                  <li class="google-play">
+                  <li className="google-play">
                     <a href="#" title="google-play">
-                      <div class="image-app">
+                      <div className="image-app">
                         <img src="images/icon/google-play.png" alt="" />
                       </div>
-                      <div class="text">
+                      <div className="text">
                         <h5>Google Play</h5>
                         <p>Get in on</p>
                       </div>
@@ -191,12 +191,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="footer-bottom has-parallax">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="title">Our Top Cities</div>
-                <ul class="city">
+        <div className="footer-bottom has-parallax">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="title">Our Top Cities</div>
+                <ul className="city">
                   <li>
                     <a href="#" title="">
                       New York
@@ -240,10 +240,10 @@ const Footer = () => {
       </footer>
       {/* End Footer */}
       {/* <!-- Start copyright --> */}
-      <section class="copyright cpr-01">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
+      <section className="copyright cpr-01">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
               <p>Copyright Prodrive © 2018. All Rights Reserved</p>
             </div>
           </div>

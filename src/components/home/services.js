@@ -58,12 +58,12 @@ const Services = () => {
         secTitle="Our Services"
         subtitle="Our aim is to fill a gap in niche market of Trade"
       />
-      <section class="icon-box">
-        <div class="container">
-          <ul class="tab_services">
+      <section className="icon-box">
+        <div className="container">
+          <ul className="tab_services">
             {serviceData.btns.map(({ id, title, img }) => {
               return (
-                <li class={serviceTab === id ? "active" : ""} key={id}>
+                <li className={serviceTab === id ? "active" : ""} key={id}>
                   <a href="#sv-1" onClick={() => setServiceTab(id)}>
                     <img src={img} alt={title} />
                     {title}
@@ -76,18 +76,18 @@ const Services = () => {
             const { id, title, desc1, desc2 } = item;
             return (
               <div
-                class={
+                className={
                   serviceTab == id
                     ? "content-box d-block"
                     : "content-box d-none"
                 }
                 key={id}>
-                <div class="position-content">
-                  <p class="left-content">{title}</p>
-                  <p class="center-content">{desc1}</p>
-                  <p class="right-content">{desc2}</p>
+                <div className="position-content">
+                  <p className="left-content">{title}</p>
+                  <p className="center-content">{desc1}</p>
+                  <p className="right-content">{desc2}</p>
                 </div>
-                <div class="view_service">
+                <div className="view_service">
                   <a href="#">
                     More Service
                     <img src="/images/icon/arrow-next.png" alt="" />

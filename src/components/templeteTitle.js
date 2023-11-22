@@ -6,11 +6,11 @@ const TempleteTitle = ({
   subtitle = "Our aim is to fill a gap in niche market of Trade",
 }) => {
   return (
-    <section class="template-title has-over">
-      <div class="container">
-        <h3 class="title">{title}</h3>
-        <span class="title_over">{secTitle}</span>
-        <p class="subtitle">{subtitle}</p>
+    <section className="template-title has-over">
+      <div className="container">
+        <h3 className="title">{title}</h3>
+        <span className="title_over">{secTitle}</span>
+        <p className="subtitle">{subtitle}</p>
       </div>
     </section>
   );
