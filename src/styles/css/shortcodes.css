@@ -1442,9 +1442,10 @@ ul.booking-steps li .text {
 }
 .wehicles {
   position: absolute;
+  top: 90px;
   background-color: rgba(215, 210, 189, 0.95);
   width: 100%;
-  z-index: 9;
+  z-index: 50;
   padding: 0 65px;
   opacity: 0;
   -webkit-transform: translate3d(0, 20px, 0);
@@ -1455,9 +1456,11 @@ ul.booking-steps li .text {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  visibility: hidden;
 }
 .wehicles.active {
   opacity: 1;
+  visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);

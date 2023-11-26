@@ -22,15 +22,15 @@ const fleetData = {
     },
     {
       id: 2,
-      title: "Party Bus",
+      title: "1-4 Pax",
     },
     {
       id: 3,
-      title: "Sedan",
+      title: "6-9 Pax",
     },
     {
       id: 4,
-      title: "Stretch Limo",
+      title: "10+ Pax",
     },
   ],
   content: [

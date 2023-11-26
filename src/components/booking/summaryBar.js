@@ -3,7 +3,11 @@ import React from "react";
 const SummaryBar = ({ summaryBarOpen }) => {
   return (
     <section
-      className={summaryBarOpen ? "summary-bar-area open" : "summary-bar-area"}>
+      className={
+        summaryBarOpen
+          ? "summary-bar-area summary-bar-area-open open"
+          : "summary-bar-area"
+      }>
       <div className="container">
         <div className="row">
           <div className="col-md-12">

@@ -19,13 +19,13 @@ const Fleet2 = () => {
             <a href="#tab-1">All</a>
           </li>
           <li>
-            <a href="#tab-2">Party Bus</a>
+            <a href="#tab-2">1-4 Pax</a>
           </li>
           <li>
-            <a href="#tab-3">Sedan</a>
+            <a href="#tab-3">6-9 pax</a>
           </li>
           <li>
-            <a href="#tab-4">Stretch Limo</a>
+            <a href="#tab-4">10+ Pax</a>
           </li>
         </ul>
         <div id="tab-1" className="fleet-carousel" data-columns="3">
@@ -186,7 +186,7 @@ const Fleet2 = () => {
           <div className="owl-carousel">
             <div className="fleet-item">
               <div className="images">
-                <img src="images/fleet/car-02.png" alt="" />
+                <img src="images/fleet/car-01.png" alt="" />
               </div>
               <div className="fleet-content">
                 <h4 className="fleet-title">
@@ -211,7 +211,7 @@ const Fleet2 = () => {
             </div>
             <div className="fleet-item">
               <div className="images">
-                <img src="images/fleet/car-01.png" alt="" />
+                <img src="images/fleet/car-02.png" alt="" />
               </div>
               <div className="fleet-content">
                 <h4 className="fleet-title">
@@ -266,6 +266,56 @@ const Fleet2 = () => {
               <div className="fleet-content">
                 <h4 className="fleet-title">
                   <a href="#">Mercedes Benz S350 L BlueTec</a>
+                </h4>
+                <h4 className="automatic">4 Matic</h4>
+                <ul>
+                  <li className="author">
+                    <a href="#">
+                      <img src="images/icon/author.png" alt="" />
+                      Max . 3
+                    </a>
+                  </li>
+                  <li className="mail">
+                    <a href="#">
+                      <img src="images/icon/mail.png" alt="" />
+                      Max . 2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="fleet-item">
+              <div className="images">
+                <img src="images/fleet/car-02.png" alt="" />
+              </div>
+              <div className="fleet-content">
+                <h4 className="fleet-title">
+                  <a href="#">Mercedes Benz AMG S63 L</a>
+                </h4>
+                <h4 className="automatic">4 Matic</h4>
+                <ul>
+                  <li className="author">
+                    <a href="#">
+                      <img src="images/icon/author.png" alt="" />
+                      Max . 3
+                    </a>
+                  </li>
+                  <li className="mail">
+                    <a href="#">
+                      <img src="images/icon/mail.png" alt="" />
+                      Max . 2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="fleet-item">
+              <div className="images">
+                <img src="images/fleet/car-03.png" alt="" />
+              </div>
+              <div className="fleet-content">
+                <h4 className="fleet-title">
+                  <a href="#">Mercedes Benz V250</a>
                 </h4>
                 <h4 className="automatic">4 Matic</h4>
                 <ul>

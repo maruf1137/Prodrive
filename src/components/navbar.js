@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import Taxis from "./taxis";
 
 const navigationData = [
   {
@@ -73,6 +74,7 @@ const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
   const [navigationStateData, setNavigationStateData] =
     useState(navigationData);
+  const [taxisActive, setTaxisActive] = useState(false);
 
   const handleNavigationDropdown = (id) => {
     console.log("first");
@@ -88,152 +90,185 @@ const Navbar = () => {
   };
 
   return (
-    <header id="header" className="header-03">
-      <div className="container-fluid">
-        <div className="onclick" onClick={() => setNavigation(true)}>
-          <span></span>
-          Menu
-        </div>
-        <ul className="info-contact">
-          <li className="vehicle">Wehicles</li>
-          <li>(880) 172 380 956</li>
-        </ul>
-        <div className={navigation ? "navigation active" : "navigation"}>
-          <div
-            id="main-menu"
-            className={navigation ? "main-menu active" : "main-menu"}>
-            <ul className="top-menuleft">
-              <li className="x_close">
-                <a
-                  href="#"
-                  className="close_x"
-                  onClick={() => setNavigation(false)}>
-                  <img src="/images/icon/close_x.png" alt="" />
-                </a>
-              </li>
-              <li className="x_logo">
-                <Link href="/" title="logo prodrive">
-                  <img src="/images/logowhite.png" alt="" />
-                </Link>
-              </li>
-              <li className="x_language">
-                <img src="/images/icon/web.png" alt="" />
-                <select id="languages">
-                  <option value="saab">KR</option>
-                  <option value="vw">FR</option>
-                  <option value="audi" selected>
-                    TR
-                  </option>
-                </select>
-              </li>
-            </ul>
-            <ul className="menu">
-              {navigationStateData.map(
-                ({ id, title, url, items, isActive }) => {
-                  if (!items) {
-                    return (
-                      <li className="has-dropdown" key={id}>
-                        {/* <span>Home</span> */}
-                        <Link href={url} onClick={() => setNavigation(false)}>
-                          <span>{title}</span>
-                        </Link>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li
-                        className="has-dropdown"
-                        key={id}
-                        onClick={() => handleNavigationDropdown(id)}>
-                        <span>{title}</span>
-                        <ul
-                          className="menu-dropdown"
-                          style={
-                            isActive
-                              ? { display: "block" }
-                              : { display: "none" }
-                          }>
-                          {items.map(({ title, url }, index) => {
-                            return (
-                              <li key={index}>
-                                <Link
-                                  href={url}
-                                  onClick={() => setNavigation(false)}>
-                                  {title}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </li>
-                    );
-                  }
-                }
-              )}
-            </ul>
-            <div className="button">
-              <a href="#" className="quote" title="">
-                Get A Quote
-              </a>
-              <a href="booking-car-class.html" className="booking" title="">
-                Online Booking
-              </a>
-            </div>
-            <ul className="social-ft">
-              <li>
-                <a href="#" title="Facebook">
-                  <i className="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Twitter">
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Instagram">
-                  <i className="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Pinterest">
-                  <i className="fa fa-pinterest" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Dribble">
-                  <i className="fa fa-dribbble" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Google">
-                  <i className="fa fa-google" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
+    <>
+      <header id="header" className="header-03">
+        <div className="container-fluid d-flex align-items-center d-md-block">
+          {/* <div
+            className="onclick d-md-none mr-3 mr-md-0"
+            onClick={() => setNavigation(true)}>
+            <span></span>
+          </div> */}
+          <div className="onclick" onClick={() => setNavigation(true)}>
+            <span></span>
+            <p className="d-none d-md-block">Menu</p>
           </div>
-        </div>
-        <div id="logo" className="logo-pro">
-          <Link href="/" title="logo prodrive">
-            <img src="/images/logo_dark.png" alt="" />
-          </Link>
-        </div>
-        <div className="box-right">
-          <div className="login">
-            <a href="#">Login/</a>
-            <a href="#">Register</a>
-          </div>
-          <ul className="quocte-booking">
-            <li>
-              <a href="#">Get A Quote</a>
+          <ul className="info-contact">
+            <li>Tours</li>
+            <li
+              className="vehicle"
+              onClick={() => setTaxisActive(!taxisActive)}>
+              Taxis
             </li>
-            <li>
-              <a href="#">Online Booking</a>
+            <li>(880) 172 380 956</li>
+          </ul>
+
+          <div className={navigation ? "navigation active" : "navigation"}>
+            <div
+              id="main-menu"
+              className={navigation ? "main-menu active" : "main-menu"}>
+              <ul className="top-menuleft d-flex align-items-center justify-content-between">
+                <li className="x_logo">
+                  <Link href="/" title="logo prodrive">
+                    <img src="/images/logowhite.png" alt="" />
+                  </Link>
+                </li>
+                <li className="x_language mb-0">
+                  <img src="/images/icon/web.png" alt="" />
+                  <select id="languages">
+                    <option value="saab">KR</option>
+                    <option value="vw">FR</option>
+                    <option value="audi" selected>
+                      TR
+                    </option>
+                  </select>
+                </li>
+                <li className="x_close mb-0">
+                  <a
+                    href="#"
+                    className="close_x"
+                    onClick={() => setNavigation(false)}>
+                    <img src="/images/icon/close_x.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+              <ul className="menu">
+                {navigationStateData.map(
+                  ({ id, title, url, items, isActive }) => {
+                    if (!items) {
+                      return (
+                        <li className="has-dropdown" key={id}>
+                          {/* <span>Home</span> */}
+                          <Link href={url} onClick={() => setNavigation(false)}>
+                            <span>{title}</span>
+                          </Link>
+                        </li>
+                      );
+                    } else {
+                      return (
+                        <li
+                          className="has-dropdown"
+                          key={id}
+                          onClick={() => handleNavigationDropdown(id)}>
+                          <span>{title}</span>
+                          <ul
+                            className="menu-dropdown"
+                            style={
+                              isActive
+                                ? { display: "block" }
+                                : { display: "none" }
+                            }>
+                            {items.map(({ title, url }, index) => {
+                              return (
+                                <li key={index}>
+                                  <Link
+                                    href={url}
+                                    onClick={() => setNavigation(false)}>
+                                    {title}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </li>
+                      );
+                    }
+                  }
+                )}
+              </ul>
+              <div className="button">
+                <div className="d-flex align-items-center mb-3">
+                  <Link href="#" className="quote mr-3 " title="">
+                    Login?Register
+                  </Link>
+                  <Link href="#" className="booking" title="">
+                    Online Booking
+                  </Link>
+                </div>
+                <div className="d-flex align-items-center">
+                  <Link href="#" className="booking mr-3" title="">
+                    Contact Us
+                  </Link>
+                  <Link href="#" className="quote" title="">
+                    Get A Quote
+                  </Link>
+                </div>
+              </div>
+              <ul className="social-ft">
+                <li>
+                  <a href="#" title="Facebook">
+                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Twitter">
+                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Instagram">
+                    <i className="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Pinterest">
+                    <i className="fa fa-pinterest" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Dribble">
+                    <i className="fa fa-dribbble" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="Google">
+                    <i className="fa fa-google" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="logo" className="logo-pro">
+            <Link href="/" title="logo prodrive">
+              <img src="/images/logo_dark.png" alt="" className="w-auto" />
+            </Link>
+          </div>
+          <div className="box-right">
+            <div className="login">
+              <a href="#">Login/</a>
+              <a href="#">Register</a>
+            </div>
+            <ul className="quocte-booking">
+              <li>
+                <a href="#">Get A Quote</a>
+              </li>
+              <li>
+                <a href="#">Online Booking</a>
+              </li>
+            </ul>
+          </div>
+          <ul className="info-contact d-flex flex-nowrap d-md-none ml-auto info-contact-mbl">
+            <li className="border-l-0">Tours</li>
+            <li
+              className={taxisActive ? "vehicle active" : "vehicle"}
+              onClick={() => setTaxisActive(!taxisActive)}>
+              Taxis
             </li>
           </ul>
         </div>
-      </div>
-    </header>
+      </header>
+      <Taxis taxisActive={taxisActive} />
+    </>
   );
 };
 

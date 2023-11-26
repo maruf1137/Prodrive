@@ -60,11 +60,17 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
   }, [stepNo]);
 
   return (
-    <section className="booking-steps-area mht">
+    <section
+      className={
+        summaryBarOpen
+          ? "booking-steps-area summary-bar-area-open mht"
+          : "booking-steps-area mht"
+      }>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <ul className="booking-steps">
+            {/* for desktop */}
+            <ul className="booking-steps d-none d-lg-block">
               {stepsStateData.map((item) => {
                 const { id, img, title, isActive } = item;
                 return (
@@ -78,7 +84,33 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
                 );
               })}
             </ul>
+            {/* for mbl */}
+            <ul className="booking-steps d-flex justify-content-between d-lg-none">
+              {stepsStateData.map((item) => {
+                const { id, img, title, isActive } = item;
+                return (
+                  <li className={isActive ? "active m-0" : " m-0"} key={id}>
+                    <span>{id}</span>
+                    <div className="icon">
+                      <img src={img} alt={title} />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
             <div
+              className={
+                summaryBarOpen ? "details active mt-2" : "details mt-2"
+              }>
+              <p className="text-white">Booking Details</p>
+              <button
+                className="btn btn-primary"
+                onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+                {summaryBarOpen ? "Hide" : "Show"}
+                <span className="ion-ios-arrow-thin-down"></span>
+              </button>
+            </div>
+            {/* <div
               className={
                 summaryBarOpen
                   ? "button-summary-bar open"
@@ -90,7 +122,7 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
               </div>
               <p className="show">Select Location & Date</p>
               <p className="hide">Hide</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

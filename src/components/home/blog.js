@@ -53,8 +53,21 @@ const Blog = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          slidesPerView={3}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={0}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
           className="mySwiper">
           {blogData.map(({ id, title, img, author, date }) => {
             return (

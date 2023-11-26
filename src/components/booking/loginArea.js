@@ -43,7 +43,7 @@ const LoginArea = () => {
               </ul>
               <div className="login-content">
                 {tabBtnActive == 1 ? (
-                  <div id="tab-1" className="content-tab">
+                  <div>
                     <div className="login-form">
                       <form
                         action="#"
@@ -73,7 +73,7 @@ const LoginArea = () => {
                           </div>
                         </div>
                         <div className="clearfix"></div>
-                        <div className="one-half">
+                        <div className="d-flex justify-content-between align-items-center mx-3">
                           <div className="remember">
                             <input
                               type="checkbox"
@@ -82,14 +82,14 @@ const LoginArea = () => {
                             />
                             <label for="remember">Remember me</label>
                           </div>
-                        </div>
-                        <div className="one-half">
                           <div className="btn-submit">
                             <a href="#" title="">
                               Lost Your Password ?
                             </a>
-                            <button type="submit">LOGIN</button>
                           </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                          <button type="submit">LOGIN</button>
                         </div>
                         <div className="clearfix"></div>
                       </form>
@@ -97,7 +97,7 @@ const LoginArea = () => {
                     <div className="login-social">
                       <span>OR</span>
                       <p>You can log in quickly with your account.</p>
-                      <ul className="social">
+                      <ul className="social d-flex align-items-center justify-content-between">
                         <li className="facebook">
                           <a href="#" title="">
                             <span className="fa fa-facebook"></span>Connect with
@@ -106,15 +106,15 @@ const LoginArea = () => {
                         </li>
                         <li className="twitter">
                           <a href="#" title="">
-                            <span className="fa fa-twitter"></span>Connect with
-                            Twitter
+                            <span className="fa fa-google"></span>Connect with
+                            Google
                           </a>
                         </li>
                       </ul>
                     </div>
                   </div>
                 ) : (
-                  <div id="tab-2" className="content-tab">
+                  <div>
                     <div className="register-form">
                       <form
                         action="#"

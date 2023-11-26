@@ -7,7 +7,7 @@ const Footer = () => {
       <footer id="footer" className="footer-03 parallax">
         <div className="container">
           <div className="row">
-            <div className="col-md-3 ft1 mb">
+            <div className="col-md-5 ft1 mb">
               <div className="widget-footer widget-about">
                 <div className="logo-ft">
                   <a href="#" title="">
@@ -55,7 +55,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-2 ft2 mb">
+            <div className="col-md-3 ft2 mb d-none d-lg-block">
               <div className="widget-footer widget-services">
                 <h3 className="title-ft">Our services</h3>
                 <ul>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-2 ft2 mb">
+            <div className="col-md-2 ft2 mb d-none d-lg-block">
               <div className="widget-footer widget-services">
                 <h3 className="title-ft">About us</h3>
                 <ul>
@@ -119,9 +119,9 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-2 ft2 mb">
+            <div className="col-md-2 ft2 mb d-none d-lg-block">
               <div className="widget-footer widget-services">
-                <h3 className="title-ft">Our cars</h3>
+                <h3 className="title-ft text-white">Our cars</h3>
                 <ul>
                   <li>
                     <a href="#" title="">
@@ -161,32 +161,89 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-3 ft3 mb">
-              <div className="widget-footer widget-apps">
-                <ul>
-                  <li className="app-store">
-                    <a href="#" title="App Store">
-                      <div className="image-app">
-                        <img src="images/icon/app-store.png" alt="" />
-                      </div>
-                      <div className="text">
-                        <h5>App Store</h5>
-                        <p>Available now on the</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="google-play">
-                    <a href="#" title="google-play">
-                      <div className="image-app">
-                        <img src="images/icon/google-play.png" alt="" />
-                      </div>
-                      <div className="text">
-                        <h5>Google Play</h5>
-                        <p>Get in on</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+            <div className="col-12 ft2 mb d-block d-lg-none">
+              <div class="accordion">
+                <div class="accordion-toggle widget-footer widget-services">
+                  <div class="toggle-title mb-0 pb-0 no-border active">
+                    <h3 className="title-ft text-white">Our Service</h3>
+                    <span className="plus">+</span>
+                    <span className="minus">-</span>
+                  </div>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>
+                        <a href="#" title="">
+                          Airport transfer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Limousine service
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Chauffeur service
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="accordion-toggle widget-footer widget-services">
+                  <div class="toggle-title mb-0 pb-0 no-border">
+                    <h3 className="title-ft text-white">Our cars</h3>
+                    <span className="plus">+</span>
+                    <span className="minus">-</span>
+                  </div>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>
+                        <a href="#" title="">
+                          Airport transfer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Limousine service
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Chauffeur service
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="accordion-toggle widget-footer widget-services">
+                  <div class="toggle-title mb-0 pb-0 no-border">
+                    <h3 className="title-ft text-white">About Us</h3>
+                    <span className="plus">+</span>
+                    <span className="minus">-</span>
+                  </div>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>
+                        <a href="#" title="">
+                          Airport transfer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Limousine service
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="">
+                          Chauffeur service
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

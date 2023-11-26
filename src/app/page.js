@@ -5,6 +5,7 @@ import Blog from "@/components/home/blog";
 import AboutBox from "@/components/home/aboutBox";
 import Hero from "@/components/home/hero";
 import Fleet2 from "@/components/home/fleet2";
+import Fleet from "@/components/home/fleet";
 
 export default function Home() {
   return (

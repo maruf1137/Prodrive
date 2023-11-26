@@ -165,7 +165,7 @@ const FleetDetails = () => {
           <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
             <div className="sidebar">
               <div className="sdl-booking add-box not-fixed">
-                <ul className="tab_booking">
+                {/* <ul className="tab_booking">
                   {fleetTabs.btns.map(({ id, title }) => {
                     return (
                       <li
@@ -176,93 +176,83 @@ const FleetDetails = () => {
                       </li>
                     );
                   })}
-                </ul>
-                {fleetTabs.btns.map(({ id, title }) => {
-                  return (
-                    <div
-                      key={id}
-                      className={
-                        fleetTab == id
-                          ? "schedule-booking d-block"
-                          : "schedule-booking d-none"
-                      }>
-                      <form className="form-booking" method="get" action="#">
-                        <div className="pick-address">
-                          <label>Pick Up Address</label>
-                          <input
-                            type="text"
-                            name="pick-up"
-                            placeholder="From: address, airport, hotel, ..."
-                          />
-                        </div>
-                        <div className="pick-dropday">
-                          <label>Drop Off Address</label>
-                          <input
-                            type="text"
-                            name="pick-up"
-                            placeholder="From: address, airport, hotel, ..."
-                          />
-                        </div>
-                        <div className="pick-date">
-                          <label>Pick Up Date</label>
-                          <div
-                            className="date form_date"
-                            data-date=""
-                            data-date-format="dd MM yyyy"
-                            data-link-field="dtp_input2"
-                            data-link-format="yyyy-mm-dd">
-                            <input
-                              size="16"
-                              type="text"
-                              value=""
-                              placeholder="Wed 19 July, 2017"
-                              readonly
-                            />
-                            <span className="add-on">
-                              <i className="icon-remove"></i>
-                            </span>
-                            <span className="add-on">
-                              <i className="icon-th"></i>
-                            </span>
-                          </div>
-                          <input type="hidden" id="dtp_input2" value="" />
-                          <br />
-                        </div>
-                        <div className="pick-time">
-                          <label>Pick Up Time</label>
-                          <div
-                            className="controls input-append date form_time"
-                            data-date=""
-                            data-date-format="hh:ii p"
-                            data-link-field="dtp_input3"
-                            data-link-format="hh:ii">
-                            <input
-                              size="16"
-                              type="text"
-                              value=""
-                              placeholder="12:25 am"
-                              readonly
-                            />
-                            <span className="add-on">
-                              <i className="icon-remove"></i>
-                            </span>
-                            <span className="add-on">
-                              <i className="icon-th"></i>
-                            </span>
-                          </div>
-                          <input type="hidden" id="dtp_input3" value="" />
-                          <br />
-                        </div>
-                        <div className="btn-submit">
-                          <a href="#" className="register_now">
-                            Reserve Now
-                            <img src="images/icon/arrow-white.png" alt="" />
-                          </a>
-                        </div>
-                      </form>
+                </ul> */}
+                <div className="schedule-booking d-block">
+                  <form className="form-booking" method="get" action="#">
+                    <div className="pick-address">
+                      <label>Pick Up Address</label>
+                      <input
+                        type="text"
+                        name="pick-up"
+                        placeholder="From: address, airport, hotel, ..."
+                      />
                     </div>
-                  );
-                })}
+                    <div className="pick-dropday">
+                      <label>Drop Off Address</label>
+                      <input
+                        type="text"
+                        name="pick-up"
+                        placeholder="From: address, airport, hotel, ..."
+                      />
+                    </div>
+                    <div className="pick-date">
+                      <label>Pick Up Date</label>
+                      <div
+                        className="date form_date"
+                        data-date=""
+                        data-date-format="dd MM yyyy"
+                        data-link-field="dtp_input2"
+                        data-link-format="yyyy-mm-dd">
+                        <input
+                          size="16"
+                          type="text"
+                          value=""
+                          placeholder="Wed 19 July, 2017"
+                          readonly
+                        />
+                        <span className="add-on">
+                          <i className="icon-remove"></i>
+                        </span>
+                        <span className="add-on">
+                          <i className="icon-th"></i>
+                        </span>
+                      </div>
+                      <input type="hidden" id="dtp_input2" value="" />
+                      <br />
+                    </div>
+                    <div className="pick-time">
+                      <label>Pick Up Time</label>
+                      <div
+                        className="controls input-append date form_time"
+                        data-date=""
+                        data-date-format="hh:ii p"
+                        data-link-field="dtp_input3"
+                        data-link-format="hh:ii">
+                        <input
+                          size="16"
+                          type="text"
+                          value=""
+                          placeholder="12:25 am"
+                          readonly
+                        />
+                        <span className="add-on">
+                          <i className="icon-remove"></i>
+                        </span>
+                        <span className="add-on">
+                          <i className="icon-th"></i>
+                        </span>
+                      </div>
+                      <input type="hidden" id="dtp_input3" value="" />
+                      <br />
+                    </div>
+                    <div className="btn-submit">
+                      <a href="#" className="register_now">
+                        Reserve Now
+                        <img src="images/icon/arrow-white.png" alt="" />
+                      </a>
+                    </div>
+                  </form>
+                </div>
               </div>
               <div className="popular-fleet">
                 <div className="items">

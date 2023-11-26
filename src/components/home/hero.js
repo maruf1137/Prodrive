@@ -377,7 +377,7 @@ const Hero = () => {
         </div>
 
         <section class="sdl-booking">
-          <ul class="tab_booking">
+          {/* <ul class="tab_booking">
             {sdtbBooking.btns.map(({ id, title }) => {
               return (
                 <li
@@ -388,9 +388,8 @@ const Hero = () => {
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
           <div
-            id="bk-1"
             class={
               sdlBookingTab == 1
                 ? "schedule-booking fw d-block"
@@ -449,7 +448,6 @@ const Hero = () => {
             </form>
           </div>
           <div
-            id="bk-2"
             class={
               sdlBookingTab == 2
                 ? "schedule-booking fw d-block"
@@ -508,7 +506,6 @@ const Hero = () => {
             </form>
           </div>
           <div
-            id="bk-3"
             class={
               sdlBookingTab == 3
                 ? "schedule-booking fw d-block"
