@@ -1158,7 +1158,7 @@
     initSlick();
     initSearch();
     // initClickonmenu();
-    initParallax();
+    // initParallax();
     initDateTimePickup();
     initCalendar();
     initPost_mansory();

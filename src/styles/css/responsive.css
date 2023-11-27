@@ -1699,6 +1699,27 @@
   margin-top: 0;
 }
 
+.scrollToTop {
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 5;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+}
+.scrollToTop svg {
+  fill: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 @media only screen and (max-width: 480px) {
   ul.list-button,
   .add-box .schedule-booking .form-booking > div {

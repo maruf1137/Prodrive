@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Taxis from "./taxis";
+import ScrollToTop from "./scrollToTop";
 
 const navigationData = [
   {
@@ -268,6 +269,7 @@ const Navbar = () => {
         </div>
       </header>
       <Taxis taxisActive={taxisActive} />
+      <ScrollToTop />
     </>
   );
 };
