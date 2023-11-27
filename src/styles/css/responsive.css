@@ -1643,6 +1643,62 @@
   display: flex;
 }
 
+.select-vehicle-area .image-car {
+  position: relative;
+}
+.select-vehicle-area .image-car .box {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid #ea652b;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.select-vehicle-area .desc-list li {
+  gap: 10px;
+}
+.select-vehicle-area .desc-list li svg {
+  fill: #00b050;
+}
+.select-vehicle-area .bottom-area {
+  align-items: center;
+  gap: 10px;
+}
+.select-vehicle-area .bottom-area .priceBox {
+  width: 100%;
+}
+.select-vehicle-area .bottom-area .price {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+.select-vehicle-area .bottom-area .old-price {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 6px;
+}
+.select-vehicle-area .bottom-area .btn-select {
+  width: 100%;
+  background-color: #ea652b;
+  display: block;
+  padding: 14px 20px;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.select-vehicle-area .bottom-area .btn-select .infoBox {
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #000;
+}
+.select-car .one-half.image-car img {
+  margin-top: 0;
+}
+
 @media only screen and (max-width: 480px) {
   ul.list-button,
   .add-box .schedule-booking .form-booking > div {
@@ -1719,5 +1775,20 @@
   }
   .main-menu .button a::after {
     display: none;
+  }
+
+  .select-vehicle-area .bottom-area .btn-select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    gap: 6px;
+  }
+  .select-vehicle-area .bottom-area .btn-select .infoBox {
+    line-height: normal;
+    font-size: 14px;
+  }
+  .select-vehicle-area .image-car .box {
+    top: 0px;
+    right: 0px;
   }
 }

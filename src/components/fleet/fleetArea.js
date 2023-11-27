@@ -2,10 +2,11 @@ import React from "react";
 import TempleteTitle from "../templeteTitle";
 import { vehicleData } from "../data";
 import Link from "next/link";
+import { FaCheck } from "react-icons/fa6";
 
 const FleetArea = () => {
   return (
-    <section className="our-fleet-area fix-loadmore">
+    <section className="our-fleet-area fix-loadmore select-vehicle-area">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -18,198 +19,64 @@ const FleetArea = () => {
           </div>
         </div>
         <div className="row">
-          {vehicleData.map((item) => {
-            const { id, title, img, subtitle, author, mail, price } = item;
-            return (
-              <div className="col-md-6" key={id}>
-                <div className="select-car al-center">
-                  <div className="select-box">
-                    <div className="image-car">
-                      <img src={img} alt={title} />
+          <div className="col-md-12">
+            {vehicleData.map((item) => {
+              const { id, title, img, subtitle, desc, author, mail, price } =
+                item;
+              const s1 = id % 2 == 0 ? true : false;
+              return (
+                <div className={s1 ? "select-car s1" : "select-car"} key={id}>
+                  <div className="image-car one-half pb-2">
+                    <img src={img} alt={title} />
+                    <div className="bottom-area d-flex">
+                      <div className="priceBox">
+                        <Link
+                          href="/fleet/single-fleet"
+                          className="btn-select justify-content-center">
+                          View Details
+                        </Link>
+                      </div>
                     </div>
-                    <div className="box-text">
-                      <div className="top">
-                        <h3>{title}</h3>
-                        <div className="name-car">{subtitle}</div>
+                    <div className="box">
+                      <div className="list">
+                        <img src="/images/booking/people.png" alt="" /> {author}
                       </div>
-                      <div className="content">
-                        <ul>
-                          <li>
-                            <img src="images/booking/people.png" alt="" />{" "}
-                            {author}
-                          </li>
-                          <li>
-                            <img src="images/booking/vali.png" alt="" /> {mail}
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="bottom">
-                        <div className="price">
-                          <span>${price}</span> / hour
-                        </div>
-                        <div className="btn-select">
-                          <Link href="/fleet/fleet-details" title="">
-                            View Details
-                          </Link>
-                        </div>
+                      <div className="list">
+                        <img src="/images/booking/vali.png" alt="" /> {mail}
                       </div>
                     </div>
                   </div>
+                  <div className="box-text one-half">
+                    <div className="top">
+                      <h3>{title}</h3>
+                      <div className="name-car">{subtitle}</div>
+                    </div>
+                    <div className="content">
+                      {/* <p>{desc}</p> */}
+                      <ul className="desc-list">
+                        <li className="d-flex align-items-center">
+                          <FaCheck />
+                          <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </li>
+                        <li className="d-flex align-items-center">
+                          <FaCheck />
+                          <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </li>
+                        <li className="d-flex align-items-center">
+                          <FaCheck />
+                          <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </li>
+                        <li className="d-flex align-items-center">
+                          <FaCheck />
+                          <span>Lorem ipsum dolor sit amet consectetur.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="clearfix"></div>
                 </div>
-              </div>
-            );
-          })}
-          <div className="col-md-6">
-            <div className="select-car al-center">
-              <div className="select-box">
-                <div className="image-car">
-                  <img src="images/booking/car-01.jpg" alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="top">
-                    <h3>Economy Premium</h3>
-                    <div className="name-car">
-                      Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
-                      similar
-                    </div>
-                  </div>
-                  <div className="content">
-                    <ul>
-                      <li>
-                        <img src="images/booking/people.png" alt="" /> Max . 3
-                      </li>
-                      <li>
-                        <img src="images/booking/vali.png" alt="" /> Max . 2
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bottom">
-                    <div className="price">
-                      <span>$49</span> / hour
-                    </div>
-                    <div className="btn-select">
-                      <a href="#" title="">
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="select-car al-center">
-              <div className="select-box">
-                <div className="image-car">
-                  <img src="images/booking/car-02.jpg" alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="top">
-                    <h3>Business Class</h3>
-                    <div className="name-car">
-                      Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
-                      similar
-                    </div>
-                  </div>
-                  <div className="content">
-                    <ul>
-                      <li>
-                        <img src="images/booking/people.png" alt="" /> Max . 3
-                      </li>
-                      <li>
-                        <img src="images/booking/vali.png" alt="" /> Max . 2
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bottom">
-                    <div className="price">
-                      <span>$99</span> / hour
-                    </div>
-                    <div className="btn-select">
-                      <a href="#" title="">
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="select-car al-center">
-              <div className="select-box">
-                <div className="image-car">
-                  <img src="images/booking/car-03.png" alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="top">
-                    <h3>Business Van</h3>
-                    <div className="name-car">
-                      Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
-                      similar
-                    </div>
-                  </div>
-                  <div className="content">
-                    <ul>
-                      <li>
-                        <img src="images/booking/people.png" alt="" /> Max . 3
-                      </li>
-                      <li>
-                        <img src="images/booking/vali.png" alt="" /> Max . 2
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bottom">
-                    <div className="price">
-                      <span>$189</span> / hour
-                    </div>
-                    <div className="btn-select">
-                      <a href="#" title="">
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="select-car al-center">
-              <div className="select-box">
-                <div className="image-car">
-                  <img src="images/booking/car-04.jpg" alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="top">
-                    <h3>First Class</h3>
-                    <div className="name-car">
-                      Mercedes-Benz E-Class, BMW 5 Series, Cadillac XTS, or
-                      similar
-                    </div>
-                  </div>
-                  <div className="content">
-                    <ul>
-                      <li>
-                        <img src="images/booking/people.png" alt="" /> Max . 3
-                      </li>
-                      <li>
-                        <img src="images/booking/vali.png" alt="" /> Max . 2
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bottom">
-                    <div className="price">
-                      <span>$259</span> / hour
-                    </div>
-                    <div className="btn-select">
-                      <a href="#" title="">
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <div className="loadmore">
             <a href="#" title="">
