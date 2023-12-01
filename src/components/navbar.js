@@ -69,6 +69,80 @@ const navigationData = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "Jamaica Pages",
+    items: [
+      {
+        title: "Home",
+        url: "/jamaica/home",
+      },
+      {
+        title: "About",
+        url: "/jamaica/about",
+      },
+      {
+        title: "Destinations",
+        url: "/jamaica/destinations",
+      },
+      {
+        title: "Booking",
+        url: "/jamaica/booking",
+      },
+      {
+        title: "Contact",
+        url: "/jamaica/contact",
+      },
+      {
+        title: "Blogs",
+        url: "/jamaica/blog",
+      },
+      {
+        title: "single Blog",
+        url: "/jamaica/blog/123",
+      },
+      {
+        title: "Booking Status",
+        url: "/jamaica/booking-status",
+      },
+      {
+        title: "Help Center",
+        url: "/jamaica/help-center",
+      },
+      {
+        title: "Invoice",
+        url: "/jamaica/invoice",
+      },
+      {
+        title: "Tour Map",
+        url: "/jamaica/tour-map",
+      },
+      {
+        title: "Tours List",
+        url: "/jamaica/tours-list",
+      },
+      {
+        title: "Tour Details",
+        url: "/jamaica/tours-list/123",
+      },
+      {
+        title: "Taxi Home",
+        url: "/jamaica/taxi-home",
+      },
+      {
+        title: "Terms",
+        url: "/jamaica/terms",
+      },
+      {
+        title: "Login",
+        url: "/jamaica/Login",
+      },
+      {
+        title: "Register",
+        url: "/jamaica/register",
+      },
+    ],
+  },
 ];
 
 const Navbar = () => {
@@ -93,7 +167,7 @@ const Navbar = () => {
   return (
     <>
       <header id="header" className="header-03">
-        <div className="container-fluid d-flex align-items-center d-md-block">
+        <div className="container-fluid d-md-block d-flex align-items-center">
           {/* <div
             className="onclick d-md-none mr-3 mr-md-0"
             onClick={() => setNavigation(true)}>

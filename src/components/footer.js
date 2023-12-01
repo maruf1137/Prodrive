@@ -55,7 +55,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-3 ft2 mb d-none d-lg-block">
+            <div className="col-md-3 ft2 mb tab-show">
               <div className="widget-footer widget-services">
                 <h3 className="title-ft">Our services</h3>
                 <ul>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-2 ft2 mb d-none d-lg-block">
+            <div className="col-md-2 ft2 mb tab-show">
               <div className="widget-footer widget-services">
                 <h3 className="title-ft">About us</h3>
                 <ul>
@@ -119,7 +119,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-2 ft2 mb d-none d-lg-block">
+            <div className="col-md-2 ft2 mb tab-show">
               <div className="widget-footer widget-services">
                 <h3 className="title-ft text-white">Our cars</h3>
                 <ul>
@@ -161,7 +161,9 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 ft2 mb d-block d-lg-none">
+
+            {/* mbl version */}
+            <div className="col-12 ft2 mb mbl-show">
               <div class="accordion">
                 <div class="accordion-toggle widget-footer widget-services">
                   <div class="toggle-title mb-0 pb-0 no-border active">

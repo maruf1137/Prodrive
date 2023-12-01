@@ -10,9 +10,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/css/daterangepicker.min.css";
 import "../styles/css/bootstrap-datetimepicker.min.css";
+import "@/styles/globals.css";
+import "@/styles/style.css";
+import "@/styles/icon.css";
 import "../styles/css/shortcodes.css";
 import "../styles/css/style.css";
 import "../styles/css/responsive.css";
+// import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
 
 const dosis = Dosis({ subsets: ["latin"] });
 
@@ -37,8 +41,19 @@ export default function RootLayout({ children }) {
         <Script src="/js/waves.min.js" />
         <Script src="/js/bootstrap-datetimepicker.js" />
         <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtRmXKclfDp20TvfQnpgXSDPjut14x5wk&region=GB" />
+        <Script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM" />
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js" />
 
-        {/* <link rel="stylesheet" href="/src/styles/css/daterangepicker.min.css" /> */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+          integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        {/* <script
+          src="https://kit.fontawesome.com/df45955d7c.js"
+          crossorigin="anonymous"></script> */}
         <link rel="stylesheet" href="/revolution/css/layers.css" />
         <link rel="stylesheet" href="/revolution/css/settings.css" />
       </head>

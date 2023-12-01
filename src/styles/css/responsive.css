@@ -1760,6 +1760,9 @@ html {
     line-height: 24px;
   }
 }
+.mbl-show {
+  display: none;
+}
 @media only screen and (max-width: 991px) {
   .summary-bar-area {
     position: absolute !important;
@@ -1776,6 +1779,12 @@ html {
   }
   .booking-steps-area.mht {
     margin-top: 90px;
+  }
+  .tab-show {
+    display: none;
+  }
+  .mbl-show {
+    display: block;
   }
 }
 @media only screen and (max-width: 565px) {
