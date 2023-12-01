@@ -977,6 +977,9 @@ button:focus {
   margin-top: 100px;
   margin-bottom: 53px;
   box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .main-menu .button a {
   display: inline-block;
