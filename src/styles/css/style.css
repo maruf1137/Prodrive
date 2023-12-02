@@ -1429,17 +1429,17 @@ button:focus {
   line-height: 40px;
   color: #7d7d7d;
 }
-.form-address .list-address li:first-child {
+/* .form-address .list-address li:first-child {
   margin-bottom: 24px;
-}
-.form-address .list-address li:first-child a {
+} */
+/* .form-address .list-address li:first-child a {
   font-size: 25px;
-  color: #ebe9dc;
+  color: #333333b3;
 }
 .form-address .list-address li a:hover {
-  color: #fff;
+  color: #333;
   margin-left: 5px;
-}
+} */
 .search-address .ui-helper-hidden-accessible {
   display: none;
 }

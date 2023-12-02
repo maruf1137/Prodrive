@@ -2150,20 +2150,20 @@ ul.booking-steps li .text {
 }
 
 .schedule-booking .form-booking > div:first-child {
-  border-right: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f1a;
   padding-left: 70px;
   padding-right: 69px;
 }
 .schedule-booking .form-booking > div:nth-child(2) {
-  border-right: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f1a;
   padding-left: 25px;
   padding-right: 69px;
 }
-.schedule-booking .form-booking > div:nth-child(3) {
-  border-right: 1px solid #3f3f3f;
+/* .schedule-booking .form-booking > div:nth-child(3) {
+  border-right: 1px solid #3f3f3f1a;
   padding-left: 27px;
   padding-right: 69px;
-}
+} */
 .schedule-booking .form-booking > div:nth-child(4) {
   padding-left: 27px;
   padding-right: 122px;

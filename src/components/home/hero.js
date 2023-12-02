@@ -1,25 +1,78 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const sdtbBooking = {
-  btns: [
-    {
-      id: 1,
-      title: "Distance",
-    },
-    {
-      id: 2,
-      title: "Hourly",
-    },
-    {
-      id: 3,
-      title: "Flat Rate",
-    },
-  ],
-};
+const pickAddressTabData = ["Airpots", "Hotels", "Ships"];
+const pickAdressdata = [
+  {
+    id: 1,
+    text: "Montago buy airpots, Jamaica",
+    subject: "Airpots",
+  },
+  {
+    id: 2,
+    text: "Montago buy airpots, Jamaica",
+    subject: "Airpots",
+  },
+  {
+    id: 3,
+    text: "Montago buy airpots, Jamaica",
+    subject: "Airpots",
+  },
+  {
+    id: 4,
+    text: "Montago buy airpots, Jamaica",
+    subject: "Airpots",
+  },
+  {
+    id: 4,
+    text: "Sandals hotel montago buy, jamaica",
+    subject: "Hotels",
+  },
+  {
+    id: 5,
+    text: "Sandals hotel montago buy, jamaica",
+    subject: "Hotels",
+  },
+  {
+    id: 6,
+    text: "Sandals hotel montago buy, jamaica",
+    subject: "Hotels",
+  },
+  {
+    id: 7,
+    text: "Sandals hotel montago buy, jamaica",
+    subject: "Hotels",
+  },
+  {
+    id: 8,
+    text: "Sandals ships montago buy, jamaica",
+    subject: "Ships",
+  },
+  {
+    id: 9,
+    text: "Sandals ships montago buy, jamaica",
+    subject: "Ships",
+  },
+  {
+    id: 10,
+    text: "Sandals ships montago buy, jamaica",
+    subject: "Ships",
+  },
+  {
+    id: 11,
+    text: "Sandals ships montago buy, jamaica",
+    subject: "Ships",
+  },
+];
+
 const Hero = () => {
-  const [sdlBookingTab, setSdlBookingTab] = useState(1);
+  const [pickAddressTab, setPickAddressTab] = useState(pickAddressTabData[0]);
+
+  const handlePopup = () => {
+    const bookAddress = document.querySelector(".book-adress");
+    bookAddress.classList.remove("open");
+  };
 
   return (
     <>
@@ -235,7 +288,7 @@ const Hero = () => {
         </div>
         {/* <!-- END REVOLUTION SLIDER --> */}
         {/* <!-- END REVOLUTION SLIDER --> */}
-        <div class="calendar">
+        {/* <div class="calendar">
           <span class="close">
             <img src="/images/icon/close_x.png" alt="" />
           </span>
@@ -320,19 +373,22 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div class="book-adress">
           <span class="close">
-            <img src="/images/icon/close_x.png" alt="" />
+            {/* <img src="/images/icon/close_x.png" alt="" /> */}
+            <svg class="icon">
+              <use xlinkHref="/icons.svg#icon-clear"></use>
+            </svg>
           </span>
           <div class="container">
             <div class="logo-calendar center">
-              <Link href="/" title="">
+              {/* <Link href="/" title="">
                 <img src="/images/logo.png" alt="" />
-              </Link>
+              </Link> */}
             </div>
           </div>
-          <div class="container">
+          <div class="container mt-5">
             <div class="form-address">
               <form
                 action="#"
@@ -345,31 +401,75 @@ const Hero = () => {
                   class="pic-add"
                   placeholder="Pick Up Address"
                 />
-                <button type="submit" class="waves-effect">
+                {/* <button type="submit" class="waves-effect">
                   <img src="/images/icon/arrowad.png" alt="" />
-                </button>
+                </button> */}
+                <div className="tab-wrapper">
+                  <div className="tab-btns">
+                    {pickAddressTabData.map((btn, i) => {
+                      return (
+                        <button
+                          className={
+                            btn == pickAddressTab ? "tab-btn active" : "tab-btn"
+                          }
+                          key={i}
+                          onClick={() => setPickAddressTab(btn)}>
+                          {btn}
+                        </button>
+                      );
+                    })}
+                    {/* <button className="tab-btn active">Airpots</button>
+                    <button className="tab-btn">Hotels</button>
+                    <button className="tab-btn">Ships</button> */}
+                  </div>
+                </div>
                 <ul class="list-address">
-                  <li>
-                    <a href="#">Most Searched</a>
+                  {pickAdressdata
+                    .filter((item) => item.subject == pickAddressTab)
+                    .map(({ id, text }) => {
+                      return (
+                        <li key={id}>
+                          <a href="#" onClick={handlePopup}>
+                            {text}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  {/* <li>
+                    <a href="#" onClick={handlePopup}>
+                      Most Searched
+                    </a>
                   </li>
                   <li>
-                    <a href="#">New York</a>
+                    <a href="#" onClick={handlePopup}>
+                      New York
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Istanbul</a>
+                    <a href="#" onClick={handlePopup}>
+                      Istanbul
+                    </a>
                   </li>
                   <li>
-                    <a href="#">London</a>
+                    <a href="#" onClick={handlePopup}>
+                      London
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Berlin</a>
+                    <a href="#" onClick={handlePopup}>
+                      Berlin
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Los Angeles</a>
+                    <a href="#" onClick={handlePopup}>
+                      Los Angeles
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Paris</a>
-                  </li>
+                    <a href="#" onClick={handlePopup}>
+                      Paris
+                    </a>
+                  </li> */}
                 </ul>
               </form>
             </div>
@@ -377,24 +477,7 @@ const Hero = () => {
         </div>
 
         <section class="sdl-booking">
-          {/* <ul class="tab_booking">
-            {sdtbBooking.btns.map(({ id, title }) => {
-              return (
-                <li
-                  class={id == sdlBookingTab ? "active" : ""}
-                  key={id}
-                  onClick={() => setSdlBookingTab(id)}>
-                  <a>{title}</a>
-                </li>
-              );
-            })}
-          </ul> */}
-          <div
-            class={
-              sdlBookingTab == 1
-                ? "schedule-booking fw d-block"
-                : "schedule-booking fw d-none"
-            }>
+          <div class="schedule-booking fw d-block">
             <h1 class="text-over">RESERVE NOW</h1>
             <form class="form-booking" method="get" action="#">
               <div class="pick-address js">
@@ -413,7 +496,7 @@ const Hero = () => {
                   placeholder="From: address, airport, hotel, ..."
                 />
               </div>
-              <div class="pick-date">
+              {/* <div class="pick-date">
                 <label>Pick Up Date</label>
                 <input
                   id="date-range12"
@@ -438,123 +521,7 @@ const Hero = () => {
                     9:25 am
                   </option>
                 </select>
-              </div>
-              <div class="btn-submit">
-                <a href="#" class="register_now">
-                  Reserve Now
-                  <img src="/images/icon/arrow-white.png" alt="" />
-                </a>
-              </div>
-            </form>
-          </div>
-          <div
-            class={
-              sdlBookingTab == 2
-                ? "schedule-booking fw d-block"
-                : "schedule-booking fw d-none"
-            }>
-            <h1 class="text-over">RESERVE NOW</h1>
-            <form class="form-booking" method="get" action="#">
-              <div class="pick-address js">
-                <label>Pick Up Address</label>
-                <input
-                  type="text"
-                  name="pick-up"
-                  placeholder="From: address, airport, hotel, ..."
-                />
-              </div>
-              <div class="pick-dropday js">
-                <label>Drop Off Address</label>
-                <input
-                  type="text"
-                  name="pick-up"
-                  placeholder="From: address, airport, hotel, ..."
-                />
-              </div>
-              <div class="pick-date">
-                <label>Pick Up Date</label>
-                <input
-                  id="date-range10"
-                  size="40"
-                  value=""
-                  placeholder="WEB 19, 2018"
-                />
-              </div>
-              <div class="pick-time js">
-                <label>Pick Up Time</label>
-                <select>
-                  <option value="time-01" selected hidden>
-                    12:25 am
-                  </option>
-                  <option value="time-02" hidden>
-                    11:25 am
-                  </option>
-                  <option value="time-03" hidden>
-                    10:25 am
-                  </option>
-                  <option value="time-04" hidden>
-                    9:25 am
-                  </option>
-                </select>
-              </div>
-              <div class="btn-submit">
-                <a href="#" class="register_now">
-                  Reserve Now
-                  <img src="/images/icon/arrow-white.png" alt="" />
-                </a>
-              </div>
-            </form>
-          </div>
-          <div
-            class={
-              sdlBookingTab == 3
-                ? "schedule-booking fw d-block"
-                : "schedule-booking fw d-none"
-            }>
-            <h1 class="text-over">RESERVE NOW</h1>
-            <form class="form-booking" method="get" action="#">
-              <div class="pick-address js">
-                <label>Pick Up Address</label>
-                <input
-                  type="text"
-                  name="pick-up"
-                  placeholder="From: address, airport, hotel, ..."
-                />
-              </div>
-              <div class="pick-dropday js">
-                <label>Drop Off Address</label>
-                <input
-                  type="text"
-                  name="pick-up"
-                  placeholder="From: address, airport, hotel, ..."
-                />
-              </div>
-              <div class="pick-date">
-                <label>Pick Up Date</label>
-                <input
-                  id="date-range11"
-                  size="40"
-                  value=""
-                  placeholder="WEB 19, 2018"
-                />
-              </div>
-              <div class="pick-time js">
-                <label>Pick Up Time</label>
-                <select>
-                  <option value="time-01" selected hidden>
-                    12:25 am
-                  </option>
-                  <option value="time-02" hidden>
-                    11:25 am
-                  </option>
-                  <option value="time-03" hidden>
-                    10:25 am
-                  </option>
-                  <option value="time-04" hidden>
-                    9:25 am
-                  </option>
-                </select>
-              </div>
+              </div> */}
               <div class="btn-submit">
                 <a href="#" class="register_now">
                   Reserve Now

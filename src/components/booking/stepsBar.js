@@ -63,8 +63,8 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
     <section
       className={
         summaryBarOpen
-          ? "booking-steps-area summary-bar-area-open mht"
-          : "booking-steps-area mht"
+          ? "booking-steps-area summary-bar-area-open"
+          : "booking-steps-area"
       }>
       <div className="container">
         <div className="row">
@@ -83,7 +83,18 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
                   </li>
                 );
               })}
+              {/* <li
+                className="m-0 show-details-btn"
+                onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+                <span>
+                  <svg>
+                    <use xlinkHref="/icons.svg#icon-plus"></use>
+                  </svg>
+                </span>
+                <div className="icon">Show Details</div>
+              </li> */}
             </ul>
+
             {/* for mbl */}
             <ul className="booking-steps d-flex justify-content-between d-lg-none">
               {stepsStateData.map((item) => {
@@ -97,10 +108,24 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
                   </li>
                 );
               })}
+              <li
+                className="m-0 show-details-btn"
+                onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+                <span>
+                  <svg>
+                    <use xlinkHref="/icons.svg#icon-plus"></use>
+                  </svg>
+                </span>
+                <div className="icon">
+                  {summaryBarOpen ? "Hide" : "Show"} Details
+                </div>
+              </li>
             </ul>
             <div
               className={
-                summaryBarOpen ? "details active mt-2" : "details mt-2"
+                summaryBarOpen
+                  ? "details active mt-2 d-none d-lg-flex"
+                  : "details mt-2 d-none d-lg-flex"
               }>
               <p className="text-white">Booking Details</p>
               <button
@@ -110,19 +135,6 @@ const StepsBar = ({ stepNo, summaryBarOpen, setSummaryBarOpen }) => {
                 <span className="ion-ios-arrow-thin-down"></span>
               </button>
             </div>
-            {/* <div
-              className={
-                summaryBarOpen
-                  ? "button-summary-bar open"
-                  : "button-summary-bar"
-              }
-              onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
-              <div className="icon">
-                <span className="ion-ios-arrow-thin-down"></span>
-              </div>
-              <p className="show">Select Location & Date</p>
-              <p className="hide">Hide</p>
-            </div> */}
           </div>
         </div>
       </div>

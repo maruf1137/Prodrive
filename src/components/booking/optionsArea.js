@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const OptionsArea = () => {
   const router = useRouter();
+  const [popup, setPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // router.push("/booking/login");
+  };
+  const handlePopup = (e) => {
+    setPopup(false);
     router.push("/booking/login");
   };
   return (
@@ -22,6 +28,61 @@ const OptionsArea = () => {
                 method="post"
                 accept-charset="utf-8"
                 onSubmit={(e) => handleSubmit(e)}>
+                {/* sdfdf */}
+                {/* <div className="one-half first-name"></div> */}
+                <div class="pick-date one-half first-name">
+                  <label>Pick Up Date</label>
+                  <input
+                    id="date-range12"
+                    size="40"
+                    value=""
+                    placeholder="WEB 19, 2018"
+                  />
+                </div>
+                <div class="pick-time js one-half first-name">
+                  <label>Pick Up Time</label>
+                  <select>
+                    <option value="time-01" selected hidden>
+                      12:25 am
+                    </option>
+                    <option value="time-02" hidden>
+                      11:25 am
+                    </option>
+                    <option value="time-03" hidden>
+                      10:25 am
+                    </option>
+                    <option value="time-04" hidden>
+                      9:25 am
+                    </option>
+                  </select>
+                </div>
+                <div class="pick-date one-half first-name">
+                  <label>Pick Up Return Date</label>
+                  <input
+                    id="date-range12"
+                    size="40"
+                    value=""
+                    placeholder="WEB 19, 2018"
+                  />
+                </div>
+                <div class="pick-time js one-half first-name">
+                  <label>Pick Up Return Time</label>
+                  <select>
+                    <option value="time-01" selected hidden>
+                      12:25 am
+                    </option>
+                    <option value="time-02" hidden>
+                      11:25 am
+                    </option>
+                    <option value="time-03" hidden>
+                      10:25 am
+                    </option>
+                    <option value="time-04" hidden>
+                      9:25 am
+                    </option>
+                  </select>
+                </div>
+                {/* xcg */}
                 <div className="one-half number-pass">
                   <label for="number-pass">Number Of Passengers</label>
                   <div className="select">
@@ -45,41 +106,24 @@ const OptionsArea = () => {
                   </div>
                 </div>
                 <div className="one-half first-name">
-                  <label for="firstname">First Name </label>
+                  <label for="arrival-flight">Arrival Flight #</label>
                   <input
                     type="text"
-                    name="firstname"
-                    id="firstname"
-                    placeholder="Ali"
+                    name="arrival-flight"
+                    id="arrival-flight"
+                    placeholder="AA1234"
                   />
                 </div>
-                <div className="one-half last-name">
-                  <label for="lastname">Last Name</label>
+                <div className="one-half first-name">
+                  <label for="return-flight">Return Flight #</label>
                   <input
                     type="text"
-                    name="lastname"
-                    id="lastname"
-                    placeholder="TUF..."
+                    name="return-flight"
+                    id="return-flight"
+                    placeholder="AA1234"
                   />
                 </div>
-                <div className="one-half email">
-                  <label for="email">Email Address</label>
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="creativelayer088@gmail.com"
-                  />
-                </div>
-                <div className="one-half phone">
-                  <label for="phone">Phone Number</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    placeholder="+90 538 658 96 315"
-                  />
-                </div>
+
                 <div className="infomation">
                   <label for="infomation">Additional Information</label>
                   <textarea
@@ -87,8 +131,14 @@ const OptionsArea = () => {
                     id="infomation"
                     placeholder="Lorem Ipsum "></textarea>
                 </div>
-                <div className="btn-submit">
-                  <button type="submit">CONTINUE</button>
+                <div className="option-area-btns d-flex">
+                  <button className="back">Back</button>
+                  <button
+                    type="submit"
+                    className="submit"
+                    onClick={() => setPopup(true)}>
+                    CONTINUE
+                  </button>
                 </div>
               </form>
             </div>
@@ -96,6 +146,107 @@ const OptionsArea = () => {
           <div className="col-lg-2"></div>
         </div>
       </div>
+
+      <div class="calendar">
+        <span class="close">
+          <img src="/images/icon/close_x.png" alt="" />
+        </span>
+        <div class="container">
+          <div class="logo-calendar center">
+            {/* <Link href="/" title="">
+              <img src="/images/logo.png" alt="" />
+            </Link> */}
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title center">
+                <h2>Please Select Date</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 center calenders">
+              <div
+                id="date-range12-container"
+                className="calender-wrapper"></div>
+              <div
+                id="date-range11-container"
+                className="calender-wrapper"></div>
+              <div
+                id="date-range10-container"
+                className="calender-wrapper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="time-open">
+        <span class="close">
+          <img src="/images/icon/close_x.png" alt="" />
+        </span>
+        <div class="container">
+          <div class="logo-calendar center">
+            <Link href="/" title="">
+              <img src="/images/logo.png" alt="" />
+            </Link>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title center">
+                <h2>Pick Up Time</h2>
+                <p>
+                  Choose from a wide selection of boats ranging from luxury
+                  motor yachts to classic sailing yachts, we have every type of
+                  boat available to meet your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 center">
+              <div class="box-time first">
+                <select id="hours">
+                  <option value="hide">01</option>
+                  <option value="january" rel="icon-temperature">
+                    02
+                  </option>
+                  <option value="february">03</option>
+                  <option value="march">04</option>
+                  <option value="april">05</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 center">
+              <div class="box-time">
+                <select id="minutes">
+                  <option value="hide">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {popup && (
+        <div className="popup">
+          <div className="content-wrapper">
+            <p>
+              For airtpot pickup, provide your flight number and if its late, we
+              will wait
+            </p>
+            <div className="btns">
+              <button onClick={handlePopup}>No thanks continnue</button>
+              <button onClick={handlePopup}>Yes please go back</button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import SummaryBar from "@/components/booking/summaryBar";
 import StepsBar from "@/components/booking/stepsBar";
 import VehicleArea from "@/components/booking/vehicleArea";
+import MapArea from "@/components/booking/mapArea";
 
 const CarClass = () => {
   const [summaryBarOpen, setSummaryBarOpen] = useState(false);
 
   return (
     <div>
+      <MapArea />
       <SummaryBar summaryBarOpen={summaryBarOpen} />
       <StepsBar
         stepNo={1}

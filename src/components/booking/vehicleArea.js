@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { vehicleData } from "../data";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
 
 const vehicleArea = () => {
+  const [info, setInfo] = useState({ id: 0, status: true });
+
+  useEffect(() => {
+    console.log(info);
+  }, [info]);
+
   return (
     <section className="select-vehicle-area">
       <div className="container">
@@ -40,40 +46,63 @@ const vehicleArea = () => {
                         </Link>
                       </div>
                     </div>
-                    <div className="box">
-                      <div className="list">
-                        <img src="/images/booking/people.png" alt="" /> {author}
-                      </div>
-                      <div className="list">
-                        <img src="/images/booking/vali.png" alt="" /> {mail}
-                      </div>
-                    </div>
                   </div>
                   <div className="box-text one-half">
                     <div className="top">
-                      <h3>{title}</h3>
-                      <div className="name-car">{subtitle}</div>
-                    </div>
-                    <div className="content">
-                      {/* <p>{desc}</p> */}
-                      <ul className="desc-list">
-                        <li className="d-flex align-items-center">
-                          <FaCheck />
-                          <span>Lorem ipsum dolor sit amet consectetur.</span>
-                        </li>
-                        <li className="d-flex align-items-center">
-                          <FaCheck />
-                          <span>Lorem ipsum dolor sit amet consectetur.</span>
-                        </li>
-                        <li className="d-flex align-items-center">
-                          <FaCheck />
-                          <span>Lorem ipsum dolor sit amet consectetur.</span>
-                        </li>
-                        <li className="d-flex align-items-center">
-                          <FaCheck />
-                          <span>Lorem ipsum dolor sit amet consectetur.</span>
-                        </li>
-                      </ul>
+                      <div className="content">
+                        {/* <p>{desc}</p> */}
+                        {info.id == id && info.status && (
+                          <ul className="desc-list">
+                            <li className="d-flex align-items-center">
+                              <FaCheck />
+                              <span>
+                                Lorem ipsum dolor sit amet consectetur.
+                              </span>
+                            </li>
+                            <li className="d-flex align-items-center">
+                              <FaCheck />
+                              <span>
+                                Lorem ipsum dolor sit amet consectetur.
+                              </span>
+                            </li>
+                            <li className="d-flex align-items-center">
+                              <FaCheck />
+                              <span>
+                                Lorem ipsum dolor sit amet consectetur.
+                              </span>
+                            </li>
+                            <li className="d-flex align-items-center">
+                              <FaCheck />
+                              <span>
+                                Lorem ipsum dolor sit amet consectetur.
+                              </span>
+                            </li>
+                          </ul>
+                        )}
+                      </div>
+                      <div className="vihicle-title-box d-flex">
+                        <h3>{title}</h3>
+                        <div className="box d-flex items-center">
+                          <div className="list">
+                            <img src="/images/max-img-1.png" alt="" /> {author}
+                          </div>
+                          <div className="list">
+                            <img src="/images/max-img-2.png" alt="" /> {mail}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="vehicle-title-box d-flex ">
+                        <div className="name-car">{subtitle}</div>
+                        <button
+                          className="vehicle-title-btn"
+                          onClick={() =>
+                            setInfo({ id: id, status: !info.status })
+                          }>
+                          {info.id == id && info.status
+                            ? "More Info"
+                            : "Less Info"}
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div className="clearfix"></div>

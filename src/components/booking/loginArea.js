@@ -4,21 +4,26 @@ import React, { useState } from "react";
 
 const tabBtns = [
   {
-    id: 1,
-    title: "LOGIN",
+    id: 2,
+    title: "Passenger Info",
   },
   {
-    id: 2,
-    title: "REGISTER",
+    id: 1,
+    title: "LOGIN",
   },
 ];
 
 const LoginArea = () => {
   const [tabBtnActive, setTabBtnActive] = useState(1);
   const router = useRouter();
+  const [popup, setPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // router.push("/booking/card");
+  };
+  const handlePopup = (e) => {
+    setPopup(false);
     router.push("/booking/card");
   };
 
@@ -148,6 +153,18 @@ const LoginArea = () => {
                             placeholder="creativelayer088@gmail.com"
                           />
                         </div>
+                        {/* <div className="one-half number-bags">
+                          <label for="country">Country</label>
+                          <div className="select">
+                            <select name="country" id="country">
+                              <option value="1">UK</option>
+                              <option value="2">USA</option>
+                              <option value="3">UAE</option>
+                              <option value="4">UAE</option>
+                              <option value="5">UAE</option>
+                            </select>
+                          </div>
+                        </div> */}
                         <div className="one-half phone">
                           <label for="phone">Phone</label>
                           <input
@@ -165,7 +182,7 @@ const LoginArea = () => {
                           <label for="re-pass">Repeat Password</label>
                           <input type="password" name="phone" id="re-pass" />
                         </div>
-                        <div className="one-half checkbox">
+                        <div className="checkbox">
                           <input type="checkbox" name="accept" id="accept" />
                           <label for="accept">
                             Accept
@@ -179,8 +196,14 @@ const LoginArea = () => {
                             input
                           </label>
                         </div>
-                        <div className="one-half btn-submit">
-                          <button type="submit">REGISTER</button>
+                        <div className="option-area-btns d-flex">
+                          <button className="back">Back</button>
+                          <button
+                            type="submit"
+                            className="submit"
+                            onClick={() => setPopup(true)}>
+                            CONTINUE
+                          </button>
                         </div>
                         <div className="clearfix"></div>
                       </form>
@@ -193,6 +216,21 @@ const LoginArea = () => {
           <div className="col-lg-2"></div>
         </div>
       </div>
+
+      {popup && (
+        <div className="popup">
+          <div className="content-wrapper">
+            <p>
+              For airtpot pickup, provide your flight number and if its late, we
+              will wait
+            </p>
+            <div className="btns">
+              <button onClick={handlePopup}>No thanks continnue</button>
+              <button onClick={handlePopup}>Yes please go back</button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

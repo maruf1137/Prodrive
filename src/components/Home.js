@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
                   Choose a Country For Your <br className="lg:d-none" />
                   Next Adventure?
                 </h1>
-                <div className="home_tab" style={{ width: "470px" }}>
+                {/* <div className="home_tab" style={{ width: "470px" }}>
                   <div className="mx-2">
                     <button
                       onClick={toggleSelectedTab}
@@ -117,7 +118,24 @@ export default function Home() {
                       </svg>
                     </button>
                   </div>
-                )}
+                )} */}
+                <div className="explore-box">
+                  <p className="text-center">Explore & Prebook</p>
+                  <div className="btns">
+                    <Link href="#" className="explore-box-btn">
+                      <svg class="icon">
+                        <use xlinkHref="/icons.svg#icon-coffee"></use>
+                      </svg>
+                      <span>Tour & Excursion</span>
+                    </Link>
+                    <Link href="#" className="explore-box-btn">
+                      <svg class="icon">
+                        <use xlinkHref="/icons.svg#icon-automobile"></use>
+                      </svg>
+                      <span>Taxi Service</span>
+                    </Link>
+                  </div>
+                </div>
 
                 <div className="heroTags">
                   <div className="heroTags__title text-white">
