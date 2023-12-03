@@ -168,18 +168,6 @@ const LoginArea = () => {
                           </select>
                           {/* <div className="select"></div> */}
                         </div>
-                        {/* <div className="one-half number-bags">
-                          <label for="country">Country</label>
-                          <div className="select">
-                            <select name="country" id="country">
-                              <option value="1">UK</option>
-                              <option value="2">USA</option>
-                              <option value="3">UAE</option>
-                              <option value="4">UAE</option>
-                              <option value="5">UAE</option>
-                            </select>
-                          </div>
-                        </div> */}
                         <div className="one-half phone">
                           <label for="phone">Phone</label>
                           <input

@@ -1859,6 +1859,11 @@ ul.booking-steps li .text {
   width: 50%;
   float: left;
 }
+.register-form form .one-half.email {
+  padding-right: 7px;
+  width: 100%;
+  float: left;
+}
 .register-form form div {
   margin-bottom: 15px;
 }
@@ -1867,12 +1872,14 @@ ul.booking-steps li .text {
   margin-bottom: 5px;
 }
 .register-form form div.checkbox {
-  margin-top: 30px;
-  z-index: -1;
+  /* margin-top: 30px; */
+  float: left;
+  width: 100%;
 }
 .register-form form div.checkbox label {
   color: #969696;
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .register-form form .btn-submit button {
