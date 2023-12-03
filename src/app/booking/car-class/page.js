@@ -9,7 +9,7 @@ const CarClass = () => {
   const [summaryBarOpen, setSummaryBarOpen] = useState(false);
 
   return (
-    <div>
+    <div className="car-class-page">
       <MapArea />
       <SummaryBar summaryBarOpen={summaryBarOpen} />
       <StepsBar

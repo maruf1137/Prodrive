@@ -9,7 +9,7 @@ const page = () => {
   const [summaryBarOpen, setSummaryBarOpen] = useState(false);
   return (
     <div>
-      <MapArea />
+      {/* <MapArea /> */}
       <SummaryBar summaryBarOpen={summaryBarOpen} />
       <StepsBar
         stepNo={2}

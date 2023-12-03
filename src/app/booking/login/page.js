@@ -1,21 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import SummaryBar from "@/components/booking/summaryBar";
-import StepsBar from "@/components/booking/stepsBar";
+// import SummaryBar from "@/components/booking/summaryBar";
+// import StepsBar from "@/components/booking/stepsBar";
+// import MapArea from "@/components/booking/mapArea";
 import LoginArea from "@/components/booking/loginArea";
-import MapArea from "@/components/booking/mapArea";
 
 const Login = () => {
   const [summaryBarOpen, setSummaryBarOpen] = useState(false);
   return (
-    <div className="login-page">
+    <div className="login-page mt-60">
       {/* <MapArea /> */}
-      <SummaryBar summaryBarOpen={summaryBarOpen} />
+      {/* <SummaryBar summaryBarOpen={summaryBarOpen} />
       <StepsBar
         stepNo={3}
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}
-      />
+      /> */}
       <LoginArea />
     </div>
   );

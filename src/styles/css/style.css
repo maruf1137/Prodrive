@@ -1093,8 +1093,10 @@ ul.summary-bar li p {
   margin-bottom: 100px;
   position: relative;
 }
-.login-page .booking-steps-area {
+.booking-steps-area {
   margin-top: 100px;
+}
+.car-class-page {
 }
 ul.booking-steps li {
   display: inline-block;
@@ -7953,6 +7955,15 @@ html {
 }
 
 /* =========== */
+.hero-btns-wrapper {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.hero-btns-wrapper p {
+  color: #000;
+  font-weight: 600;
+}
 .hero-form .form-wrapper {
   background-color: #fff;
   border-radius: 5px;

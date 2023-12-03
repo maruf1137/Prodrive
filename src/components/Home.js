@@ -21,8 +21,8 @@ export default function Home() {
                   Choose a Country For Your <br className="lg:d-none" />
                   Next Adventure?
                 </h1>
-                <form action="#" className="hero-form">
-                  <div className="form-wrapper">
+                <div className="hero-btns-wrapper">
+                  {/* <div className="form-wrapper">
                     <svg class="icon">
                       <use xlinkHref="/icons.svg#icon-beach"></use>
                     </svg>
@@ -35,7 +35,8 @@ export default function Home() {
                         <use xlinkHref="/icons.svg#icon-search"></use>
                       </svg>
                     </button>
-                  </div>
+                  </div> */}
+                  <p className="text-black">Explore & Prebook</p>
                   <div className="explore-box">
                     {/* <p className="text-center">Explore & Prebook</p> */}
                     <div className="btns">
@@ -53,7 +54,7 @@ export default function Home() {
                       </Link>
                     </div>
                   </div>
-                </form>
+                </div>
 
                 <div className="heroTags">
                   <div className="heroTags__title text-white">
