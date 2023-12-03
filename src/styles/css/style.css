@@ -1236,6 +1236,7 @@ ul.booking-steps li .text {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .ver1 {
@@ -7735,7 +7736,19 @@ html {
   flex-wrap: wrap;
 }
 .vehicle-title-box {
-  gap: 12px;
+  gap: 6px;
+  align-items: flex-start;
+}
+.vehicle-info-btn {
+  padding: 0;
+  height: auto;
+  line-height: normal;
+  background-color: transparent;
+}
+.vehicle-info-btn .icon {
+  height: 30px;
+  width: 30px;
+  fill: #ea652b;
 }
 .vihicle-title-box .box {
   gap: 12px;
@@ -7762,6 +7775,41 @@ html {
   border: 1px solid #ea652b;
   background-color: #ea652b;
   color: #fff;
+}
+.mbl-vihicle-title-box .box {
+  position: relative !important;
+  justify-content: center;
+  border: none !important;
+}
+.vehicle-flip-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  /* opacity: 0.6; */
+  padding: 30px;
+  border: 1px solid #ebe9dc;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+.vehicle-flip-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+.vehicle-flip-box .name-car {
+  font-weight: 600;
+  font-size: 20px;
+}
+.vehicle-flip-box .vehicle-close-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 .options-area .pick-date input {
   border: 1px solid #d7d2bd;

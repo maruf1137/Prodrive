@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import TempleteTitle from "../templeteTitle";
 import { vehicleData } from "../data";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
+import VehicleArea from "../booking/vehicleArea";
 
 const FleetArea = () => {
   return (
@@ -18,6 +20,7 @@ const FleetArea = () => {
             />
           </div>
         </div>
+        <VehicleArea />
         <div className="row">
           <div className="col-md-12">
             {vehicleData.map((item) => {
