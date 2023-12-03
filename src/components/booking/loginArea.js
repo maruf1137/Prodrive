@@ -9,7 +9,7 @@ const tabBtns = [
   },
   {
     id: 1,
-    title: "LOGIN",
+    title: "Login",
   },
 ];
 
@@ -102,17 +102,21 @@ const LoginArea = () => {
                     <div className="login-social">
                       <span>OR</span>
                       <p>You can log in quickly with your account.</p>
-                      <ul className="social d-flex align-items-center justify-content-between">
+                      <ul className="social d-flex align-items-center justify-content-center">
                         <li className="facebook">
                           <a href="#" title="">
-                            <span className="fa fa-facebook"></span>Connect with
-                            Facebook
+                            <svg class="icon icon-facebook1">
+                              <use xlinkHref="/icons.svg#icon-facebook1"></use>
+                            </svg>
+                            Connect with Facebook
                           </a>
                         </li>
                         <li className="twitter">
                           <a href="#" title="">
-                            <span className="fa fa-google"></span>Connect with
-                            Google
+                            <svg class="icon icon-facebook1">
+                              <use xlinkHref="/icons.svg#icon-google"></use>
+                            </svg>
+                            Connect with Google
                           </a>
                         </li>
                       </ul>
@@ -144,7 +148,7 @@ const LoginArea = () => {
                             placeholder="TUF..."
                           />
                         </div>
-                        <div className="one-half email">
+                        <div className="email one-half">
                           <label for="email">Email</label>
                           <input
                             type="text"
@@ -152,6 +156,17 @@ const LoginArea = () => {
                             id="email"
                             placeholder="creativelayer088@gmail.com"
                           />
+                        </div>
+
+                        <div className="one-half number-bags">
+                          <label for="country">Country</label>
+                          <select name="country" id="country">
+                            <option value="England">England</option>
+                            <option value="United States">United States</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                          </select>
+                          {/* <div className="select"></div> */}
                         </div>
                         {/* <div className="one-half number-bags">
                           <label for="country">Country</label>

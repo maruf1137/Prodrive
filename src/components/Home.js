@@ -358,7 +358,7 @@ export default function Home() {
                   <h4 className="text-24 text-white fw-700 mt-5">
                     Best staycation deals
                   </h4>
-                  <button className="button -md -accent-1 bg-white">
+                  <button className="button -md -accent-1 bg-white text-black">
                     See activities
                     <i className="icon-arrow-top-right ml-10"></i>
                   </button>
@@ -377,7 +377,7 @@ export default function Home() {
                   <h4 className="text-24 text-white fw-700 mt-5">
                     All Time Favourite Activities in Dubai
                   </h4>
-                  <button className="button -md -accent-1 bg-white">
+                  <button className="button -md -accent-1 bg-white text-black">
                     See activities
                     <i className="icon-arrow-top-right ml-10"></i>
                   </button>
@@ -394,7 +394,7 @@ export default function Home() {
                   <h4 className="text-24 text-white fw-700 mt-5">
                     Discover the wow of europe
                   </h4>
-                  <button className="button -md -accent-1 bg-white">
+                  <button className="button -md -accent-1 bg-white text-black">
                     See activities
                     <i className="icon-arrow-top-right ml-10"></i>
                   </button>
@@ -1007,7 +1007,7 @@ export default function Home() {
 
               <div className="singleInput type-1 mt-30">
                 <input type="text" placeholder="Your email" />
-                <button className="button -md -dark-1 bg-white">
+                <button className="button -md -dark-1 bg-white text-black">
                   Subscribe
                 </button>
               </div>

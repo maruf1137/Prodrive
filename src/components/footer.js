@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="widget-footer widget-about">
                 <div className="logo-ft">
                   <a href="#" title="">
-                    <img src="images/logo-ft.png" alt="" />
+                    <img src="/images/logo-ft.png" alt="" />
                   </a>
                 </div>
                 <ul className="infomation-ft">
