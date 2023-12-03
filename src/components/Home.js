@@ -21,121 +21,39 @@ export default function Home() {
                   Choose a Country For Your <br className="lg:d-none" />
                   Next Adventure?
                 </h1>
-                {/* <div className="home_tab" style={{ width: "470px" }}>
-                  <div className="mx-2">
-                    <button
-                      onClick={toggleSelectedTab}
-                      className={`home_tab_ ${selectedTab ? "active" : ""}`}>
-                      Taxi
-                    </button>
-                  </div>
-                  <div className="">
-                    <button
-                      onClick={toggleSelectedTab}
-                      className={`home_tab_ ${selectedTab ? "" : "active"}`}>
-                      Tours
-                    </button>
-                  </div>
-                </div>
-                {selectedTab ? (
-                  <div className="hero__search">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      color="black"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.0001 4.29932C7.95277 4.29932 6.28711 5.96498 6.28711 8.01232C6.28711 10.0597 7.95277 11.7253 10.0001 11.7253C12.0475 11.7253 13.7131 10.0597 13.7131 8.01232C13.7131 5.96498 12.0475 4.29932 10.0001 4.29932ZM10.0001 10.162C8.8148 10.162 7.85047 9.19764 7.85047 8.01232C7.85047 6.82701 8.8148 5.86268 10.0001 5.86268C11.1854 5.86268 12.1498 6.82701 12.1498 8.01232C12.1498 9.19764 11.1854 10.162 10.0001 10.162Z"
-                        fill="05073C"
-                      />
-                      <path
-                        d="M10.0006 0C5.58258 0 1.98828 3.59434 1.98828 8.01231V8.23379C1.98828 10.4682 3.2693 13.0719 5.79586 15.9726C7.62742 18.0754 9.4334 19.5416 9.50934 19.603L10.0006 20L10.4918 19.6031C10.5678 19.5417 12.3738 18.0754 14.2053 15.9726C16.7318 13.0719 18.0129 10.4682 18.0129 8.23383V8.01234C18.0129 3.59434 14.4186 0 10.0006 0ZM16.4495 8.23383C16.4495 12.0098 11.5843 16.5807 10.0006 17.9683C8.41648 16.5803 3.55164 12.0095 3.55164 8.23383V8.01234C3.55164 4.45641 6.44465 1.5634 10.0006 1.5634C13.5565 1.5634 16.4495 4.45641 16.4495 8.01234V8.23383Z"
-                        fill="05073C"
-                      />
-                    </svg>
-
-                    <input
-                      type="text"
-                      placeholder="enter your pickup location .."
-                    />
-
-                    <button>
-                      <svg
-                        className="feather feather-search"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" x2="16.65" y1="21" y2="16.65" />
-                      </svg>
-                    </button>
-                  </div>
-                ) : (
-                  <div className="hero__search">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      color="black"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10.0001 4.29932C7.95277 4.29932 6.28711 5.96498 6.28711 8.01232C6.28711 10.0597 7.95277 11.7253 10.0001 11.7253C12.0475 11.7253 13.7131 10.0597 13.7131 8.01232C13.7131 5.96498 12.0475 4.29932 10.0001 4.29932ZM10.0001 10.162C8.8148 10.162 7.85047 9.19764 7.85047 8.01232C7.85047 6.82701 8.8148 5.86268 10.0001 5.86268C11.1854 5.86268 12.1498 6.82701 12.1498 8.01232C12.1498 9.19764 11.1854 10.162 10.0001 10.162Z"
-                        fill="05073C"
-                      />
-                      <path
-                        d="M10.0006 0C5.58258 0 1.98828 3.59434 1.98828 8.01231V8.23379C1.98828 10.4682 3.2693 13.0719 5.79586 15.9726C7.62742 18.0754 9.4334 19.5416 9.50934 19.603L10.0006 20L10.4918 19.6031C10.5678 19.5417 12.3738 18.0754 14.2053 15.9726C16.7318 13.0719 18.0129 10.4682 18.0129 8.23383V8.01234C18.0129 3.59434 14.4186 0 10.0006 0ZM16.4495 8.23383C16.4495 12.0098 11.5843 16.5807 10.0006 17.9683C8.41648 16.5803 3.55164 12.0095 3.55164 8.23383V8.01234C3.55164 4.45641 6.44465 1.5634 10.0006 1.5634C13.5565 1.5634 16.4495 4.45641 16.4495 8.01234V8.23383Z"
-                        fill="05073C"
-                      />
+                <form action="#" className="hero-form">
+                  <div className="form-wrapper">
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-beach"></use>
                     </svg>
                     <input
                       type="text"
                       placeholder="search by tour name or location"
                     />
-
-                    <button>
-                      <svg
-                        className="feather feather-search"
-                        fill="none"
-                        height="24"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        strokeLinejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                    <button type="submit" className="btn-submit">
+                      <svg class="icon">
+                        <use xlinkHref="/icons.svg#icon-search"></use>
                       </svg>
                     </button>
                   </div>
-                )} */}
-                <div className="explore-box">
-                  <p className="text-center">Explore & Prebook</p>
-                  <div className="btns">
-                    <Link href="#" className="explore-box-btn">
-                      <svg class="icon">
-                        <use xlinkHref="/icons.svg#icon-coffee"></use>
-                      </svg>
-                      <span>Tour & Excursion</span>
-                    </Link>
-                    <Link href="#" className="explore-box-btn">
-                      <svg class="icon">
-                        <use xlinkHref="/icons.svg#icon-automobile"></use>
-                      </svg>
-                      <span>Taxi Service</span>
-                    </Link>
+                  <div className="explore-box">
+                    {/* <p className="text-center">Explore & Prebook</p> */}
+                    <div className="btns">
+                      <Link href="#" className="explore-box-btn">
+                        <svg class="icon">
+                          <use xlinkHref="/icons.svg#icon-beach"></use>
+                        </svg>
+                        <span>Tour & Excursion</span>
+                      </Link>
+                      <Link href="#" className="explore-box-btn">
+                        <svg class="icon">
+                          <use xlinkHref="/icons.svg#icon-automobile"></use>
+                        </svg>
+                        <span>Taxi Service</span>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </form>
 
                 <div className="heroTags">
                   <div className="heroTags__title text-white">
@@ -181,32 +99,7 @@ export default function Home() {
         <div className="container">
           <div className="row y-gap-10 justify-between items-center y-gap-10">
             <div className="col-auto">
-              <h2 className="text-30 md:text-24">
-                Best of London
-                {/* <div
-                  className="dropdown -type-list js-dropdown js-form-dd"
-                  data-main-value="london"
-                >
-                  <div className="dropdown__button text-light-7 js-button">
-                    <span className="js-title">London</span>
-                    <i className="icon-chevron-down ml-5 text-18"></i>
-                  </div>
-                  <div className="dropdown__menu text-16 fw-500 border-1 js-menu-items">
-                    <div className="dropdown__item" data-value="london">
-                      London
-                    </div>
-                    <div className="dropdown__item" data-value="new_york">
-                      New York
-                    </div>
-                    <div className="dropdown__item" data-value="berlin">
-                      Berlin
-                    </div>
-                    <div className="dropdown__item" data-value="paris">
-                      Paris
-                    </div>
-                  </div>
-                </div> */}
-              </h2>
+              <h2 className="text-30 md:text-24">Best of London</h2>
             </div>
           </div>
           <div className="row y-gap-30 pt-40 sm:pt-20">
