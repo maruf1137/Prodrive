@@ -8,8 +8,8 @@ import MapArea from "@/components/booking/mapArea";
 const Login = () => {
   const [summaryBarOpen, setSummaryBarOpen] = useState(false);
   return (
-    <div>
-      <MapArea />
+    <div className="login-page">
+      {/* <MapArea /> */}
       <SummaryBar summaryBarOpen={summaryBarOpen} />
       <StepsBar
         stepNo={3}

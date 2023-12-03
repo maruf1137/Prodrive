@@ -1055,7 +1055,7 @@ blockquote.bg-1 {
   padding: 34px 0 30px;
   position: absolute;
   width: 100%;
-  top: -54px;
+  top: -100%;
   left: 0;
   z-index: 98;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1092,6 +1092,9 @@ ul.summary-bar li p {
   border-bottom: 1px solid #ebe9dc;
   margin-bottom: 100px;
   position: relative;
+}
+.login-page .booking-steps-area {
+  margin-top: 100px;
 }
 ul.booking-steps li {
   display: inline-block;
@@ -7271,12 +7274,9 @@ ul.social-ft li:last-child {
   .header-03 .top-menuleft .x_language {
     display: none;
   }
-  .form-options .one-half,
-  .login-booking .login-content .login-form .one-half,
-  .register-form form .one-half,
-  .form-card .one-half {
-    /* width: 100%;
-    float: none; */
+  .login-booking .login-content .login-form .one-half {
+    width: 100% !important;
+    float: none !important;
   }
   .form-options .one-half {
     padding-left: 6px;
@@ -7891,8 +7891,11 @@ html {
 }
 
 @media only screen and (max-width: 565px) {
-  .summary-bar-area {
+  /* .summary-bar-area {
     top: -200px;
+  } */
+  .login-page .booking-steps-area {
+    margin-top: 70px;
   }
   .login-social ul.social li a {
     padding: 12px 5px;
@@ -8018,4 +8021,8 @@ html {
   fill: #fff;
   height: 30px;
   width: 30px;
+}
+
+.rev_slider ul li .tp-bgimg {
+  opacity: 0.5 !important;
 }

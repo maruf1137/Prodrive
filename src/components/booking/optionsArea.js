@@ -57,6 +57,15 @@ const OptionsArea = () => {
                   </select>
                 </div>
                 <div class="pick-date one-half first-name">
+                  <label>Pick Up Date</label>
+                  <input
+                    id="date-range11"
+                    size="40"
+                    value=""
+                    placeholder="WEB 19, 2018"
+                  />
+                </div>
+                {/* <div class="pick-date one-half first-name">
                   <label>Pick Up Return Date</label>
                   <input
                     id="date-range12"
@@ -64,7 +73,7 @@ const OptionsArea = () => {
                     value=""
                     placeholder="WEB 19, 2018"
                   />
-                </div>
+                </div> */}
                 <div class="pick-time js one-half first-name">
                   <label>Pick Up Return Time</label>
                   <select>

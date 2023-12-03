@@ -185,7 +185,7 @@ const LoginArea = () => {
                           <label for="re-pass">Repeat Password</label>
                           <input type="password" name="phone" id="re-pass" />
                         </div>
-                        <div className="checkbox">
+                        {/* <div className="checkbox">
                           <input type="checkbox" name="accept" id="accept" />
                           <label for="accept">
                             Accept
@@ -198,7 +198,7 @@ const LoginArea = () => {
                             </a>{" "}
                             input
                           </label>
-                        </div>
+                        </div> */}
                         <div className="option-area-btns d-flex">
                           <button className="back">Back</button>
                           <button
