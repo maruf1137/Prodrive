@@ -13,9 +13,9 @@ import "../styles/css/bootstrap-datetimepicker.min.css";
 import "@/styles/globals.css";
 import "@/styles/style.css";
 import "@/styles/icon.css";
-import "../styles/css/shortcodes.css";
+// import "../styles/css/shortcodes.css";
 import "../styles/css/style.css";
-import "../styles/css/responsive.css";
+// import "../styles/css/responsive.css";
 // import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
 
 const dosis = Dosis({ subsets: ["latin"] });
