@@ -1,5 +1,6 @@
 import { Dosis } from "next/font/google";
-import Navbar from "@/components/navbar";
+// import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbarJamaica";
 import Footer from "@/components/footer";
 import Script from "next/script";
 import Loader from "@/components/loader";
@@ -11,10 +12,11 @@ import "swiper/css/pagination";
 import "../styles/css/daterangepicker.min.css";
 import "../styles/css/bootstrap-datetimepicker.min.css";
 import "@/styles/globals.css";
-import "@/styles/style.css";
 import "@/styles/icon.css";
 // import "../styles/css/shortcodes.css";
+import "@/styles/style.css";
 import "../styles/css/style.css";
+import "@/styles/sass/main.scss";
 // import "../styles/css/responsive.css";
 // import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
 

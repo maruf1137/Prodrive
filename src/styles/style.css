@@ -2020,16 +2020,16 @@ h6 {
   font-weight: 700;
 }
 
-/* .header.-type-1 {
+.header.-type-1 {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: white;
   z-index: 1000;
-} */
+}
 
-/* .header.-type-1 .header__container {
+.header.-type-1 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2659,7 +2659,7 @@ h6 {
 }
 
 .header .desktopNav > * {
-  padding: 8px 20px;
+  padding: 5px 12px;
 }
 
 .header .desktopNav__item {
@@ -3170,7 +3170,7 @@ h6 {
 
 .header.-type-10 .header__menuBtn i {
   font-size: 20px;
-} */
+}
 
 /* .footer.-type-1 .footer__main {
   position: relative;
@@ -7118,7 +7118,7 @@ h6 {
   opacity: 1;
 }
 
-/* .menu {
+.menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -7222,9 +7222,9 @@ h6 {
 
 .menuNav__item a:hover {
   color: var(--color-accent-1);
-} */
+}
 
-/* .submenu {
+.submenu {
   overflow-y: scroll;
   position: absolute;
   top: 0;
@@ -7247,7 +7247,7 @@ h6 {
 
 .submenu a {
   transform: translateY(100%);
-} */
+}
 
 .preloader {
   position: fixed;

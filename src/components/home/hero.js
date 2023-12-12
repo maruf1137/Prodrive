@@ -68,10 +68,16 @@ const pickAdressdata = [
 
 const Hero = () => {
   const [pickAddressTab, setPickAddressTab] = useState(pickAddressTabData[0]);
+  const [adressLists, setAdressLists] = useState(false);
 
   const handlePopup = () => {
     const bookAddress = document.querySelector(".book-adress");
     bookAddress.classList.remove("open");
+  };
+
+  const handlePickAddressTab = (btn) => {
+    console.log(btn);
+    setPickAddressTab(btn);
   };
 
   return (
@@ -287,106 +293,15 @@ const Hero = () => {
           </div>
         </div>
         {/* <!-- END REVOLUTION SLIDER --> */}
-        {/* <!-- END REVOLUTION SLIDER --> */}
-        {/* <div class="calendar">
-          <span class="close">
-            <img src="/images/icon/close_x.png" alt="" />
-          </span>
-          <div class="container">
-            <div class="logo-calendar center">
-              <Link href="/" title="">
-                <img src="/images/logo.png" alt="" />
-              </Link>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="title center">
-                  <h2>Please Select Date</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 center calenders">
-                <div
-                  id="date-range12-container"
-                  className="calender-wrapper"></div>
-                <div
-                  id="date-range11-container"
-                  className="calender-wrapper"></div>
-                <div
-                  id="date-range10-container"
-                  className="calender-wrapper"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="time-open">
-          <span class="close">
-            <img src="/images/icon/close_x.png" alt="" />
-          </span>
-          <div class="container">
-            <div class="logo-calendar center">
-              <Link href="/" title="">
-                <img src="/images/logo.png" alt="" />
-              </Link>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="title center">
-                  <h2>Pick Up Time</h2>
-                  <p>
-                    Choose from a wide selection of boats ranging from luxury
-                    motor yachts to classic sailing yachts, we have every type
-                    of boat available to meet your needs.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 center">
-                <div class="box-time first">
-                  <select id="hours">
-                    <option value="hide">01</option>
-                    <option value="january" rel="icon-temperature">
-                      02
-                    </option>
-                    <option value="february">03</option>
-                    <option value="march">04</option>
-                    <option value="april">05</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6 center">
-                <div class="box-time">
-                  <select id="minutes">
-                    <option value="hide">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+
         <div class="book-adress">
           <span class="close">
-            {/* <img src="/images/icon/close_x.png" alt="" /> */}
             <svg class="icon">
               <use xlinkHref="/icons.svg#icon-clear"></use>
             </svg>
           </span>
           <div class="container">
-            <div class="logo-calendar center">
-              {/* <Link href="/" title="">
-                <img src="/images/logo.png" alt="" />
-              </Link> */}
-            </div>
+            <div class="logo-calendar center"></div>
           </div>
           <div class="container mt-5">
             <div class="form-address">
@@ -401,9 +316,6 @@ const Hero = () => {
                   class="pic-add"
                   placeholder="Pick Up Address"
                 />
-                {/* <button type="submit" class="waves-effect">
-                  <img src="/images/icon/arrowad.png" alt="" />
-                </button> */}
                 <div className="tab-wrapper">
                   <div className="tab-btns">
                     {pickAddressTabData.map((btn, i) => {
@@ -413,17 +325,14 @@ const Hero = () => {
                             btn == pickAddressTab ? "tab-btn active" : "tab-btn"
                           }
                           key={i}
-                          onClick={() => setPickAddressTab(btn)}>
+                          onClick={() => handlePickAddressTab(btn)}>
                           {btn}
                         </button>
                       );
                     })}
-                    {/* <button className="tab-btn active">Airpots</button>
-                    <button className="tab-btn">Hotels</button>
-                    <button className="tab-btn">Ships</button> */}
                   </div>
                 </div>
-                <ul class="list-address">
+                <ul class="list-address active">
                   {pickAdressdata
                     .filter((item) => item.subject == pickAddressTab)
                     .map(({ id, text }) => {
@@ -435,47 +344,11 @@ const Hero = () => {
                         </li>
                       );
                     })}
-                  {/* <li>
-                    <a href="#" onClick={handlePopup}>
-                      Most Searched
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      New York
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      Istanbul
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      London
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      Berlin
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      Los Angeles
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" onClick={handlePopup}>
-                      Paris
-                    </a>
-                  </li> */}
                 </ul>
               </form>
             </div>
           </div>
         </div>
-
         <section class="sdl-booking">
           <div class="schedule-booking fw d-block">
             <h1 class="text-over">RESERVE NOW</h1>
@@ -496,32 +369,6 @@ const Hero = () => {
                   placeholder="From: address, airport, hotel, ..."
                 />
               </div>
-              {/* <div class="pick-date">
-                <label>Pick Up Date</label>
-                <input
-                  id="date-range12"
-                  size="40"
-                  value=""
-                  placeholder="WEB 19, 2018"
-                />
-              </div>
-              <div class="pick-time js">
-                <label>Pick Up Time</label>
-                <select>
-                  <option value="time-01" selected hidden>
-                    12:25 am
-                  </option>
-                  <option value="time-02" hidden>
-                    11:25 am
-                  </option>
-                  <option value="time-03" hidden>
-                    10:25 am
-                  </option>
-                  <option value="time-04" hidden>
-                    9:25 am
-                  </option>
-                </select>
-              </div> */}
               <div class="btn-submit">
                 <a href="#" class="register_now">
                   Reserve Now

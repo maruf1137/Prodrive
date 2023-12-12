@@ -166,7 +166,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header id="header" className="header-03">
+      <header id="header" className="header-03 gfhyg">
         <div className="container-fluid d-md-block d-flex align-items-center">
           {/* <div
             className="onclick d-md-none mr-3 mr-md-0"

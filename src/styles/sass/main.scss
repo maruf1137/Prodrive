@@ -1,0 +1,60 @@
+$color-primary: #eb662b;
+
+.header__container {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    height: auto;
+    line-height: normal;
+    font-size: 28px;
+    color: #ffffff;
+    background: transparent;
+    font-family: inherit, sans-serif;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .headerMobile__right {
+    gap: 40px;
+
+    a,
+    button {
+      height: 30px;
+      width: 30px;
+
+      .icon {
+        height: 100%;
+        width: 100%;
+        fill: #fff;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        .icon {
+          fill: $color-primary;
+        }
+      }
+    }
+  }
+
+  .header_small_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    padding: 0;
+  }
+}

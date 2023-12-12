@@ -447,9 +447,9 @@
     _close.on("click", function () {
       $(".book-adress").removeClass("open");
     });
-    _add.on("click", function () {
-      $(".list-address").toggleClass("active");
-    });
+    // _add.on("click", function () {
+    //   $(".list-address").toggleClass("active");
+    // });
   };
   // DateTime Pickup
   var initDateTimePickup = function () {

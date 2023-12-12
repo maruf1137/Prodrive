@@ -36,7 +36,7 @@ export default function Home() {
                       </svg>
                     </button>
                   </div> */}
-                  <p className="text-black">Explore & Prebook</p>
+                  {/* <p className="text-black">Explore & Prebook</p> */}
                   <div className="explore-box">
                     {/* <p className="text-center">Explore & Prebook</p> */}
                     <div className="btns">
@@ -44,13 +44,13 @@ export default function Home() {
                         <svg class="icon">
                           <use xlinkHref="/icons.svg#icon-beach"></use>
                         </svg>
-                        <span>Tour & Excursion</span>
+                        <span>Tour</span>
                       </Link>
                       <Link href="#" className="explore-box-btn">
                         <svg class="icon">
                           <use xlinkHref="/icons.svg#icon-automobile"></use>
                         </svg>
-                        <span>Taxi Service</span>
+                        <span>Taxi</span>
                       </Link>
                     </div>
                   </div>
