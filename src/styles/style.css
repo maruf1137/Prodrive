@@ -7146,7 +7146,7 @@ h6 {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 40px;
+  padding: 20px;
   background-color: white;
   z-index: 1;
 }
@@ -7172,6 +7172,9 @@ h6 {
   justify-content: center;
   align-items: center;
   background-color: var(--color-light-1);
+}
+.menu__header button i {
+  color: #969696;
 }
 
 .menu__content {

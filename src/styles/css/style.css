@@ -4769,7 +4769,7 @@ button:focus {
   height: calc(100% + 0px);
   z-index: 100000;
   opacity: 0;
-  border-top: 6px solid #d7d2bd;
+  /* border-top: 6px solid #d7d2bd; */
   visibility: hidden;
   background-color: rgba(30, 30, 30, 0.95);
 }
@@ -7664,8 +7664,8 @@ html {
   right: 30px;
 }
 .book-adress .icon {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   fill: #000000;
 }
 
@@ -7694,7 +7694,7 @@ html {
   /* background-color: #ea652b; */
   background-color: #fff;
   border: 1px solid #33333376;
-  padding: 10px 15px;
+  padding: 5px 15px;
   width: 100%;
   height: auto;
   line-height: normal;

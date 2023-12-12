@@ -1,10 +1,7 @@
 $color-primary: #eb662b;
 
 .header__container {
-  button,
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"] {
+  button {
     display: inline-block;
     border-radius: 0;
     border: none;
