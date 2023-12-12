@@ -39,11 +39,24 @@ $color-primary: #eb662b;
     }
   }
 
+  .header__left {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+
   .header_small_img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  @media only screen and (max-width: 565px) {
+    .headerMobile__right {
+      gap: 20px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
   }
 }
 
