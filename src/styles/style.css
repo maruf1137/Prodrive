@@ -578,14 +578,14 @@ body {
   line-height: 1.875;
 }
 
-select,
+/* select,
 input:not([type="range"]),
 textarea {
   border: 0;
   outline: none;
   width: 100%;
   background-color: transparent;
-}
+} */
 
 main {
   overflow: hidden;
