@@ -200,29 +200,8 @@ const Tours = () => {
         </div>
       </section>
 
-      {/* <section className="pageHeader -type-3 pt-60">
-        <div className="container">
-          <div className="row justify-between">
-            <div className="col-auto"></div>
-            <div className="col-auto">
-              <div className="pageHeader__subtitle">
-                THE 10 BEST Phuket Tours & Excursions
-              </div>
-            </div>
-          </div>
-
-          <div className="row pt-30">
-            <div className="col-auto">
-              <h1 className="pageHeader__title">
-                Explore all things to do in Phuket
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="layout-pb-xl mt-20">
-        <div className="container p-0">
+        <div className="container">
           <div className="pl-tag__grid mobile-css-slider-2">
             <div className="">
               <a href="#" className="pl-tag">
@@ -292,7 +271,8 @@ const Tours = () => {
                 </div>
 
                 <div className="col-auto">
-                  <div
+                  <button className="btn-show-map">Show On Map</button>
+                  {/* <div
                     className="dropdown -type-2 js-dropdown js-form-dd"
                     data-main-value="">
                     <div className="dropdown__button js-button">
@@ -322,7 +302,7 @@ const Tours = () => {
                         Grind
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="row y-gap-30 pt-30">

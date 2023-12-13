@@ -10,13 +10,19 @@ const page = () => {
   return (
     <div>
       {/* <MapArea /> */}
-      <SummaryBar summaryBarOpen={summaryBarOpen} />
-      <StepsBar
-        stepNo={2}
+      <SummaryBar
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}
       />
-      <OptionsArea />
+      {/* <StepsBar
+        stepNo={2}
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
+      /> */}
+      <OptionsArea
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
+      />
     </div>
   );
 };

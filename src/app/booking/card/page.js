@@ -12,12 +12,15 @@ const Bookingcard = () => {
     <div>
       {/* <MapArea /> */}
       <SummaryBar summaryBarOpen={summaryBarOpen} />
-      <StepsBar
+      {/* <StepsBar
         stepNo={4}
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}
+      /> */}
+      <BookingCardArea
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
       />
-      <BookingCardArea />
       <Choose />
     </div>
   );

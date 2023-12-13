@@ -51,6 +51,10 @@ $color-primary: #eb662b;
     object-fit: cover;
   }
 
+  .desktopNav__item a {
+    color: inherit;
+  }
+
   @media only screen and (max-width: 565px) {
     .headerMobile__right {
       gap: 20px;
@@ -66,5 +70,80 @@ $color-primary: #eb662b;
   input[type="reset"],
   input[type="submit"] {
     padding: 0;
+  }
+}
+
+.btn-show-map {
+  border: 1px solid $color-primary;
+  background-color: #eb652b30;
+  color: $color-primary;
+  padding: 10px 20px;
+  line-height: normal;
+  height: auto;
+
+  &:hover {
+    border: 1px solid $color-primary;
+  }
+}
+
+.summaryBtnBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: $color-primary;
+  padding: 10px 20px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+
+  p {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .summaryBtn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    height: auto;
+    line-height: normal;
+
+    .iconBox {
+      height: 35px;
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+
+      svg {
+        height: 25px;
+        width: 25px;
+        fill: $color-primary;
+      }
+    }
+  }
+}
+
+.options-area,
+.card-area {
+  padding-top: 90px;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.login-booking-area {
+  .logo {
+    img {
+      height: 70px;
+    }
   }
 }

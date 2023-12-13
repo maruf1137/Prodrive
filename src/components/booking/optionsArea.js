@@ -3,8 +3,9 @@ import React, { useState } from "react";
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import SummaryBox from "./summaryBox";
 
-const OptionsArea = () => {
+const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
   const router = useRouter();
   const [popup, setPopup] = useState(false);
 
@@ -18,6 +19,11 @@ const OptionsArea = () => {
   };
   return (
     <section className="options-area">
+      <SummaryBox
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
+      />
+
       <div className="container">
         <div className="row">
           <div className="col-lg-2"></div>

@@ -3,7 +3,7 @@ import { vehicleData } from "../data";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
 
-const VehicleArea = () => {
+const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
   const [vehicleStateData, setVehicleStateData] = useState(vehicleData);
   // const [info, setInfo] = useState({ id: 0, status: true });
 
@@ -27,7 +27,27 @@ const VehicleArea = () => {
   };
 
   return (
-    <section className="select-vehicle-area">
+    <section className="select-vehicle-area relative pt-0">
+      <div className="summaryBtnBox mb-50">
+        <p className="text">Trip Info</p>
+        <button
+          className="summaryBtn d-flex"
+          onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+          <span>Booking Details</span>
+          <span className="iconBox">
+            <svg>
+              <use
+                xlinkHref={`/icons.svg#icon-${
+                  summaryBarOpen ? "minus" : "plus"
+                }`}></use>
+            </svg>
+          </span>
+          {/* <svg>
+            <use xlinkHref="/icons.svg#icon-minimize"></use>
+          </svg> */}
+        </button>
+      </div>
+
       <div className="container">
         <div className="row">
           <div className="col-md-12">

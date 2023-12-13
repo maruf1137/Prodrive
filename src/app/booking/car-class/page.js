@@ -12,12 +12,15 @@ const CarClass = () => {
     <div className="car-class-page">
       <MapArea />
       <SummaryBar summaryBarOpen={summaryBarOpen} />
-      <StepsBar
+      {/* <StepsBar
         stepNo={1}
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}
+      /> */}
+      <VehicleArea
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
       />
-      <VehicleArea />
     </div>
   );
 };

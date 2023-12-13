@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const tabBtns = [
   {
     id: 2,
-    title: "Passenger Info",
+    title: "User Info",
   },
   {
     id: 1,
@@ -14,7 +14,7 @@ const tabBtns = [
 ];
 
 const LoginArea = () => {
-  const [tabBtnActive, setTabBtnActive] = useState(1);
+  const [tabBtnActive, setTabBtnActive] = useState(2);
   const router = useRouter();
   const [popup, setPopup] = useState(false);
 
@@ -29,6 +29,9 @@ const LoginArea = () => {
 
   return (
     <section className="login-booking-area">
+      <figure className="mx-auto mb-20 text-center logo">
+        <img src="/img/general/small-logo.png" alt="" />
+      </figure>
       <div className="container">
         <div className="row">
           <div className="col-lg-2"></div>
@@ -55,14 +58,14 @@ const LoginArea = () => {
                         method="post"
                         accept-charset="utf-8"
                         onSubmit={(e) => handleSubmit(e)}>
-                        <div className="one-half">
+                        <div className="one-half w-100">
                           <div className="form-email">
                             <label for="">Email</label>
                             <input
                               type="text"
                               name="email"
                               id="email"
-                              placeholder="creativelayer088@gmail.com"
+                              placeholder="hello@jamrocktaxi.com"
                             />
                           </div>
                         </div>
@@ -76,6 +79,12 @@ const LoginArea = () => {
                               placeholder="************"
                             />
                           </div>
+                        </div>
+                        <div className="one-half d-flex flex-column">
+                          <label className="invisible">submit</label>
+                          <button type="submit" className="form-password">
+                            LOGIN
+                          </button>
                         </div>
                         <div className="clearfix"></div>
                         <div className="d-flex justify-content-between align-items-center mx-3">
@@ -93,9 +102,9 @@ const LoginArea = () => {
                             </a>
                           </div>
                         </div>
-                        <div className="d-flex justify-content-center">
+                        {/* <div className="d-flex justify-content-center">
                           <button type="submit">LOGIN</button>
-                        </div>
+                        </div> */}
                         <div className="clearfix"></div>
                       </form>
                     </div>
@@ -136,7 +145,7 @@ const LoginArea = () => {
                             type="text"
                             name="firstname"
                             id="firstname"
-                            placeholder="Ali"
+                            placeholder="Dave"
                           />
                         </div>
                         <div className="one-half last-name">
@@ -145,7 +154,7 @@ const LoginArea = () => {
                             type="text"
                             name="lastname"
                             id="lastname"
-                            placeholder="TUF..."
+                            placeholder="Everton"
                           />
                         </div>
                         <div className="email one-half">
@@ -154,7 +163,7 @@ const LoginArea = () => {
                             type="text"
                             name="email"
                             id="email"
-                            placeholder="creativelayer088@gmail.com"
+                            placeholder="hello@jamrocktaxi.com"
                           />
                         </div>
 
@@ -177,14 +186,14 @@ const LoginArea = () => {
                             placeholder="(+90) 538 658 96 315"
                           />
                         </div>
-                        <div className="one-half pass">
+                        {/* <div className="one-half pass">
                           <label for="pass">Password</label>
                           <input type="text" name="pass" id="pass" />
                         </div>
                         <div className="one-half re-pass">
                           <label for="re-pass">Repeat Password</label>
                           <input type="password" name="phone" id="re-pass" />
-                        </div>
+                        </div> */}
                         {/* <div className="checkbox">
                           <input type="checkbox" name="accept" id="accept" />
                           <label for="accept">
@@ -199,14 +208,18 @@ const LoginArea = () => {
                             input
                           </label>
                         </div> */}
-                        <div className="option-area-btns d-flex">
-                          <button className="back">Back</button>
-                          <button
-                            type="submit"
-                            className="submit"
-                            onClick={() => setPopup(true)}>
-                            CONTINUE
-                          </button>
+                        <div className="option-area-btns">
+                          <div className="one-half">
+                            <button className="back">Back</button>
+                          </div>
+                          <div className="one-half">
+                            <button
+                              type="submit"
+                              className="submit"
+                              onClick={() => setPopup(true)}>
+                              CONTINUE
+                            </button>
+                          </div>
                         </div>
                         <div className="clearfix"></div>
                       </form>

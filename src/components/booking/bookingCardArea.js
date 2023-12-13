@@ -1,15 +1,21 @@
 import React from "react";
 import { useRouter } from "next/navigation";
+import SummaryBox from "./summaryBox";
 
-const BookingCardArea = () => {
+const BookingCardArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
   const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push("/booking/checkout");
   };
+
   return (
     <section className="card-area">
+      <SummaryBox
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
+      />
       <div className="container">
         <div className="row">
           <div className="col-md-2"></div>

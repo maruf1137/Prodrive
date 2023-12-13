@@ -91,7 +91,7 @@ const PhuketPage = () => {
 
       <section className="layout-pt-xl">
         <div className="container">
-          <div className="row y-gap-10 justify-between items-end y-gap-10">
+          <div className="row y-gap-10 justify-between items-center y-gap-10">
             <div className="col-auto">
               <h2 className="text-30">Popular Tour in Phuket</h2>
             </div>

@@ -7282,8 +7282,8 @@ ul.social-ft li:last-child {
     float: none !important;
   }
   .form-options .one-half {
-    padding-left: 6px;
-    padding-right: 0px;
+    /* padding-left: 6px;
+    padding-right: 0px; */
     margin-bottom: 22px;
   }
   .login-social ul.social li {
@@ -7447,6 +7447,15 @@ ul.social-ft li:last-child {
   .no-slider .fleet-carousels .fleet-item:hover,
   .no-slider .fleet-carousels .fleet-item {
     min-height: 320px;
+  }
+  .form-options .one-half {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .form-options .infomation,
+  .form-options .btn-submit {
+    padding-right: 6px;
+    padding-left: 6px;
   }
 }
 
@@ -7754,8 +7763,8 @@ html {
   gap: 12px;
 }
 .vihicle-title-box .box img {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
 }
 .vihicle-title-box .box .list {
   display: flex;
@@ -7815,13 +7824,13 @@ html {
   border: 1px solid #d7d2bd;
   padding-left: 10px;
 }
-.option-area-btns {
+/* .option-area-btns {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 15px;
   padding: 0 10px;
-}
+} */
 .option-area-btns button {
   width: 100%;
   background-color: #ea652b;
@@ -7957,6 +7966,15 @@ html {
 }
 
 @media only screen and (max-width: 991px) {
+  .select-car .box-text:not(.no-pd) {
+    padding: 15px;
+  }
+  .select-car {
+    padding: 0 10px;
+  }
+  .select-car .one-half.image-car {
+    margin-bottom: 0;
+  }
   .summary-bar-area {
     position: absolute !important;
     margin-top: 0;
@@ -8024,12 +8042,16 @@ html {
     width: 24px;
     line-height: 24px;
   }
+
+  .mht {
+    margin-top: 56px;
+  }
+  .summary-bar-area.open {
+    top: 56px;
+  }
 }
 
 @media only screen and (max-width: 565px) {
-  /* .summary-bar-area {
-    top: -200px;
-  } */
   .login-page .booking-steps-area {
     margin-top: 70px;
   }
@@ -8067,6 +8089,9 @@ html {
   .form-address .list-address {
     margin-top: 15px;
   }
+  /* .option-area-btns {
+    padding: 0 6px;
+  } */
 }
 
 @media only screen and (max-width: 480px) {

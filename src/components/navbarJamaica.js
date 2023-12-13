@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Taxis from "./taxis";
 
@@ -220,6 +221,9 @@ const jamicaPages = [
 
 export default function Navbar() {
   const [taxisActive, setTaxisActive] = useState(false);
+  const [bg_black, setBg_black] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   function dropdown() {
     const targets = document.querySelectorAll(".js-dropdown");
@@ -294,8 +298,6 @@ export default function Navbar() {
       },
     });
   }
-  const router = useRouter();
-  const isHomePage = router.pathname === "/";
 
   function menuClose() {
     const menu = document.querySelector(".js-menu");
@@ -549,12 +551,25 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (
+      pathname.includes("/booking") ||
+      (pathname.includes("/jamaica") &&
+        pathname != "/jamaica/home" &&
+        pathname != "/jamaica/tours-list")
+    ) {
+      setBg_black(true);
+    } else {
+      setBg_black(false);
+    }
+  }, [pathname]);
+
   return (
     <>
       <header className="header -type-10 js-header ">
         <div
           className={
-            isHomePage ? "header__container " : "header__container homepage"
+            !bg_black ? "header__container" : "header__container homepage"
           }>
           <div className="headerMobile__left">
             <button
