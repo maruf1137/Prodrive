@@ -11,7 +11,10 @@ const Bookingcard = () => {
   return (
     <div>
       {/* <MapArea /> */}
-      <SummaryBar summaryBarOpen={summaryBarOpen} />
+      <SummaryBar
+        summaryBarOpen={summaryBarOpen}
+        setSummaryBarOpen={setSummaryBarOpen}
+      />
       {/* <StepsBar
         stepNo={4}
         summaryBarOpen={summaryBarOpen}

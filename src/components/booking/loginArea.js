@@ -82,7 +82,9 @@ const LoginArea = () => {
                         </div>
                         <div className="one-half d-flex flex-column">
                           <label className="invisible">submit</label>
-                          <button type="submit" className="form-password">
+                          <button
+                            type="submit"
+                            className="form-password login-btn">
                             LOGIN
                           </button>
                         </div>
@@ -186,14 +188,14 @@ const LoginArea = () => {
                             placeholder="(+90) 538 658 96 315"
                           />
                         </div>
-                        {/* <div className="one-half pass">
+                        <div className="one-half pass">
                           <label for="pass">Password</label>
                           <input type="text" name="pass" id="pass" />
                         </div>
                         <div className="one-half re-pass">
                           <label for="re-pass">Repeat Password</label>
                           <input type="password" name="phone" id="re-pass" />
-                        </div> */}
+                        </div>
                         {/* <div className="checkbox">
                           <input type="checkbox" name="accept" id="accept" />
                           <label for="accept">

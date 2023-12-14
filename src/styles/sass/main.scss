@@ -91,15 +91,20 @@ $color-primary: #eb662b;
 
 .summaryBtnBox {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+
   background-color: $color-primary;
-  padding: 10px 20px;
+
   // position: absolute;
   // top: 0;
   // left: 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 20px;
+  }
 
   p {
     font-size: 20px;
@@ -151,9 +156,106 @@ $color-primary: #eb662b;
   }
 }
 
-// input:not([type="range"]),
-// select,
-// textarea {
-//   border: 1px solid #d7d2bd;
-//   outline: auto;
-// }
+.btn-information {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $color-primary;
+  padding: 0;
+  height: auto;
+  line-height: normal;
+  background-color: transparent;
+
+  .iconBox {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    border-radius: 50%;
+
+    .icon {
+      height: 20px;
+      width: 20px;
+      fill: #fff;
+    }
+  }
+}
+
+.login-btn {
+  background-color: $color-primary;
+}
+
+.schedule-booking.fw .form-booking {
+  padding: 20px 0 0;
+}
+
+.select-vehicle-area {
+  .tp-banner {
+    height: 90px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 768px) {
+      height: 228px;
+    }
+    @media only screen and (max-width: 462px) {
+      height: 285px;
+    }
+  }
+
+  .sdl-booking {
+    background-color: #fef7f4;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .book-adress {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .btn-submit {
+    width: auto !important;
+    gap: 15px;
+
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000000a9;
+      border: 1px solid #d7d2bd;
+      height: auto;
+      line-height: normal;
+      min-width: 200px;
+
+      &:focus {
+        box-shadow: 0 0 0 transparent;
+      }
+    }
+    .btn-hidemap {
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+}
+
+.close-summarybar {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  line-height: normal;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  .icon {
+    height: 30px;
+    width: 30px;
+    fill: $color-primary;
+  }
+}

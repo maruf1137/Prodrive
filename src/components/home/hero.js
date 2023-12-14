@@ -293,7 +293,6 @@ const Hero = () => {
           </div>
         </div>
         {/* <!-- END REVOLUTION SLIDER --> */}
-
         <div class="book-adress">
           <span class="close">
             <svg class="icon">
@@ -349,6 +348,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
         <section class="sdl-booking">
           <div class="schedule-booking fw d-block">
             <h1 class="text-over">RESERVE NOW</h1>

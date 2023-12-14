@@ -96,6 +96,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="layout-pt-xl">
         <div className="container">
           <div className="row y-gap-10 justify-between items-center y-gap-10">

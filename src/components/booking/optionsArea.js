@@ -8,6 +8,7 @@ import SummaryBox from "./summaryBox";
 const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
   const router = useRouter();
   const [popup, setPopup] = useState(false);
+  const [information, setInformation] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +44,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     size="40"
                     value=""
                     placeholder="WEB 19, 2018"
+                    className="w-100"
                   />
                 </div>
                 <div class="pick-time js one-half first-name">
@@ -69,6 +71,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     size="40"
                     value=""
                     placeholder="WEB 19, 2018"
+                    className="w-100"
                   />
                 </div>
                 {/* <div class="pick-date one-half first-name">
@@ -140,11 +143,27 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                 </div>
 
                 <div className="infomation mb-20">
-                  <label for="infomation">Additional Information</label>
-                  <textarea
-                    name="infomation"
-                    id="infomation"
-                    placeholder="Lorem Ipsum "></textarea>
+                  <label for="infomation">
+                    <button
+                      className="btn-information"
+                      onClick={() => setInformation(!information)}>
+                      Additional Information
+                      <span className="iconBox">
+                        <svg class="icon">
+                          <use
+                            xlinkHref={`/icons.svg#icon-${
+                              information ? "minus" : "plus"
+                            }`}></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </label>
+                  {information && (
+                    <textarea
+                      name="infomation"
+                      id="infomation"
+                      placeholder="Lorem Ipsum "></textarea>
+                  )}
                 </div>
 
                 <div className="one-half option-area-btns">

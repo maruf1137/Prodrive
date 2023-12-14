@@ -1,6 +1,6 @@
 import React from "react";
 
-const SummaryBar = ({ summaryBarOpen }) => {
+const SummaryBar = ({ summaryBarOpen, setSummaryBarOpen }) => {
   return (
     <section
       className={
@@ -36,6 +36,13 @@ const SummaryBar = ({ summaryBarOpen }) => {
           </div>
         </div>
       </div>
+      <button
+        className="close-summarybar"
+        onClick={() => setSummaryBarOpen(false)}>
+        <svg class="icon">
+          <use xlinkHref="/icons.svg#icon-clear"></use>
+        </svg>
+      </button>
     </section>
   );
 };

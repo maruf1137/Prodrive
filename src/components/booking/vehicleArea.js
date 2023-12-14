@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { vehicleData } from "../data";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
+import MapInfo from "./mapInfo";
 
 const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
   const [vehicleStateData, setVehicleStateData] = useState(vehicleData);
-  // const [info, setInfo] = useState({ id: 0, status: true });
-
-  // useEffect(() => {
-  //   console.log(info);
-  // }, [info]);
 
   const handleFlipCard = (id) => {
     const newData = vehicleStateData.map((item) => {
@@ -28,24 +24,29 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
 
   return (
     <section className="select-vehicle-area relative pt-0">
+      <MapInfo />
       <div className="summaryBtnBox mb-50">
-        <p className="text">Trip Info</p>
-        <button
-          className="summaryBtn d-flex"
-          onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
-          <span>Booking Details</span>
-          <span className="iconBox">
-            <svg>
-              <use
-                xlinkHref={`/icons.svg#icon-${
-                  summaryBarOpen ? "minus" : "plus"
-                }`}></use>
-            </svg>
-          </span>
-          {/* <svg>
+        <div className="container">
+          <div className="summaryBtnBox__wrapper">
+            <p className="text">Trip Info</p>
+            <button
+              className="summaryBtn d-flex"
+              onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+              <span>Booking Details</span>
+              <span className="iconBox">
+                <svg>
+                  <use
+                    xlinkHref={`/icons.svg#icon-${
+                      summaryBarOpen ? "minus" : "plus"
+                    }`}></use>
+                </svg>
+              </span>
+              {/* <svg>
             <use xlinkHref="/icons.svg#icon-minimize"></use>
           </svg> */}
-        </button>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="container">
@@ -90,23 +91,34 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     </div>
                     <div className="bottom-area d-flex">
                       <div className="priceBox">
-                        <p className="price">${price}</p>
+                        <p className="price text-center">
+                          ${price}
+                          <span className="price-id">USD</span>{" "}
+                        </p>
                         <Link
                           href="/booking/car-options"
                           className="btn-select">
-                          <span className="infoBox">One Trip</span>
+                          <span className="infoBox text-center">
+                            Oneway <br /> Trip
+                          </span>
                           SELECT
                         </Link>
                       </div>
                       <div className="priceBox">
-                        <div className="d-flex">
-                          <p className="old-price">${price}</p>
-                          <p className="price">${price}</p>
+                        <div className="d-flex justify-content-center">
+                          <p className="old-price">
+                            ${price} <span className="price-id">USD</span>{" "}
+                          </p>
+                          <p className="price">
+                            ${price} <span className="price-id">USD</span>{" "}
+                          </p>
                         </div>
                         <Link
                           href="/booking/car-options"
                           className="btn-select">
-                          <span className="infoBox">Round Trip</span>
+                          <span className="infoBox text-center">
+                            Round <br /> Trip
+                          </span>
                           SELECT
                         </Link>
                       </div>

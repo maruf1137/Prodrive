@@ -5,7 +5,7 @@ function TourCard({ imageSrc, location, title, rating, duration, price }) {
     <div>
       <div className="tourCard__header">
         <div className="tourCard__image ratio ratio-28:20">
-          <img src={imageSrc} alt="image" className="img-ratio rounded-12" />
+          <img src={imageSrc} alt="image" className="img-ratio" />
         </div>
 
         <button className="tourCard__favorite">

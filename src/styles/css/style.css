@@ -21373,10 +21373,10 @@ ul.social-ft li:last-child {
   .header-03 .top-menuleft .x_language {
     display: none;
   }
-  .login-booking .login-content .login-form .one-half {
+  /* .login-booking .login-content .login-form .one-half {
     width: 100% !important;
     float: none !important;
-  }
+  } */
   .form-options .one-half {
     /* padding-left: 6px;
     padding-right: 0px; */
@@ -21690,6 +21690,9 @@ ul.social-ft li:last-child {
 .select-vehicle-area .bottom-area .priceBox {
   width: 100%;
 }
+.select-vehicle-area .bottom-area .priceBox .price-id {
+  font-size: 20px;
+}
 .select-vehicle-area .bottom-area .price {
   font-size: 30px;
   font-weight: 500;
@@ -21704,19 +21707,21 @@ ul.social-ft li:last-child {
   width: 100%;
   background-color: #ea652b;
   display: block;
-  padding: 14px 20px;
+  padding: 5px;
   border-radius: 6px;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  padding-right: 25%;
 }
 .select-vehicle-area .bottom-area .btn-select .infoBox {
   background-color: #fff;
   padding: 0 5px;
   border-radius: 4px;
   color: #000;
+  line-height: normal;
 }
 .select-car .one-half.image-car img {
   margin-top: 0;
@@ -21954,10 +21959,13 @@ html {
   border-radius: 10px;
   max-width: 441px;
   padding: 30px;
+  margin: 0 10px;
 }
 .popup .content-wrapper p {
   text-align: center;
   color: white;
+  line-height: normal;
+  margin-bottom: 15px;
 }
 .popup .content-wrapper .btns {
   display: flex;
@@ -21970,6 +21978,7 @@ html {
   line-height: normal !important;
   padding: 12px 10px;
   width: 100%;
+  height: auto;
 }
 .email {
   padding: 0 10px;
@@ -22098,6 +22107,7 @@ html {
 @media only screen and (max-width: 767px) {
   .sdl-booking .form-booking {
     flex-direction: column;
+    align-items: flex-start;
   }
   .schedule-booking .form-booking > div:first-child {
     border-right: 1px solid #3f3f3f00;
@@ -22191,6 +22201,11 @@ html {
 }
 
 @media only screen and (max-width: 480px) {
+  .popup .content-wrapper button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
   ul.list-button,
   .add-box .schedule-booking .form-booking > div {
     margin: 0 20px;

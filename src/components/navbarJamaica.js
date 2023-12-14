@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // import { useRouter } from "next/router";
-import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Taxis from "./taxis";
@@ -61,6 +60,10 @@ const navigationData = [
       {
         title: "Login",
         url: "/booking/login",
+      },
+      {
+        title: "Passenger Info",
+        url: "/booking/passenger-info",
       },
       {
         title: "Booking Card",
@@ -148,81 +151,9 @@ const navigationData = [
   },
 ];
 
-const jamicaPages = [
-  {
-    title: "Home",
-    url: "/jamaica/home",
-  },
-  {
-    title: "About",
-    url: "/jamaica/about",
-  },
-  {
-    title: "Destinations",
-    url: "/jamaica/destinations",
-  },
-  {
-    title: "Booking",
-    url: "/jamaica/booking",
-  },
-  {
-    title: "Contact",
-    url: "/jamaica/contact",
-  },
-  {
-    title: "Blogs",
-    url: "/jamaica/blog",
-  },
-  {
-    title: "single Blog",
-    url: "/jamaica/blog/123",
-  },
-  {
-    title: "Booking Status",
-    url: "/jamaica/booking-status",
-  },
-  {
-    title: "Help Center",
-    url: "/jamaica/help-center",
-  },
-  {
-    title: "Invoice",
-    url: "/jamaica/invoice",
-  },
-  {
-    title: "Tour Map",
-    url: "/jamaica/tour-map",
-  },
-  {
-    title: "Tours List",
-    url: "/jamaica/tours-list",
-  },
-  {
-    title: "Tour Details",
-    url: "/jamaica/tours-list/123",
-  },
-  {
-    title: "Taxi Home",
-    url: "/jamaica/taxi-home",
-  },
-  {
-    title: "Terms",
-    url: "/jamaica/terms",
-  },
-  {
-    title: "Login",
-    url: "/jamaica/Login",
-  },
-  {
-    title: "Register",
-    url: "/jamaica/register",
-  },
-];
-
 export default function Navbar() {
   const [taxisActive, setTaxisActive] = useState(false);
   const [bg_black, setBg_black] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
 
   function dropdown() {

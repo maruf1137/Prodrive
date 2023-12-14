@@ -14,11 +14,6 @@ const page = () => {
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}
       />
-      {/* <StepsBar
-        stepNo={2}
-        summaryBarOpen={summaryBarOpen}
-        setSummaryBarOpen={setSummaryBarOpen}
-      /> */}
       <OptionsArea
         summaryBarOpen={summaryBarOpen}
         setSummaryBarOpen={setSummaryBarOpen}

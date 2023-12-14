@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import LoginArea from "@/components/booking/loginArea";
+import React from "react";
+import PassengerInfoArea from "@/components/booking/passsengerInfo";
 
 const Login = () => {
   return (
     <div className="login-page mt-60">
-      <LoginArea />
+      <PassengerInfoArea />
     </div>
   );
 };

@@ -310,7 +310,7 @@ const Tours = () => {
                   <div className="col-lg-3 col-md-4 col-sm-6">
                     <a
                       href="#"
-                      className="tourCard -type-1 py-10 px-10 border-1 rounded-12 -hover-shadow">
+                      className="tourCard -type-1 border-1 rounded-12 -hover-shadow ratio">
                       <TourCard key={index} {...tour} />
                     </a>
                   </div>
