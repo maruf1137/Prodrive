@@ -106,9 +106,7 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                       </div>
                       <div className="priceBox">
                         <div className="d-flex justify-content-center">
-                          <p className="old-price">
-                            ${price} <span className="price-id">USD</span>{" "}
-                          </p>
+                          <p className="old-price">${price}</p>
                           <p className="price">
                             ${price} <span className="price-id">USD</span>{" "}
                           </p>

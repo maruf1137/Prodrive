@@ -97,6 +97,7 @@ const TourDetail = () => {
       init: init,
     };
   })();
+
   function calendarSlider() {
     new Swiper(".js-calendar-slider", {
       speed: 600,
@@ -125,6 +126,7 @@ const TourDetail = () => {
       },
     });
   }
+
   function closeAllDropdowns() {
     const targets = document.querySelectorAll(".js-form-dd");
     if (!targets) return;
@@ -359,6 +361,7 @@ const TourDetail = () => {
     calendarSlider();
     calendarInteraction();
   }, []);
+
   return (
     <div className="mt-header2 jamaica-page singletour-page">
       <div className="container">
@@ -571,6 +574,12 @@ const TourDetail = () => {
                     <button
                       className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-6">
+                      Reviews
+                    </button>
+                  </div>
+
+                  <div className="col-auto">
+                    <button className="text-30 md:text-20 fw-700 js-tabs-button ">
                       Reviews
                     </button>
                   </div>

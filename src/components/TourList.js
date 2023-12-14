@@ -134,14 +134,10 @@ function TourCard(props) {
   return (
     <a
       href=""
-      className="tourCard -type-1 py-10 px-10 border-1 rounded-12 bg-white -hover-shadow">
+      className="tourCard -type-1 border-1 ratio rounded-12 bg-white -hover-shadow">
       <div className="tourCard__header">
         <div className="tourCard__image">
-          <img
-            src={props.imageSrc}
-            alt="image"
-            className="/img-ratio rounded-12"
-          />
+          <img src={props.imageSrc} alt="image" className="/img-ratio" />
         </div>
         <button className="tourCard__favorite">
           <i className="icon-heart"></i>

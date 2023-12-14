@@ -12,14 +12,17 @@ const PassengerInfoArea = () => {
 
   return (
     <section className="login-booking-area">
-      {/* <figure className="mx-auto mb-20 text-center logo">
+      <figure className="mx-auto mb-20 text-center logo">
         <img src="/img/general/small-logo.png" alt="" />
-      </figure> */}
+      </figure>
       <div className="container">
         <div className="row">
           <div className="col-lg-2"></div>
           <div className="col-lg-8">
             <div className="login-booking">
+              <ul className="login-tab-list">
+                <li className="active">Passenger</li>
+              </ul>
               <div className="login-content">
                 <div>
                   <div className="register-form">
