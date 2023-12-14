@@ -14,7 +14,7 @@ import "../styles/css/bootstrap-datetimepicker.min.css";
 import "@/styles/globals.css";
 import "@/styles/icon.css";
 // import "../styles/css/shortcodes.css";
-import "@/styles/style.css";
+// import "@/styles/style.css";
 import "../styles/css/style.css";
 import "@/styles/sass/main.scss";
 // import "../styles/css/responsive.css";

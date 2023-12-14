@@ -139,14 +139,27 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                   />
                 </div>
 
-                <div className="infomation">
+                <div className="infomation mb-20">
                   <label for="infomation">Additional Information</label>
                   <textarea
                     name="infomation"
                     id="infomation"
                     placeholder="Lorem Ipsum "></textarea>
                 </div>
-                <div className="option-area-btns d-flex">
+
+                <div className="one-half option-area-btns">
+                  <button className="back w-100">Back</button>
+                </div>
+                <div className="one-half option-area-btns">
+                  <button
+                    type="submit"
+                    className="submit w-100"
+                    onClick={() => setPopup(true)}>
+                    CONTINUE
+                  </button>
+                </div>
+
+                {/* <div className="option-area-btns d-flex">
                   <button className="back">Back</button>
                   <button
                     type="submit"
@@ -154,7 +167,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     onClick={() => setPopup(true)}>
                     CONTINUE
                   </button>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
