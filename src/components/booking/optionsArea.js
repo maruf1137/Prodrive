@@ -74,15 +74,6 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     className="w-100"
                   />
                 </div>
-                {/* <div class="pick-date one-half first-name">
-                  <label>Pick Up Return Date</label>
-                  <input
-                    id="date-range12"
-                    size="40"
-                    value=""
-                    placeholder="WEB 19, 2018"
-                  />
-                </div> */}
                 <div class="pick-time js one-half first-name">
                   <label>Pick Up Return Time</label>
                   <select>
@@ -177,16 +168,6 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                     CONTINUE
                   </button>
                 </div>
-
-                {/* <div className="option-area-btns d-flex">
-                  <button className="back">Back</button>
-                  <button
-                    type="submit"
-                    className="submit"
-                    onClick={() => setPopup(true)}>
-                    CONTINUE
-                  </button>
-                </div> */}
               </form>
             </div>
           </div>

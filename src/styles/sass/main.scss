@@ -3,6 +3,11 @@
 
 $color-primary: #eb662b;
 
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
 .header__container {
   button {
     display: inline-block;
@@ -270,5 +275,54 @@ $color-primary: #eb662b;
   .card-area,
   .options-area {
     padding-top: 57px;
+  }
+}
+.book-btn {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .book-btn {
+    display: block;
+  }
+  .is-sticky {
+    position: fixed;
+    top: 57px;
+    // left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    padding: 15px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+.single-tour-form-wrapper {
+  p {
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+  .single-tour-form {
+    input {
+      padding: 10px;
+    }
+
+    .date-time {
+      gap: 15px;
+    }
+  }
+
+  .btns {
+    gap: 15px;
+
+    .btn {
+      width: 100%;
+      flex-shrink: 1;
+    }
+
+    .btn-back {
+      border: 1px solid transparent;
+      background-color: #eb652b1c !important;
+      color: $color-primary !important;
+    }
   }
 }
