@@ -2722,7 +2722,7 @@ h6 {
 }
 
 .header .desktopNav.-light > * > a {
-  color: white;
+  color: white !important;
 }
 
 .header .desktopNav > *:hover {
