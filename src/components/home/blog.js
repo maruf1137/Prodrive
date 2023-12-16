@@ -39,6 +39,7 @@ const blogData = [
     date: "January 18, 2017",
   },
 ];
+
 const Blog = () => {
   return (
     <section className="blog-slider change_bg hide_mb primary-slider">

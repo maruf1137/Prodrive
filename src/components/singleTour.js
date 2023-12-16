@@ -3,6 +3,7 @@ import Calender from "@/components/Calender";
 import TourList from "@/components/TourList";
 import React, { useEffect, useState, useRef } from "react";
 import SingleTourForm from "./singleTourForm";
+import SingleTour from "@/app/jamaica/tours-list/[id]/page";
 
 const tabBtnsData = [
   {
@@ -277,7 +278,7 @@ const TourDetail = () => {
     Accordion.init();
     Tabs.init();
     // sectionSlider();
-    calendarSlider();
+    // calendarSlider();
     calendarInteraction();
   }, []);
 
@@ -302,14 +303,7 @@ const TourDetail = () => {
 
   return (
     <div className="mt-header2 jamaica-page singletour-page">
-      <div className="container">
-        <div className="row justify-between py-30 mt-80">
-          <div className="col-auto">
-            <div className="text-14">THE 10 BEST Phuket Tours & Excursions</div>
-          </div>
-        </div>
-      </div>
-
+      {/* <SingleTour /> */}
       <section className="tourSingleHero5">
         <div className="tourSingleHero5__image">
           <div
@@ -341,7 +335,6 @@ const TourDetail = () => {
               </button>
             </div>
           </div>
-
           <div className="icon">
             <svg
               width="1800"

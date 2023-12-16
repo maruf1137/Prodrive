@@ -12781,7 +12781,7 @@ table.table-4.-border-bottom tbody > tr {
 
 .tourSingleHero5 {
   position: relative;
-  padding-top: 440px;
+  /* padding-top: 440px; */
   padding-bottom: 80px;
   z-index: 0;
 }
@@ -12801,12 +12801,12 @@ table.table-4.-border-bottom tbody > tr {
 }
 
 .tourSingleHero5__image {
-  overflow: hidden;
+  /* overflow: hidden;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 60px;
-  right: 60px;
+  right: 60px; */
   border-radius: 12px 12px 0 0;
   z-index: -1;
 }
@@ -15631,9 +15631,9 @@ ul.booking-steps li .text {
   background-color: #f3f3f3;
 }
 /*========== Options Area ==========*/
-.options-area {
+/* .options-area {
   padding: 77px 0 79px;
-}
+} */
 .form-options {
   margin-right: -15px;
   margin-left: -15px;
@@ -18888,8 +18888,8 @@ button:focus {
 .time-open .close,
 .book-adress .close {
   position: absolute;
-  top: 70px;
-  right: 70px;
+  top: 56px;
+  right: 56px;
   cursor: pointer;
 }
 .calendar .logo-pro-calendar,
