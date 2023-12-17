@@ -5,47 +5,53 @@ const taxisData = [
   {
     id: 1,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-1.jpg",
+    img: "/images/cars&Tours/tour-1.jpg",
   },
   {
     id: 2,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-2.jpg",
+    img: "/images/cars&Tours/tour-2.jpg",
   },
   {
     id: 3,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-3.jpg",
+    img: "/images/cars&Tours/tour-3.jpg",
   },
   {
     id: 4,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-4.jpg",
+    img: "/images/cars&Tours/tour-4.jpg",
   },
   {
     id: 5,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-5.jpg",
+    img: "/images/cars&Tours/tour-5.jpg",
   },
   {
     id: 6,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-1.jpg",
+    img: "/images/cars&Tours/tour-6.jpg",
   },
   {
     id: 7,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-2.jpg",
+    img: "/images/cars&Tours/tour-7.jpg",
   },
   {
     id: 8,
     title: "Business Class",
-    img: "/images/cars&Tours/bus-3.jpg",
+    img: "/images/cars&Tours/tour-8.jpg",
   },
 ];
-const Taxis = ({ taxisActive }) => {
+
+const Tours = ({ toursActive }) => {
   return (
-    <div class={taxisActive ? "wehicles active" : "wehicles visibility-hidden"}>
+    <div
+      class={
+        toursActive
+          ? "wehicles tours active"
+          : "wehicles tours visibility-hidden"
+      }>
       <div class="fleet-carousel" data-columns="6">
         <div class="owl-carousel">
           {taxisData.map(({ id, title, img }) => {
@@ -55,17 +61,15 @@ const Taxis = ({ taxisActive }) => {
                   <img src={img} alt={title} />
                 </div>
                 <div class="fleet-content">
+                  <p className="location">
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-location2"></use>
+                    </svg>
+                    Kingston​
+                  </p>
                   <h4 class="fleet-title">
                     <a href="#">{title}</a>
                   </h4>
-                  <div class="box d-flex items-center justify-content-center">
-                    <div class="list">
-                      <img src="/images/max-img-1.png" alt="" /> Max . 3
-                    </div>
-                    <div class="list">
-                      <img src="/images/max-img-2.png" alt="" /> Max . 2
-                    </div>
-                  </div>
                 </div>
               </div>
             );
@@ -74,7 +78,7 @@ const Taxis = ({ taxisActive }) => {
       </div>
       <div className="serach-wrapper">
         <Link href="#" className="btn-search">
-          Search Texi
+          Search Tour
           <svg class="icon">
             <use xlinkHref="/icons.svg#icon-arrow-up-right"></use>
           </svg>
@@ -84,4 +88,4 @@ const Taxis = ({ taxisActive }) => {
   );
 };
 
-export default Taxis;
+export default Tours;

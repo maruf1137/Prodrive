@@ -2,6 +2,7 @@
 // @import "./pages/pages.scss";
 
 $color-primary: #eb662b;
+$color-bg-light: #fff1eb;
 
 a {
   color: #1e1e1e;
@@ -96,8 +97,9 @@ a {
 
 .summaryBtnBox {
   width: 100%;
-
   background-color: $color-primary;
+  position: relative;
+  z-index: 2;
 
   // position: absolute;
   // top: 0;
@@ -144,7 +146,8 @@ a {
 }
 
 .options-area,
-.card-area {
+.card-area,
+.checkout-confirm-page {
   padding-top: 90px;
 }
 
@@ -153,7 +156,8 @@ a {
   visibility: hidden;
 }
 
-.login-booking-area {
+.login-booking-area,
+.check-out-area {
   .logo {
     img {
       height: 70px;
@@ -273,6 +277,7 @@ a {
 
 @media only screen and (max-width: 768px) {
   .card-area,
+  .checkout-confirm-page,
   .options-area {
     padding-top: 57px;
   }
@@ -363,5 +368,716 @@ a {
 }
 
 .singletour-page {
-  padding-top: 100px;
+  padding-top: 400px;
+}
+
+.checkout-confirm-page {
+  padding-bottom: 80px;
+
+  .checkout-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      color: $color-primary;
+      height: auto;
+      padding: 10px 30px;
+      line-height: normal;
+      background: transparent;
+      padding: 0;
+    }
+    .active {
+      color: rgb(10, 10, 129);
+    }
+  }
+
+  .checkout-wrapper {
+  }
+  .box-wrapper {
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .top-text {
+    display: block !important;
+    background-color: #eb652b23;
+    padding: 10px;
+    color: black;
+    font-size: 16px !important;
+    text-align: left !important;
+    font-weight: 400 !important;
+  }
+
+  .box {
+    border: 1px solid $color-primary;
+    padding: 10px;
+    border-radius: 5px;
+
+    @media only screen and (max-width: 992px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 565px) {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+
+  .box-price {
+    background-color: green;
+    color: #fff;
+    border: 1px solid green;
+
+    @media only screen and (max-width: 992px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .btns {
+    gap: 20px;
+
+    .btn {
+      margin-top: 0;
+      width: 100%;
+      border-radius: 5px;
+      // padding-top: 10px;
+      height: auto;
+      line-height: normal;
+      background-color: #eb652b1d;
+      color: $color-primary;
+      border: none;
+    }
+
+    .btn-back {
+    }
+  }
+
+  .summary-bar-area {
+    background: #fff1eb;
+  }
+
+  .checkout-summary {
+    .car-box {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      height: 80px;
+      width: auto;
+
+      @media only screen and (max-width: 380px) {
+        height: 50px;
+      }
+
+      img {
+        height: 100%;
+        // width: 100%;
+      }
+    }
+
+    .text,
+    span {
+      font-size: 14px;
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      gap: 0 30px;
+      flex-wrap: wrap;
+
+      .item {
+        display: flex;
+        gap: 15px;
+        color: #000;
+      }
+    }
+  }
+}
+
+.check-out-area {
+  .name {
+    color: $color-primary;
+  }
+
+  .middle {
+    background: #fff1eb;
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media only screen and (max-width: 992px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .text {
+        text-align: left !important;
+        font-size: 16px !important;
+        color: #000;
+      }
+    }
+  }
+
+  .btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    .btn {
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      background-color: #fff;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.wehicles {
+  background-color: $color-bg-light;
+  padding: 0;
+
+  .fleet-carousel {
+    padding-top: 0;
+  }
+
+  .fleet-item {
+    opacity: 1;
+    background-color: #fff;
+    padding: 10px 0;
+
+    .box {
+      gap: 10px;
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      img {
+        height: 20px;
+      }
+    }
+  }
+
+  .serach-wrapper {
+    width: 100%;
+    background-color: $color-primary;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff;
+      color: $color-primary;
+      padding: 10px 30px;
+      border-radius: 5px;
+
+      .icon {
+        height: 20px;
+        width: 20px;
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+.wehicles.tours {
+  .fleet-item {
+    position: relative;
+    height: 115px;
+
+    .images {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .fleet-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      padding: 10px;
+      background-color: #00000048;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #fff;
+
+        .icon {
+          height: 15px;
+          width: 15px;
+          fill: currentColor;
+        }
+      }
+
+      h4 {
+        text-align: left;
+      }
+
+      h4 a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.extras-page {
+  padding-bottom: 100px;
+
+  .extras-wrapper {
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      h4 {
+      }
+
+      .btn-skip {
+        color: $color-primary;
+      }
+    }
+
+    .list {
+      // display: grid;
+
+      .item {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+
+        .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(
+            to bottom,
+            #00000000 50%,
+            #000000af
+          );
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 10px;
+          color: #fff;
+
+          h5 {
+            font-weight: 500;
+            color: #fff;
+          }
+
+          .price {
+          }
+
+          .btns {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .btn {
+              background-color: #fff;
+              border: 1px solid $color-primary;
+              padding: 5px 15px;
+              border-radius: 3px;
+              height: auto;
+              line-height: normal;
+              color: $color-primary;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .details {
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        // width: 100%;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        // height: 100%;
+        z-index: 2;
+        border: 2px solid transparent;
+        display: none;
+
+        .btn-close {
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          background-color: red;
+          height: 20px;
+          width: 20px;
+          line-height: normal;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+
+          .icon {
+            height: 14px;
+            width: 14px;
+            fill: #fff;
+          }
+        }
+
+        .list {
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: auto;
+
+            .icon {
+              height: 15px;
+              width: 15px;
+              fill: green;
+            }
+          }
+        }
+      }
+
+      .add {
+        display: none;
+
+        select {
+          padding: 5px 10px;
+          height: auto;
+          line-height: normal;
+        }
+
+        button {
+          height: auto;
+          line-height: normal;
+          background-color: $color-primary;
+          border: 1px solid $color-primary;
+          color: #fff;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: transparent;
+            color: $color-primary;
+          }
+        }
+
+        .count {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          button {
+            height: auto;
+            line-height: normal;
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+            padding: 0;
+            border-radius: 50%;
+            color: #fff;
+            height: 15px;
+            width: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+
+            .icon {
+              height: 14px;
+              width: 14px;
+              fill: #fff;
+              transition: all 0.2s;
+            }
+
+            &:hover {
+              background-color: transparent;
+
+              .icon {
+                fill: $color-primary;
+              }
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 5px;
+
+          button {
+            padding: 4px 15px !important;
+          }
+
+          .price {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .details.active,
+      .add.active {
+        display: block;
+      }
+    }
+  }
+
+  .popup {
+    display: none;
+
+    &-wrapper {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 500px;
+      flex-grow: 1;
+
+      .title {
+        border-bottom: 1px solid $color-primary;
+        text-align: center;
+        color: $color-primary;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .logo {
+        height: 100px;
+        text-align: center;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      h4 {
+        color: $color-primary;
+        text-align: center;
+      }
+
+      .success {
+        color: green;
+      }
+
+      button {
+        height: auto;
+        line-height: normal;
+        background-color: $color-primary;
+        border: 2px solid $color-primary;
+        width: 100%;
+        padding: 10px 20px;
+        margin-top: 40px;
+
+        &:hover {
+          background-color: transparent;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  .popup.active {
+    display: flex;
+  }
+}
+
+// contact page
+.contact-page {
+  position: relative;
+  padding-bottom: 0 !important;
+
+  .contact-wrapper {
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #000;
+
+        .icon {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    .details {
+      padding: 60px 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px 40px;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: 565px) {
+        flex-direction: column;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        @media only screen and (max-width: 565px) {
+          justify-content: flex-start;
+        }
+
+        .icon {
+          height: 18px;
+          width: 18px;
+          fill: #000;
+        }
+
+        p {
+          font-size: 16px;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: $color-primary;
+    padding: 60px 0;
+
+    .list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      a {
+        position: relative;
+        display: block;
+        padding-right: 10px;
+        color: #fff;
+
+        &:not(:last-child) {
+          &::after {
+            content: "";
+            display: block;
+            height: 70%;
+            width: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+
+      a {
+        display: block;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+
+        .icon {
+          height: 16px;
+          width: 16px;
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  .help {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // height: 100%;
+    padding-bottom: 60px;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 170px;
+    z-index: 1;
+    display: none;
+
+    &__wrapper {
+      // max-width: 500px;
+
+      .title {
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+
+      button {
+        height: auto;
+        line-height: normal;
+        background-color: $color-bg-light;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        padding: 12px 30px;
+        margin-top: 40px;
+
+        @media only screen and (max-width: 565px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .help.active {
+    display: block;
+  }
 }

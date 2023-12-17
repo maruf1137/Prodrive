@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Checkout = () => {
+const CheckoutTours = () => {
   return (
     <section className="check-out-area">
       <div className="container">
@@ -39,20 +39,14 @@ const Checkout = () => {
                     <p className="text">Dave Elliott | +44 7595152720 ​</p>
                     <p className="text">UK | daveevertonelliott@gmail.com​</p>
                     <p className="text">
-                      <strong>Service:</strong> Taxi/Family/Round Trip​
+                      <strong>Service:</strong> Tour/Dunn’s River Falls Tour​
                     </p>
                     <p className="text">
-                      <strong>Duration:</strong> About 5 hours & 123 km​
+                      <strong>Duration:</strong> About 5 hours
                     </p>
                     <p className="text">
                       <strong>Persons/Bags:</strong> 4/3​
                     </p>
-
-                    <p className="text">
-                      <strong>Extras​</strong>
-                    </p>
-                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
-                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
                   </div>
 
                   <div className="content">
@@ -67,12 +61,10 @@ const Checkout = () => {
                       <strong>Pickup Date & Time:</strong> 13th Sep 2023 3:30pm​
                     </p>
                     <p className="text">
-                      <strong>Return Date & Time:</strong> 20th Sep 2023 9:15am​
+                      <strong>Extras​</strong>
                     </p>
-                    <p className="text">
-                      <strong>Pickup Flight#:</strong> AA1234 Return Flight#:
-                      BB1234
-                    </p>
+                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
+                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
 
                     <p className="text">
                       <strong> Additional Information​</strong>
@@ -82,29 +74,6 @@ const Checkout = () => {
                     </p>
                   </div>
                 </div>
-
-                {/* <ul className="summary-bar">
-                  <li>
-                    <div className="info">Pick Up Address</div>
-                    <p>Airport Istanbul-Atatürk (IST) ...</p>
-                  </li>
-                  <li>
-                    <div className="info">Drop Off Address</div>
-                    <p>Airport Ankara-Esenboğa (ESB)...</p>
-                  </li>
-                  <li>
-                    <div className="info">Pick Up Date</div>
-                    <p>Sep 15, 2017</p>
-                  </li>
-                  <li>
-                    <div className="info">Pick Up Time</div>
-                    <p>9:45PM (21:45)</p>
-                  </li>
-                  <li>
-                    <div className="info">Duration</div>
-                    <p>About 5 hours – Distance: 476.2 km</p>
-                  </li>
-                </ul> */}
                 <div className="btns mt-20 d-md-none">
                   <Link href="#" className="btn">
                     Book A Taxi​
@@ -120,12 +89,11 @@ const Checkout = () => {
                   </Link>
                 </div>
               </div>
-
               <div className="bottom">
-                <h2>BOOKED TAXI​</h2>
-                <p>Family</p>
+                <h2>BOOKED TOUR</h2>
+                <p>Dunn’s River Falls Tour</p>
                 <div className="car-choose">
-                  <img src="/images/booking/car-01.jpg" alt="" />
+                  <img src="/images/cars&Tours/tour-1.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -136,4 +104,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckoutTours;

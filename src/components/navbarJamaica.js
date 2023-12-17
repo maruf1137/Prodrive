@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Taxis from "./taxis";
+import Tours from "./tours";
 
 const navigationData = [
   {
@@ -70,8 +71,20 @@ const navigationData = [
         url: "/booking/card",
       },
       {
-        title: "Booking Checkout",
+        title: "Checkout Confirm",
+        url: "/booking/checkout-confirm",
+      },
+      {
+        title: "Checkout",
         url: "/booking/checkout",
+      },
+      {
+        title: "Checkout Tours",
+        url: "/booking/checkout-tours",
+      },
+      {
+        title: "Extras",
+        url: "/booking/extras",
       },
     ],
   },
@@ -153,6 +166,7 @@ const navigationData = [
 
 export default function Navbar() {
   const [taxisActive, setTaxisActive] = useState(false);
+  const [toursActive, setToursActive] = useState(false);
   const [bg_black, setBg_black] = useState(false);
   const pathname = usePathname();
 
@@ -571,11 +585,17 @@ export default function Navbar() {
                 <use xlinkHref="/icons.svg#icon-person"></use>
               </svg>
             </Link>
-            <Link href="#" className="d-flex">
+            <button
+              href="#"
+              className="d-flex"
+              onClick={() => setToursActive(!toursActive)}>
               <svg className="icon">
-                <use xlinkHref="/icons.svg#icon-beach"></use>
+                <use
+                  xlinkHref={`/icons.svg#icon-${
+                    toursActive ? "clear" : "beach"
+                  }`}></use>
               </svg>
-            </Link>
+            </button>
             <button
               className="d-flex"
               onClick={() => setTaxisActive(!taxisActive)}>
@@ -679,6 +699,7 @@ export default function Navbar() {
       </div>
 
       <Taxis taxisActive={taxisActive} />
+      <Tours toursActive={toursActive} />
     </>
   );
 }
