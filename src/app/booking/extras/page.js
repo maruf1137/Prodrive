@@ -131,21 +131,21 @@ const Extras = () => {
     return (
       <div className={show ? "details add active" : "details add"}>
         <div className="add-form">
-          <select name="airport" id="airport" className="mb-5">
+          <select name="airport" id="airport">
             <option value="Select Airport" selected>
               Select Airport
             </option>
             <option value="Select Airport 2">Select Airport 2</option>
             <option value="Select Airport 3">Select Airport 3</option>
           </select>
-          <select name="journey" id="journey" className="mb-5">
+          <select name="journey" id="journey">
             <option value="Select Journey​" selected>
               Select Journey​
             </option>
             <option value="Select Journey​ 2">Select Journey​ 2</option>
             <option value="Select Journey​ 3">Select Journey​ 3</option>
           </select>
-          <select name="beer" id="beer" className="mb-5">
+          <select name="beer" id="beer">
             <option value="Select Beer Type​" selected>
               Select Beer Type​
             </option>

@@ -788,6 +788,10 @@ a {
           padding: 5px 10px;
           height: auto;
           line-height: normal;
+
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
         }
 
         button {
