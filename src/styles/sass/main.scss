@@ -1085,3 +1085,8 @@ a {
     display: block;
   }
 }
+
+ol,
+ul {
+  padding-left: 0 !important;
+}
