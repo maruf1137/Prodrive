@@ -368,7 +368,15 @@ a {
 }
 
 .singletour-page {
-  padding-top: 400px;
+  padding-top: 80px;
+
+  .tourSingleHero5 {
+    padding-top: 0 !important;
+  }
+
+  .tourSingleHero5__image {
+    position: relative;
+  }
 }
 
 .checkout-confirm-page {
