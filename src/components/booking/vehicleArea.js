@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
 import MapInfo from "./mapInfo";
 
-const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
+const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen, fleetPage }) => {
   const [vehicleStateData, setVehicleStateData] = useState(vehicleData);
 
   const handleFlipCard = (id) => {
@@ -24,30 +24,34 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
 
   return (
     <section className="select-vehicle-area relative pt-0">
-      <MapInfo />
-      <div className="summaryBtnBox mb-50">
-        <div className="container">
-          <div className="summaryBtnBox__wrapper">
-            <p className="text">Trip Info</p>
-            <button
-              className="summaryBtn d-flex"
-              onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
-              <span>Booking Details</span>
-              <span className="iconBox">
-                <svg>
-                  <use
-                    xlinkHref={`/icons.svg#icon-${
-                      summaryBarOpen ? "minus" : "plus"
-                    }`}></use>
-                </svg>
-              </span>
-              {/* <svg>
+      {!fleetPage && (
+        <>
+          <MapInfo />
+          <div className="summaryBtnBox mb-50">
+            <div className="container">
+              <div className="summaryBtnBox__wrapper">
+                <p className="text">Trip Info</p>
+                <button
+                  className="summaryBtn d-flex"
+                  onClick={() => setSummaryBarOpen(!summaryBarOpen)}>
+                  <span>Booking Details</span>
+                  <span className="iconBox">
+                    <svg>
+                      <use
+                        xlinkHref={`/icons.svg#icon-${
+                          summaryBarOpen ? "minus" : "plus"
+                        }`}></use>
+                    </svg>
+                  </span>
+                  {/* <svg>
             <use xlinkHref="/icons.svg#icon-minimize"></use>
           </svg> */}
-            </button>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
       <div className="container">
         <div className="row">

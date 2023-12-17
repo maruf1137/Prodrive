@@ -20,7 +20,7 @@ const FleetArea = () => {
             />
           </div>
         </div>
-        <VehicleArea />
+        <VehicleArea fleetPage={true} />
         <div className="row">
           <div className="col-md-12">
             {vehicleData.map((item) => {
