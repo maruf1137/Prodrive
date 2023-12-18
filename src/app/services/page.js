@@ -4,7 +4,7 @@ import ServicesArea from "@/components/services/servicesArea";
 
 const Service = () => {
   return (
-    <div>
+    <div className="service-page">
       <CommonHero
         title="SERVICES"
         subtitle="Service at the highest level!"

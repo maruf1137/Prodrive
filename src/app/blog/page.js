@@ -4,7 +4,7 @@ import BlogArea from "@/components/blog/blogArea";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="blog-page">
       <CommonHero
         title="BLOG"
         subtitle="Latest news from Prodirve"

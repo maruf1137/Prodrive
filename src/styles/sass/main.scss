@@ -1098,3 +1098,38 @@ ol,
 ul {
   padding-left: 0 !important;
 }
+
+.fleet-page {
+}
+
+.single-fleet-page {
+  .top-title {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/template/single-fleet-bg.jpg") no-repeat top center;
+    background-size: cover;
+  }
+}
+
+.service-page {
+  .top-title {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/template/service-bg.jpg") no-repeat top center;
+    background-size: cover;
+  }
+}
+
+.blog-page {
+  .top-title {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/template/blog-bg.jpg") no-repeat top center;
+    background-size: cover;
+  }
+}
+
+.single-blog-page {
+  .top-title {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/template/single-blog-bg.jpg") no-repeat top center;
+    background-size: cover;
+  }
+}

@@ -4,7 +4,7 @@ import SingleBlogArea from "@/components/blog/singleBlogArea";
 
 const SingleBlog = () => {
   return (
-    <div>
+    <div className="single-blog-page">
       <CommonHero
         title="BLOG SINGLE"
         subtitle="Latest news from Prodirve"

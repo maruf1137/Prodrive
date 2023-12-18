@@ -5,7 +5,7 @@ import CommonHero from "@/components/commonHero";
 
 const Fleet = () => {
   return (
-    <div>
+    <div className="fleet-page">
       <CommonHero
         title="FLEET"
         subtitle="Choose Your Dream Car From Among Six Different Categories"
