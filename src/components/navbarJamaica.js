@@ -627,7 +627,7 @@ export default function Navbar() {
                 const { id, title, url, items } = item;
                 if (!items) {
                   return (
-                    <li className="menuNav__item" key={id}>
+                    <li className="menuNav__item js-menu-button" key={id}>
                       <Link href={url}>{title}</Link>
                     </li>
                   );
@@ -648,8 +648,10 @@ export default function Navbar() {
 
                         {items.map(({ title, url }, index) => {
                           return (
-                            <li className="submenu__item" key={index}>
-                              <Link href={url}>{title}</Link>
+                            <li
+                              className="submenu__item js-menu-button"
+                              key={index}>
+                              <a href={url}>{title}</a>
                             </li>
                           );
                         })}
