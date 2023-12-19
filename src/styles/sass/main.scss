@@ -340,13 +340,13 @@ a {
     li,
     li.active,
     li:hover {
-      color: #fff;
+      color: #fff !important;
     }
 
     li:hover:before,
     li.active:before {
-      bottom: -7px;
-      background-color: #fff;
+      bottom: -7px !important;
+      background-color: #fff !important;
     }
   }
 }
@@ -1131,5 +1131,13 @@ ul {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/images/template/single-blog-bg.jpg") no-repeat top center;
     background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .card-area,
+  .checkout-confirm-page,
+  .options-area {
+    padding-top: 57px;
   }
 }

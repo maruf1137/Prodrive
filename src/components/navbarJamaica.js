@@ -649,7 +649,7 @@ export default function Navbar() {
                         {items.map(({ title, url }, index) => {
                           return (
                             <li className="submenu__item" key={index}>
-                              <a href={url}>{title}</a>
+                              <Link href={url}>{title}</Link>
                             </li>
                           );
                         })}
