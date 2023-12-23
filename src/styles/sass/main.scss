@@ -2,7 +2,7 @@
 // @import "./pages/pages.scss";
 
 $color-primary: #eb662b;
-$color-bg-light: #fff1eb;
+$color-bg-light: #fef7f4;
 
 a {
   color: #1e1e1e;
@@ -386,7 +386,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+
+    @media only screen and (max-width: 380px) {
+      gap: 20px;
+    }
 
     button {
       color: $color-primary;
@@ -1139,5 +1143,112 @@ ul {
   .checkout-confirm-page,
   .options-area {
     padding-top: 57px;
+  }
+}
+
+.car-class-page {
+  .sdl-booking {
+    background-color: $color-primary;
+
+    .schedule-booking,
+    .form-booking {
+      background-color: transparent;
+    }
+  }
+  .form-booking .js {
+    background-color: #fef7f4;
+    border-radius: 5px;
+    padding: 8px 0;
+  }
+  .btn-submit {
+    @media only screen and (max-width: 768px) {
+      width: 100% !important;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 0;
+      min-width: auto;
+      background: transparent;
+      border: none;
+    }
+    .btn-hidemap {
+      color: #fff;
+    }
+  }
+}
+
+.select-car .one-half.image-car {
+  width: 100% !important;
+}
+
+.book-adress .close {
+  position: static !important;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  padding: 6px;
+  border-radius: 4px;
+
+  p {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .close .icon {
+    fill: #fff;
+  }
+}
+
+.checkout-wrapper.container {
+  max-width: 600px !important;
+  width: 100% !important;
+}
+
+.tp-bgimg {
+  background-position: unset;
+}
+
+.single-fleet-page {
+  .form-booking {
+    display: block;
+  }
+}
+
+.help-page {
+  .pageHeader__search {
+    button {
+      padding: 0;
+    }
+  }
+}
+
+.halfMap {
+  button {
+    color: #fff;
+  }
+}
+
+.wehicles {
+  position: fixed;
+}
+
+.check-out-area {
+  padding: 30px 65px 75px 65px;
+}
+
+.explore-box .btns {
+  max-width: 435px;
+  margin: 0 auto;
+}
+
+.extras-wrapper {
+  .option-area-btns {
+    gap: 30px;
+    justify-content: center;
   }
 }

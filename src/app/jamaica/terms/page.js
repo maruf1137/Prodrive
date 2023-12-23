@@ -46,8 +46,8 @@ const Terms = () => {
         <div className="tabs -terms js-tabs">
           <div className="row y-gap-30">
             <div className="col-lg-3">
-              <div className="tabs__controls row y-gap-10 js-tabs-controls">
-                <div className="col-7 row">
+              <div className="tabs__controls row gap-10 js-tabs-controls">
+                <div className="col-12 row">
                   <div className="col-12">
                     <button
                       className="tabs__button relative pl-20 js-tabs-button is-tab-el-active"
@@ -72,7 +72,7 @@ const Terms = () => {
                     </button>
                   </div>
                 </div>
-                <div className="col-5 row">
+                <div className="col-12 row">
                   <div className="col-12">
                     <button
                       className="tabs__button relative pl-20 js-tabs-button "

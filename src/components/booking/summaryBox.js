@@ -2,7 +2,7 @@ import React from "react";
 
 const SummaryBox = ({ summaryBarOpen, setSummaryBarOpen }) => {
   return (
-    <div className="summaryBtnBox mb-50">
+    <div className="summaryBtnBox mb-20">
       <div className="container">
         <div className="summaryBtnBox__wrapper">
           <p className="text">Trip Info</p>

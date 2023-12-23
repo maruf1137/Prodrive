@@ -133,7 +133,7 @@ const Hero = () => {
                 <img
                   src="/images/slider/home.jpg"
                   alt=""
-                  data-bgposition="center center"
+                  // data-bgposition="center center"
                   data-kenburns="off"
                   data-duration="30000"
                   data-ease="Linear.easeNone"
@@ -223,9 +223,9 @@ const Hero = () => {
                 data-description="">
                 {/* <!-- MAIN IMAGE --> */}
                 <img
-                  src="/images/slider/home.jpg"
+                  src="/images/slider/home-2.jpg"
                   alt=""
-                  data-bgposition="center center"
+                  // data-bgposition="center center"
                   data-kenburns="off"
                   data-duration="30000"
                   data-ease="Linear.easeNone"
@@ -294,16 +294,20 @@ const Hero = () => {
         </div>
         {/* <!-- END REVOLUTION SLIDER --> */}
         <div class="book-adress">
-          <span class="close">
-            <svg class="icon">
-              <use xlinkHref="/icons.svg#icon-clear"></use>
-            </svg>
-          </span>
           <div class="container">
             <div class="logo-calendar center"></div>
           </div>
+
           <div class="container mt-5">
             <div class="form-address">
+              <div className="title-box">
+                <p>Where From</p>
+                <span class="close">
+                  <svg class="icon">
+                    <use xlinkHref="/icons.svg#icon-clear"></use>
+                  </svg>
+                </span>
+              </div>
               <form
                 action="#"
                 method="get"

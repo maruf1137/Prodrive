@@ -5,9 +5,9 @@ const Checkout = () => {
   return (
     <section className="check-out-area">
       <div className="container">
-        <figure class="mx-auto mb-20 text-center logo">
+        {/* <figure class="mx-auto mb-20 text-center logo">
           <img src="/img/general/small-logo.png" alt="" />
-        </figure>
+        </figure> */}
         <div className="row">
           <div className="col-md-12">
             <div className="check-out">
@@ -16,7 +16,7 @@ const Checkout = () => {
                   <span>
                     <img src="/images/icon/thanks.png" alt="" />
                   </span>
-                  THANK YOU <span className="name">JSON</span>
+                  THANK YOU <span className="name">DAVE</span>
                 </div>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
@@ -47,15 +47,6 @@ const Checkout = () => {
                     <p className="text">
                       <strong>Persons/Bags:</strong> 4/3​
                     </p>
-
-                    <p className="text">
-                      <strong>Extras​</strong>
-                    </p>
-                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
-                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
-                  </div>
-
-                  <div className="content">
                     <p className="text">
                       <strong>From:</strong> Sangster International Airport,
                       Montego Bay….​
@@ -64,18 +55,29 @@ const Checkout = () => {
                       <strong>To:</strong> Hilton Hotel, Montego Bay, Jamaica​
                     </p>
                     <p className="text">
+                      <strong>Extras​:</strong>
+                    </p>
+                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
+                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
+                  </div>
+
+                  <div className="content">
+                    <p className="text">
                       <strong>Pickup Date & Time:</strong> 13th Sep 2023 3:30pm​
                     </p>
                     <p className="text">
                       <strong>Return Date & Time:</strong> 20th Sep 2023 9:15am​
                     </p>
                     <p className="text">
-                      <strong>Pickup Flight#:</strong> AA1234 Return Flight#:
+                      <strong>Pickup FLT#:</strong> AA1234
+                    </p>
+                    <p className="text">
+                      <strong>Return Flight#:</strong>
                       BB1234
                     </p>
 
                     <p className="text">
-                      <strong> Additional Information​</strong>
+                      <strong> Additional Information:​</strong>
                     </p>
                     <p className="text">
                       Please remember to bring the baby car seat​

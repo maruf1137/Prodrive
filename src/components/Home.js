@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row y-gap-30 pt-40 sm:pt-20">
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <a
                 href=""
                 className="tourCard -type-1 d-block border-1 bg-white hover-shadow-1 overflow-hidden rounded-12 bg-white -hover-shadow">
@@ -164,7 +164,7 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <a
                 href=""
                 className="tourCard -type-1 d-block border-1 bg-white hover-shadow-1 overflow-hidden rounded-12 bg-white -hover-shadow">
@@ -223,7 +223,7 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <a
                 href=""
                 className="tourCard -type-1 d-block border-1 bg-white hover-shadow-1 overflow-hidden rounded-12 bg-white -hover-shadow">
@@ -282,7 +282,7 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <a
                 href=""
                 className="tourCard -type-1 d-block border-1 bg-white hover-shadow-1 overflow-hidden rounded-12 bg-white -hover-shadow">

@@ -55,29 +55,30 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen, fleetPage }) => {
 
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            {vehicleStateData.map((item) => {
-              const {
-                id,
-                title,
-                img,
-                subtitle,
-                desc,
-                author,
-                mail,
-                price,
-                infoData,
-              } = item;
-              const s1 = id % 2 == 0 ? true : false;
-              return (
-                <div className={s1 ? "select-car s1" : "select-car"} key={id}>
+          {/* className={s1 ? "select-car s1" : "select-car"} */}
+          {vehicleStateData.map((item) => {
+            const {
+              id,
+              title,
+              img,
+              subtitle,
+              desc,
+              author,
+              mail,
+              price,
+              infoData,
+            } = item;
+            const s1 = id % 2 == 0 ? true : false;
+            return (
+              <div className="col-md-6" key={id}>
+                <div className="select-car">
                   <div className="image-car one-half pb-20">
                     <img src={img} alt={title} />
-                    <div className="vihicle-title-box mbl-vihicle-title-box mb-20 d-lg-none">
-                      <h3>
-                        {title}{" "}
+                    <div className="vihicle-title-box mbl-vihicle-title-box mb-20">
+                      <h3 className="text-center">
+                        {title}
                         <button
-                          className="vehicle-info-btn d-lg-none"
+                          className="vehicle-info-btn"
                           onClick={() => handleFlipCard(id)}>
                           <svg class="icon">
                             <use xlinkHref="/icons.svg#icon-info-with-circle"></use>
@@ -126,7 +127,7 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen, fleetPage }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="box-text one-half d-none d-lg-block">
+                  <div className="box-text one-half d-none">
                     <div className="top">
                       <div className="vihicle-title-box d-none d-lg-flex ">
                         <h3>{title}</h3>
@@ -167,9 +168,7 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen, fleetPage }) => {
                   </div>
                   <div
                     className={
-                      infoData
-                        ? "vehicle-flip-box show d-lg-none"
-                        : "vehicle-flip-box d-lg-none"
+                      infoData ? "vehicle-flip-box show" : "vehicle-flip-box"
                     }>
                     <div className="vehicle-title-box">
                       <div className="name-car mb-20">{subtitle}</div>
@@ -202,9 +201,10 @@ const VehicleArea = ({ summaryBarOpen, setSummaryBarOpen, fleetPage }) => {
                   </div>
                   <div className="clearfix"></div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
+          <div className="col-md-12"></div>
         </div>
       </div>
     </section>

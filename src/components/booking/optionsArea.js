@@ -65,7 +65,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                   </select>
                 </div>
                 <div class="pick-date one-half first-name">
-                  <label>Pick Up Date</label>
+                  <label>Return Pick Up Date​</label>
                   <input
                     id="date-range11"
                     size="40"
@@ -75,7 +75,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
                   />
                 </div>
                 <div class="pick-time js one-half first-name">
-                  <label>Pick Up Return Time</label>
+                  <label>Return Pick Up Time​</label>
                   <select>
                     <option value="time-01" selected hidden>
                       12:25 am

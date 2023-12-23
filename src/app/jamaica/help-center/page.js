@@ -82,7 +82,7 @@ const HelpCenter = () => {
   ];
 
   return (
-    <div className="mt-header3">
+    <div className="mt-header3 help-page">
       <section className="pageHeader -type-2">
         <div className="pageHeader__bg">
           <img src="/img/pageHeader/2.jpg" alt="image" />
@@ -111,74 +111,6 @@ const HelpCenter = () => {
       </section>
 
       <section className="layout-pt-md">
-        <div className="container">
-          <div className="row y-gap-30">
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/1.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">Booking your activity</h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/2.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">Payment &amp; receipts</h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/3.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">
-                  Booking changes &amp; refunds
-                </h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/4.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">Promo codes &amp; credits</h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/5.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">On the participation day</h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="px-50 py-45 border-1 rounded-12">
-                <img src="/img/icons/6/6.svg" alt="image" className="mb-20" />
-                <h3 className="text-18 fw-500">Value Packs</h3>
-                <div className="mt-10">
-                  Lorem ipsum is placeholder text commonly used in the site.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="layout-pt-xl layout-pb-xl">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -299,6 +231,74 @@ const HelpCenter = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="layout-pt-xl layout-pb-xl">
+        <div className="container">
+          <div className="row y-gap-30">
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/1.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">Booking your activity</h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/2.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">Payment &amp; receipts</h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/3.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">
+                  Booking changes &amp; refunds
+                </h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/4.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">Promo codes &amp; credits</h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/5.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">On the participation day</h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="px-50 py-45 border-1 rounded-12">
+                <img src="/img/icons/6/6.svg" alt="image" className="mb-20" />
+                <h3 className="text-18 fw-500">Value Packs</h3>
+                <div className="mt-10">
+                  Lorem ipsum is placeholder text commonly used in the site.
                 </div>
               </div>
             </div>

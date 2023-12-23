@@ -5,9 +5,9 @@ const CheckoutTours = () => {
   return (
     <section className="check-out-area">
       <div className="container">
-        <figure class="mx-auto mb-20 text-center logo">
+        {/* <figure class="mx-auto mb-20 text-center logo">
           <img src="/img/general/small-logo.png" alt="" />
-        </figure>
+        </figure> */}
         <div className="row">
           <div className="col-md-12">
             <div className="check-out">
@@ -16,7 +16,7 @@ const CheckoutTours = () => {
                   <span>
                     <img src="/images/icon/thanks.png" alt="" />
                   </span>
-                  THANK YOU <span className="name">JSON</span>
+                  THANK YOU <span className="name">DAVE</span>
                 </div>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
@@ -47,9 +47,6 @@ const CheckoutTours = () => {
                     <p className="text">
                       <strong>Persons/Bags:</strong> 4/3​
                     </p>
-                  </div>
-
-                  <div className="content">
                     <p className="text">
                       <strong>From:</strong> Sangster International Airport,
                       Montego Bay….​
@@ -57,21 +54,23 @@ const CheckoutTours = () => {
                     <p className="text">
                       <strong>To:</strong> Hilton Hotel, Montego Bay, Jamaica​
                     </p>
+                  </div>
+
+                  <div className="content">
                     <p className="text">
                       <strong>Pickup Date & Time:</strong> 13th Sep 2023 3:30pm​
                     </p>
-                    <p className="text">
-                      <strong>Extras​</strong>
-                    </p>
-                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
-                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
-
                     <p className="text">
                       <strong> Additional Information​</strong>
                     </p>
                     <p className="text">
                       Please remember to bring the baby car seat​
                     </p>
+                    <p className="text">
+                      <strong>Extras:​</strong>
+                    </p>
+                    <p className="text">1. Bay Car Seat (MBJ/6YO) x2​</p>
+                    <p className="text">2. Red Stripe Beers (AD/RJ) x1</p>
                   </div>
                 </div>
                 <div className="btns mt-20 d-md-none">

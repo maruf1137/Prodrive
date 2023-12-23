@@ -221,7 +221,7 @@ const Extras = () => {
           {itemData.map((item) => {
             const { id, title, img, details, add, price } = item;
             return (
-              <div className="col-12 col-sm-6 col-lg-3" key={id}>
+              <div className="col-12 col-sm-6 col-lg-4" key={id}>
                 <div className="item">
                   <img src={img} alt={title} />
                   <div className="content">
@@ -265,6 +265,17 @@ const Extras = () => {
               <Add />
             </div>
           </div> */}
+        </div>
+
+        <div class="option-area-btns mt-30 d-flex align-items-center gap-20">
+          <div class="one-half">
+            <button class="back">Back</button>
+          </div>
+          <div class="one-half">
+            <button type="submit" class="submit">
+              CONTINUE
+            </button>
+          </div>
         </div>
       </div>
 

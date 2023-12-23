@@ -99,7 +99,7 @@ const FleetDetails = () => {
                 </p>
               </div>
             </article>
-            <div className="bottom-content row">
+            {/* <div className="bottom-content row">
               <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
                 <ul className="detail-info">
                   <li>
@@ -160,7 +160,7 @@ const FleetDetails = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 fix-bst">
             <div className="sidebar">
