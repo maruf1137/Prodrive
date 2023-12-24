@@ -27,8 +27,8 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
 
       <div className="container">
         <div className="row">
-          <div className="col-lg-2"></div>
-          <div className="col-lg-8">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">
             <div className="form-options">
               <form
                 action="#"
@@ -171,7 +171,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
               </form>
             </div>
           </div>
-          <div className="col-lg-2"></div>
+          <div className="col-lg-3"></div>
         </div>
       </div>
 

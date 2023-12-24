@@ -17,11 +17,11 @@ const PassengerInfoArea = () => {
       </figure> */}
       <div className="container">
         <div className="row">
-          <div className="col-lg-2"></div>
-          <div className="col-lg-8">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">
             <div className="login-booking">
               <ul className="login-tab-list">
-                <li className="active">Passenger Info</li>
+                <li className="active">Lead Passenger Info</li>
               </ul>
               <div className="login-content">
                 <div>
@@ -94,7 +94,7 @@ const PassengerInfoArea = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-2"></div>
+          <div className="col-lg-3"></div>
         </div>
       </div>
     </section>

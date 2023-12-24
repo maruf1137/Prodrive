@@ -190,11 +190,83 @@ function TourLayout() {
   });
 
   return (
-    <div className="mt-header2">
+    <div className="mt-header2 map-page">
       <Filters />
       <section className="halfMap -type-1 mb-30">
         <div className="halfMap__content">
-          <div className="row">
+          <form className="map-form mb-20">
+            <select name="" id="">
+              <option value="Select A Tour Location">
+                Select A Tour Location
+              </option>
+              <option value="Select A Tour Location 2">
+                Select A Tour Location 2
+              </option>
+              <option value="Select A Tour Location 3">
+                Select A Tour Location 3
+              </option>
+            </select>
+          </form>
+          <div class="pl-tag__grid mobile-css-slider-2 mb-20">
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-office text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">City Tours</div>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-bank text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">Cultural Tours</div>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-boat text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">Day Cruises</div>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-bus text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">Bus Tours</div>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-beach text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">Beach Tours</div>
+              </a>
+            </div>
+            <div class="">
+              <a href="#" class="pl-tag">
+                <div class="pl-tag__icon">
+                  <i class="icon-menu-1 text-24 text-accent-1"></i>
+                </div>
+                <div class="pl-tag__title text-dark-1">Food Tours</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="row y-gap-5 justify-between  mb-30">
+            <div class="col-auto">
+              <div>1362 results</div>
+            </div>
+            <div class="col-auto">
+              <button class="btn-show-map">Show On Map</button>
+            </div>
+          </div>
+          {/* <div className="row">
             <div className="col-auto">
               <h2 className="text-30 md:text-24">
                 Explore all things to do in Phuket
@@ -238,7 +310,8 @@ function TourLayout() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
           <div className="halfMap__cards">
             <div className="row y-gap-30">
               {tour_data.map((tour, index) => (

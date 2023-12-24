@@ -84,22 +84,40 @@ const SingleBlogArea = () => {
                 <div className="share">
                   <span>Share:</span>
                   <a href="#" title="Facebook">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                    {/* <i className="fa fa-facebook" aria-hidden="true"></i> */}
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-facebook100"></use>
+                    </svg>
                   </a>
                   <a href="#" title="Twitter">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-twitter"></use>
+                    </svg>
+                    {/* <i className="fa fa-twitter" aria-hidden="true"></i> */}
                   </a>
                   <a href="#" title="Instagram">
-                    <i className="fa fa-instagram" aria-hidden="true"></i>
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-instagram"></use>
+                    </svg>
+                    {/* <i className="fa fa-instagram" aria-hidden="true"></i> */}
                   </a>
                   <a href="#" title="Pinterest">
-                    <i className="fa fa-pinterest" aria-hidden="true"></i>
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-pinterest"></use>
+                    </svg>
+                    {/* <i className="fa fa-pinterest" aria-hidden="true"></i> */}
                   </a>
                   <a href="#" title="Dribble">
-                    <i className="fa fa-dribbble" aria-hidden="true"></i>
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-dribbble"></use>
+                    </svg>
+                    {/* <i className="fa fa-dribbble" aria-hidden="true"></i> */}
                   </a>
                   <a href="#" title="Google">
-                    <i className="fa fa-google" aria-hidden="true"></i>
+                    <svg class="icon">
+                      <use xlinkHref="/icons.svg#icon-google"></use>
+                    </svg>
+                    {/* <i className="fa fa-google" aria-hidden="true"></i> */}
                   </a>
                 </div>
               </div>

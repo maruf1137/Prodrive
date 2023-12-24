@@ -18,8 +18,8 @@ const BookingCardArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
       />
       <div className="container">
         <div className="row">
-          <div className="col-md-2"></div>
-          <div className="col-md-8">
+          <div className="col-md-3"></div>
+          <div className="col-md-6">
             <div className="form-card">
               <form
                 action="#"
@@ -82,7 +82,7 @@ const BookingCardArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
               </form>
             </div>
           </div>
-          <div className="col-md-2"></div>
+          <div className="col-md-3"></div>
         </div>
       </div>
     </section>

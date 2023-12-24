@@ -42,13 +42,13 @@ const ContactSection = () => {
             <svg class="icon">
               <use xlinkHref="/icons.svg#icon-gmail"></use>
             </svg>
-            gmail
+            Email
           </a>
           <a href="#" className="social__item">
             <svg class="icon">
               <use xlinkHref="/icons.svg#icon-whatsapp"></use>
             </svg>
-            whatsapp
+            WhatsApp
           </a>
         </div>
         <ul className="details">

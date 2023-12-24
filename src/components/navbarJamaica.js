@@ -109,8 +109,8 @@ const navigationData = [
         url: "/jamaica/booking",
       },
       {
-        title: "Contact",
-        url: "/jamaica/contact",
+        title: "Contact US",
+        url: "/jamaica/contact-us",
       },
       {
         title: "Blogs",

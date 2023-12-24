@@ -29,13 +29,13 @@ const LoginArea = () => {
 
   return (
     <section className="login-booking-area">
-      <figure className="mx-auto mb-20 text-center logo">
+      {/* <figure className="mx-auto mb-20 text-center logo">
         <img src="/img/general/small-logo.png" alt="" />
-      </figure>
+      </figure> */}
       <div className="container">
         <div className="row">
-          <div className="col-lg-2"></div>
-          <div className="col-lg-8">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">
             <div className="login-booking">
               <ul className="login-tab-list">
                 {tabBtns.map(({ id, title }) => {
@@ -231,7 +231,7 @@ const LoginArea = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-2"></div>
+          <div className="col-lg-3"></div>
         </div>
       </div>
 
