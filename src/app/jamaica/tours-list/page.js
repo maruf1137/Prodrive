@@ -307,7 +307,7 @@ const Tours = () => {
               </div>
               <div className="row y-gap-30 pt-30">
                 {tourData.map((tour, index) => (
-                  <div className="col-lg-3 col-md-4 col-sm-6">
+                  <div className="col-lg-4 col-sm-6">
                     <a
                       href="#"
                       className="tourCard -type-1 border-1 rounded-12 -hover-shadow ratio">

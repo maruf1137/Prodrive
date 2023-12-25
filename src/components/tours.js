@@ -1,5 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const taxisData = [
   {
@@ -45,6 +51,25 @@ const taxisData = [
 ];
 
 const Tours = ({ toursActive }) => {
+  const breakpoints = {
+    250: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+  };
+
   return (
     <div
       class={
@@ -53,31 +78,61 @@ const Tours = ({ toursActive }) => {
           : "wehicles tours visibility-hidden"
       }>
       <div class="fleet-carousel" data-columns="6">
-        <div class="owl-carousel">
+        <Swiper
+          pagination={false}
+          modules={[Pagination]}
+          // slidesPerView={3}
+          // spaceBetween={30}
+          breakpoints={breakpoints}
+          className="mySwiper">
           {taxisData.map(({ id, title, img }) => {
             return (
-              <div class="fleet-item" key={id}>
-                <div class="images">
-                  <img src={img} alt={title} />
+              <SwiperSlide key={id}>
+                <div class="fleet-item">
+                  <div class="images">
+                    <img src={img} alt={title} />
+                  </div>
+                  <div class="fleet-content">
+                    <p className="location">
+                      <svg class="icon">
+                        <use xlinkHref="/icons.svg#icon-location2"></use>
+                      </svg>
+                      Kingston​
+                    </p>
+                    <h4 class="fleet-title">
+                      <Link href="/jamaica/tours-list/123">{title}</Link>
+                    </h4>
+                  </div>
                 </div>
-                <div class="fleet-content">
-                  <p className="location">
-                    <svg class="icon">
-                      <use xlinkHref="/icons.svg#icon-location2"></use>
-                    </svg>
-                    Kingston​
-                  </p>
-                  <h4 class="fleet-title">
-                    <a href="#">{title}</a>
-                  </h4>
-                </div>
-              </div>
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
+        {/* {taxisData.map(({ id, title, img }) => {
+          return (
+            <div class="fleet-item" key={id}>
+              <div class="images">
+                <img src={img} alt={title} />
+              </div>
+              <div class="fleet-content">
+                <p className="location">
+                  <svg class="icon">
+                    <use xlinkHref="/icons.svg#icon-location2"></use>
+                  </svg>
+                  Kingston​
+                </p>
+                <h4 class="fleet-title">
+                  <Link href="/jamaica/tours-list/123">{title}</Link>
+                </h4>
+              </div>
+            </div>
+          );
+        })} */}
+        {/* <div class="owl-carousel">
+        </div> */}
       </div>
       <div className="serach-wrapper">
-        <Link href="#" className="btn-search">
+        <Link href="/jamaica/tours-list" className="btn-search">
           Search Tour
           <svg class="icon">
             <use xlinkHref="/icons.svg#icon-arrow-up-right"></use>

@@ -175,16 +175,12 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
         </div>
       </div>
 
-      <div class="calendar">
+      {/* <div class="calendar">
         <span class="close">
           <img src="/images/icon/close_x.png" alt="" />
         </span>
         <div class="container">
-          <div class="logo-calendar center">
-            {/* <Link href="/" title="">
-              <img src="/images/logo.png" alt="" />
-            </Link> */}
-          </div>
+          <div class="logo-calendar center"></div>
         </div>
         <div class="container">
           <div class="row">
@@ -260,7 +256,7 @@ const OptionsArea = ({ summaryBarOpen, setSummaryBarOpen }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {popup && (
         <div className="popup">
           <div className="content-wrapper">

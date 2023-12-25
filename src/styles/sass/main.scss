@@ -296,12 +296,27 @@ a {
     width: 100%;
     background-color: #fff;
     z-index: 10;
-    padding: 15px 20px;
+    padding: 10px 5px 0 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .tabs__button {
+      font-size: 18px !important;
+    }
+  }
+
+  .tourSingleSidebar {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 0 transparent;
+    background-color: transparent;
   }
 }
 
 .single-tour-form-wrapper {
+  @media only screen and (max-width: 992px) {
+    padding-top: 0 !important;
+  }
   p {
     color: $color-primary;
     margin-bottom: 10px;
@@ -329,6 +344,11 @@ a {
       background-color: #eb652b1c !important;
       color: $color-primary !important;
     }
+  }
+
+  button,
+  button:hover {
+    border: 1px solid $color-primary;
   }
 }
 
@@ -556,6 +576,16 @@ a {
 
   .fleet-carousel {
     padding-top: 0;
+    width: 85%;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 992px) {
+      width: 80%;
+    }
+
+    .swiper {
+      overflow: visible;
+    }
   }
 
   .fleet-item {
@@ -585,6 +615,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 
     .btn-search {
       display: flex;
@@ -630,7 +661,7 @@ a {
       width: 100%;
       color: #fff;
       padding: 10px;
-      background-color: #00000048;
+      background-color: rgba(0, 0, 0, 0.4);
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -1317,5 +1348,62 @@ ul {
 .map-page {
   .map-form select {
     color: $color-primary;
+  }
+}
+
+.checkout-confirm-page {
+  .form-checkbox {
+    .icon {
+      height: 12px;
+      width: 12px;
+      fill: #fff;
+    }
+
+    .form-checkbox__icon {
+      height: 100%;
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .terms-text {
+    a {
+      margin-left: 5px;
+      color: $color-primary;
+    }
+  }
+  // .form-checkbox:hover input ~ .form-checkbox__mark {
+  //   background-color: $color-primary;
+  // }
+}
+
+.country-input {
+  position: relative;
+  display: block;
+  font-family: inherit;
+  width: 100%;
+  padding: 8px 15px 8px 16px;
+  color: #969696;
+  border: 1px solid #d7d2bd;
+  height: 50px;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    color: $color-primary;
+  }
+
+  input,
+  input:focus {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    // height: auto;
+    // position: ;
   }
 }

@@ -1,13 +1,42 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
+
+const countryData = [
+  {
+    name: "England",
+    code: "+44",
+  },
+  {
+    name: "United States",
+    code: "+1",
+  },
+  {
+    name: "Dubai",
+    code: "+971",
+  },
+  {
+    name: "Bangladesh",
+    code: "+880",
+  },
+];
 
 const PassengerInfoArea = () => {
+  const [countryValue, setCountryValue] = useState("+44");
   const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // router.push("/booking/card");
+  };
+
+  const handleCountryCHnage = (e) => {
+    const value = e.target.value;
+    countryData.filter((item) => {
+      if (item.name == value) {
+        setCountryValue(item.code);
+      }
+    });
   };
 
   return (
@@ -60,22 +89,35 @@ const PassengerInfoArea = () => {
                       </div>
                       <div className="one-half number-bags">
                         <label for="country">Country</label>
-                        <select name="country" id="country">
-                          <option value="England">England</option>
+                        <select
+                          name="country"
+                          id="country"
+                          onChange={(e) => handleCountryCHnage(e)}>
+                          {countryData.map(({ name, code }, i) => {
+                            return (
+                              <option value={name} key={i}>
+                                {name}
+                              </option>
+                            );
+                          })}
+                          {/* <option value="England">England</option>
                           <option value="United States">United States</option>
                           <option value="Dubai">Dubai</option>
-                          <option value="Bangladesh">Bangladesh</option>
+                          <option value="Bangladesh">Bangladesh</option> */}
                         </select>
                         {/* <div className="select"></div> */}
                       </div>
                       <div className="one-half phone">
                         <label for="phone">Phone</label>
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          placeholder="(+90) 538 658 96 315"
-                        />
+                        <div className="country-input">
+                          <span>{`(${countryValue})`}</span>
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            placeholder=" 538 658 96 315"
+                          />
+                        </div>
                       </div>
                       <div className="option-area-btns">
                         <div className="one-half">

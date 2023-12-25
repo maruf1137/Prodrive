@@ -4,6 +4,8 @@ import Navbar from "@/components/navbarJamaica";
 import Footer from "@/components/footer";
 import Script from "next/script";
 import Loader from "@/components/loader";
+import PickupDate from "@/components/booking/pickupDate";
+import PickupTime from "@/components/booking/pickupTime";
 
 // css
 import "../styles/css/bootstrap.min.css";
@@ -68,6 +70,8 @@ export default function RootLayout({ children }) {
           )} */}
 
           <Loader />
+          <PickupDate />
+          <PickupTime />
           <Navbar />
           {children}
           <Footer />

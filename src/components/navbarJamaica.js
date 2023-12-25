@@ -700,7 +700,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <Taxis taxisActive={taxisActive} />
+      <Taxis taxisActive={taxisActive} setTaxisActive={setTaxisActive} />
       <Tours toursActive={toursActive} />
     </>
   );
