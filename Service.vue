@@ -1,79 +1,78 @@
 <template>
-    <div class="main-container">
-        
-        <HeaderProcessing />
+  <div class="main-container">
+    <HeaderProcessing />
 
-        <HeroService />
+    <HeroService />
 
-        <FeatureGallery />
+    <FeatureGallery />
 
-        <CompanyHistory />
+    <CompanyHistory />
 
-        <ServiceStyleTwo class="bg-gray" />
+    <ServiceStyleTwo class="bg-gray" />
 
-        <FourSteps />
+    <FourSteps />
 
-        <CtaThree />
+    <CtaThree />
 
-        <CaseStudiesSectionTwo />
+    <CaseStudiesSectionTwo />
 
-        <PricingOne />
+    <PricingOne />
 
-        <BlogStyleTwo />
+    <BlogStyleTwo />
 
-        <ContactUsTwo />
+    <ContactUsTwo />
 
-        <BrandLogoCarousel />
+    <BrandLogoCarousel />
 
-        <Footer />
+    <Footer />
 
-        <OffCanvasMobileMenu />
+    <OffCanvasMobileMenu />
 
-        <SearchOverlay />
-
-    </div>
+    <SearchOverlay />
+  </div>
 </template>
 
 <script>
-    import HeaderProcessing from '@/components/HeaderProcessing';
-    import HeroService from '@/components/HeroService';
-    import FeatureGallery from '@/components/sections/FeatureGallery';
-    import CompanyHistory from '@/components/sections/CompanyHistory';
-    import ServiceStyleTwo from '@/components/sections/ServiceStyleTwo';
-    import FourSteps from '@/components/sections/FourSteps';
-    import CtaThree from '@/components/CtaThree';
-    import CaseStudiesSectionTwo from '@/components/sections/CaseStudiesSectionTwo';
-    import PricingOne from '@/components/sections/PricingOne';
-    import ContactUsTwo from '@/components/sections/ContactUsTwo';
-    import BlogStyleTwo from '@/components/sections/BlogStyleTwo';
-    import BrandLogoCarousel from '@/components/BrandLogoCarousel';
-    import Footer from '@/components/Footer';
-    import OffCanvasMobileMenu from '@/components/OffCanvasMobileMenu';
-    import SearchOverlay from '@/components/SearchOverlay';
+// fdghdfghgh;
+import HeaderProcessing from '@/components/HeaderProcessing';
+import HeroService from '@/components/HeroService';
+import FeatureGallery from '@/components/sections/FeatureGallery';
+import CompanyHistory from '@/components/sections/CompanyHistory';
+import ServiceStyleTwo from '@/components/sections/ServiceStyleTwo';
+import FourSteps from '@/components/sections/FourSteps';
+import CtaThree from '@/components/CtaThree';
+import CaseStudiesSectionTwo from '@/components/sections/CaseStudiesSectionTwo';
+import PricingOne from '@/components/sections/PricingOne';
+import ContactUsTwo from '@/components/sections/ContactUsTwo';
+import BlogStyleTwo from '@/components/sections/BlogStyleTwo';
+import BrandLogoCarousel from '@/components/BrandLogoCarousel';
+import Footer from '@/components/Footer';
+import OffCanvasMobileMenu from '@/components/OffCanvasMobileMenu';
+import SearchOverlay from '@/components/SearchOverlay';
 
-    export default {
-        name: 'service',
-        components: {
-            HeaderProcessing,
-            HeroService,
-            FeatureGallery,
-            CompanyHistory,
-            ServiceStyleTwo,
-            FourSteps,
-            CtaThree,
-            CaseStudiesSectionTwo,
-            PricingOne,
-            BlogStyleTwo,
-            ContactUsTwo,
-            BrandLogoCarousel,
-            Footer,
-            OffCanvasMobileMenu,
-            SearchOverlay
-        },
-        head() {
-            return {
-                title: 'Mitech || Service'
-            }
-        },
+export default {
+  name: 'service',
+  components: {
+    HeaderProcessing,
+    HeroService,
+    FeatureGallery,
+    CompanyHistory,
+    ServiceStyleTwo,
+    FourSteps,
+    CtaThree,
+    CaseStudiesSectionTwo,
+    PricingOne,
+    BlogStyleTwo,
+    ContactUsTwo,
+    BrandLogoCarousel,
+    Footer,
+    OffCanvasMobileMenu,
+    SearchOverlay,
+  },
+  head() {
+    return {
+      title: 'Mitech || Service',
     };
+  },
+};
 </script>
